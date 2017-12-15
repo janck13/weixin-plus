@@ -1,6 +1,5 @@
 group 'com.rsh.framework'
 version '1.0-SNAPSHOT'
-javaVersion = JavaVersion.VERSION_1_8
 
 buildscript {
     ext.kotlin_version = '1.1.4-3'
@@ -25,9 +24,10 @@ repositories {
 
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlin_version"
-    compile 'com.squareup.okhttp:okhttp:2.7.5'
-    compile 'com.squareup.okhttp3:okhttp:3.6.0'
-    compile 'com.squareup.okio:okio:1.11.0'
+    providedCompile 'com.squareup.okhttp:okhttp:2.7.5'
+    providedCompile 'com.squareup.okhttp3:okhttp:3.6.0'
+    providedCompile 'com.squareup.okio:okio:1.11.0'
+    providedCompile 'org.apache.httpcomponents:httpclient:4.4.1'
     compile 'com.alibaba:fastjson:1.2.31'
 
     testCompile group: 'junit', name: 'junit', version: '4.12'
