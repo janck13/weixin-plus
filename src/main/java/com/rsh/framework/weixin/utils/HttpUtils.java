@@ -6,11 +6,14 @@ import okhttp3.FormBody;
 import org.apache.http.HttpEntity;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.config.RequestConfig;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
+import org.apache.http.client.methods.HttpRequestBase;
 import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.DefaultHttpRequestRetryHandler;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
@@ -523,23 +526,30 @@ public class HttpUtils {
      */
     private static class HttpClientDelegate implements HttpDelegate {
 
-        @Override
-        public String get(String url) {
-            return get(url, null);
+        private CloseableHttpClient httpclient;
+
+        public HttpClientDelegate() {
+            httpclient = HttpClients.custom()
+                    .setDefaultRequestConfig(getRequestConfig())
+                    .setMaxConnTotal(50)
+                    .setMaxConnPerRoute(25)
+                    .setRetryHandler(new DefaultHttpRequestRetryHandler(3, true))
+                    .build();
         }
 
-        @Override
-        public String get(String url, Map<String, String> params) {
-            String responseStr = null;
-            CloseableHttpClient httpclient = HttpClients.createDefault();
-            try {
-                HttpGet httpGet = new HttpGet(buildUrlWithQueryString(url, params));
-                CloseableHttpResponse response = httpclient.execute(httpGet);
+        private RequestConfig getRequestConfig() {
+            return RequestConfig.custom().setConnectionRequestTimeout(
+                    20000).setSocketTimeout(120000).setConnectTimeout(
+                    20000).build();
+        }
 
+        private String exec(HttpRequestBase request) {
+            try {
+                CloseableHttpResponse response = httpclient.execute(request);
                 try {
                     HttpEntity entity = response.getEntity();
                     if (entity != null) {
-                        responseStr = EntityUtils.toString(entity, CHARSET);
+                        return EntityUtils.toString(entity, CHARSET);
                     }
                 } finally {
                     response.close();
@@ -548,23 +558,24 @@ public class HttpUtils {
                 throw new RuntimeException(e);
             } catch (IOException e) {
                 throw new RuntimeException(e);
-            } finally {
-                try {
-                    httpclient.close();
-                } catch (IOException e) {
-                    throw new RuntimeException(e);
-                }
             }
-            return responseStr;
+            return null;
+        }
+
+        @Override
+        public String get(String url) {
+            return get(url, null);
+        }
+
+        @Override
+        public String get(String url, Map<String, String> params) {
+            HttpGet httpGet = new HttpGet(buildUrlWithQueryString(url, params));
+            return exec(httpGet);
         }
 
         @Override
         public String post(String url, Map<String, String> params) {
-            String responseStr = null;
-            CloseableHttpClient httpClient = HttpClients.createDefault();
             HttpPost httpPost = new HttpPost(url);
-            //httpPost.setConfig(requestConfig);
-
             List<NameValuePair> paramList = new ArrayList<NameValuePair>();
             Set<Map.Entry<String, String>> set = params.entrySet();
 
@@ -574,31 +585,10 @@ public class HttpUtils {
             try {
                 UrlEncodedFormEntity uefEntity = new UrlEncodedFormEntity(paramList, CHARSET);
                 httpPost.setEntity(uefEntity);
-                CloseableHttpResponse response = httpClient.execute(httpPost);
-
-                try {
-                    HttpEntity entity = response.getEntity();
-
-                    if (entity != null) {
-                        responseStr = EntityUtils.toString(entity, CHARSET);
-                    }
-                } finally {
-                    response.close();
-                }
-            } catch (ClientProtocolException e) {
-                throw new RuntimeException(e);
             } catch (UnsupportedEncodingException e) {
-                throw new RuntimeException(e);
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            } finally {
-                try {
-                    httpClient.close();
-                } catch (IOException e) {
-                    throw new RuntimeException(e);
-                }
+                e.printStackTrace();
             }
-            return responseStr;
+            return exec(httpPost);
         }
 
         @Override
@@ -622,7 +612,6 @@ public class HttpUtils {
         }
 
     }
-
 
     /**
      * Build queryString of the url
