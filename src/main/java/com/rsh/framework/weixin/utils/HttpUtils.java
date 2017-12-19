@@ -1,8 +1,7 @@
 package com.rsh.framework.weixin.utils;
 
-import com.rsh.framework.weixin.model.MediaFile;
+import com.rsh.framework.weixin.model.msg.MediaFile;
 import com.squareup.okhttp.FormEncodingBuilder;
-import okhttp3.FormBody;
 import org.apache.http.HttpEntity;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.ClientProtocolException;
