@@ -1,4 +1,5 @@
 /**
+ * 微信设备
  * Created with IntelliJ IDEA
  * Created By Rsh
  * Date: 2017/12/20
