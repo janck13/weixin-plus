@@ -36,6 +36,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="weixin-plus_main" />
     <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jre8:1.1.4-3" level="project" />
+    <orderEntry type="library" name="Gradle: org.slf4j:slf4j-api:1.7.0" level="project" />
     <orderEntry type="library" name="Gradle: com.squareup.okhttp:okhttp:2.7.5" level="project" />
     <orderEntry type="library" name="Gradle: com.squareup.okhttp3:okhttp:3.6.0" level="project" />
     <orderEntry type="library" name="Gradle: com.squareup.okio:okio:1.11.0" level="project" />

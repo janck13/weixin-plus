@@ -15,6 +15,7 @@ import org.apache.http.client.methods.HttpRequestBase;
 import org.apache.http.conn.ssl.SSLConnectionSocketFactory;
 import org.apache.http.conn.ssl.TrustSelfSignedStrategy;
 import org.apache.http.entity.ContentType;
+import org.apache.http.entity.StringEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.DefaultHttpRequestRetryHandler;
@@ -28,7 +29,8 @@ import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
-import java.security.*;
+import java.security.KeyStore;
+import java.security.SecureRandom;
 import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;
 import java.util.ArrayList;
@@ -47,9 +49,10 @@ import java.util.concurrent.locks.ReentrantLock;
  * Time: 13:10
  */
 public class HttpUtils {
-    private HttpUtils() {}
+    private HttpUtils() {
+    }
 
-    private static final String GET  = "GET";
+    private static final String GET = "GET";
     private static final String POST = "POST";
     private static String CHARSET = "UTF-8";
 
@@ -65,14 +68,23 @@ public class HttpUtils {
         return delegate.post(url, params);
     }
 
+    public static String post(String url, String data) {
+        return delegate.post(url, data);
+    }
+
     public static String postSSL(String url, Map<String, String> params, String certPath, String certPass) {
         return delegate.postSSL(url, params, certPath, certPass);
+    }
+
+    public static String postSSL(String url, String data, String certPath, String certPass) {
+        return delegate.postSSL(url, data, certPath, certPass);
     }
 
     public static MediaFile download(String url) {
         return delegate.download(url);
     }
-    public static InputStream download(String url, Map<String, String> params){
+
+    public static InputStream download(String url, Map<String, String> params) {
         return delegate.download(url, params);
     }
 
@@ -87,12 +99,19 @@ public class HttpUtils {
      */
     private interface HttpDelegate {
         String get(String url);
+
         String get(String url, Map<String, String> params);
 
         String post(String url, Map<String, String> params);
+
+        String post(String url, String data);
+
         String postSSL(String url, Map<String, String> params, String certPath, String certPass);
 
+        String postSSL(String url, String data, String certPath, String certPass);
+
         MediaFile download(String url);
+
         InputStream download(String url, Map<String, String> params);
 
         String upload(String url, File file, Map<String, String> params);
@@ -193,6 +212,16 @@ public class HttpUtils {
         }
 
         @Override
+        public String post(String url, String data) {
+            com.squareup.okhttp.RequestBody body = com.squareup.okhttp.RequestBody.create(CONTENT_TYPE_FORM, data);
+            com.squareup.okhttp.Request request = new com.squareup.okhttp.Request.Builder()
+                    .url(url)
+                    .post(body)
+                    .build();
+            return exec(request);
+        }
+
+        @Override
         public String postSSL(String url, Map<String, String> params, String certPath, String certPass) {
             com.squareup.okhttp.RequestBody formBody = null;
             if (params != null) {
@@ -207,6 +236,21 @@ public class HttpUtils {
                     .post(formBody)
                     .build();
 
+            return postSSL(request, certPath, certPass);
+        }
+
+        @Override
+        public String postSSL(String url, String data, String certPath, String certPass) {
+            com.squareup.okhttp.RequestBody body = com.squareup.okhttp.RequestBody.create(CONTENT_TYPE_FORM, data);
+            com.squareup.okhttp.Request request = new com.squareup.okhttp.Request.Builder()
+                    .url(url)
+                    .post(body)
+                    .build();
+
+            return postSSL(request, certPath, certPass);
+        }
+
+        private String postSSL(com.squareup.okhttp.Request request, String certPath, String certPass) {
             InputStream inputStream = null;
             try {
                 // 移动到最开始，certPath io异常unlock会报错
@@ -257,7 +301,7 @@ public class HttpUtils {
                     String ds = response.header("Content-disposition");
                     String fullName = ds.substring(ds.indexOf("filename=\"") + 10, ds.length() - 1);
                     String relName = fullName.substring(0, fullName.lastIndexOf("."));
-                    String suffix = fullName.substring(relName.length()+1);
+                    String suffix = fullName.substring(relName.length() + 1);
 
                     mediaFile.setFullName(fullName);
                     mediaFile.setFileName(relName);
@@ -391,6 +435,17 @@ public class HttpUtils {
         }
 
         @Override
+        public String post(String url, String data) {
+            okhttp3.RequestBody body = okhttp3.RequestBody.create(CONTENT_TYPE_FORM, data);
+            okhttp3.Request request = new okhttp3.Request.Builder()
+                    .url(url)
+                    .post(body)
+                    .build();
+            return exec(request);
+        }
+
+
+        @Override
         public String postSSL(String url, Map<String, String> params, String certPath, String certPass) {
             okhttp3.RequestBody formBody = null;
             if (params != null) {
@@ -404,6 +459,23 @@ public class HttpUtils {
                     .url(url)
                     .post(formBody)
                     .build();
+
+            return postSSL(request, certPath, certPass);
+        }
+
+        @Override
+        public String postSSL(String url, String data, String certPath, String certPass) {
+            okhttp3.RequestBody body = okhttp3.RequestBody.create(CONTENT_TYPE_FORM, data);
+            okhttp3.Request request = new okhttp3.Request.Builder()
+                    .url(url)
+                    .post(body)
+                    .build();
+
+            return postSSL(request, certPath, certPass);
+        }
+
+        private String postSSL(okhttp3.Request request, String certPath, String certPass) {
+
 
             InputStream inputStream = null;
             try {
@@ -458,7 +530,7 @@ public class HttpUtils {
                     String ds = response.header("Content-disposition");
                     String fullName = ds.substring(ds.indexOf("filename=\"") + 10, ds.length() - 1);
                     String relName = fullName.substring(0, fullName.lastIndexOf("."));
-                    String suffix = fullName.substring(relName.length()+1);
+                    String suffix = fullName.substring(relName.length() + 1);
 
                     mediaFile.setFullName(fullName);
                     mediaFile.setFileName(relName);
@@ -599,7 +671,45 @@ public class HttpUtils {
         }
 
         @Override
+        public String post(String url, String data) {
+            HttpPost httpPost = new HttpPost(url);
+            StringEntity stringEntity = new StringEntity(data, CHARSET);
+            httpPost.setEntity(stringEntity);
+            return exec(httpPost);
+        }
+
+        @Override
         public String postSSL(String url, Map<String, String> params, String certPath, String certPass) {
+            HttpPost httpPost = new HttpPost(url);
+            try {
+                if (params != null) {
+                    List<NameValuePair> paramList = new ArrayList<NameValuePair>();
+                    Set<Map.Entry<String, String>> set = params.entrySet();
+
+                    for (Map.Entry<String, String> entry : set) {
+                        paramList.add(new BasicNameValuePair(entry.getKey(), entry.getValue()));
+                    }
+
+                    UrlEncodedFormEntity uefEntity = new UrlEncodedFormEntity(paramList, CHARSET);
+                    httpPost.setEntity(uefEntity);
+                }
+            } catch (UnsupportedEncodingException e) {
+                e.printStackTrace();
+            }
+
+            return postSSL(httpPost, certPath, certPass);
+        }
+
+        @Override
+        public String postSSL(String url, String data, String certPath, String certPass) {
+            HttpPost httpPost = new HttpPost(url);
+            StringEntity uefEntity = new StringEntity(data, CHARSET);
+            httpPost.setEntity(uefEntity);
+
+            return postSSL(httpPost, certPath, certPass);
+        }
+
+        private String postSSL(HttpPost httpPost, String certPath, String certPass) {
             CloseableHttpClient httpclient = null;
             InputStream inputStream = null;
             try {
@@ -612,19 +722,6 @@ public class HttpUtils {
                 SSLContext sslcontext = SSLContexts.custom().loadTrustMaterial(clientStore, new TrustSelfSignedStrategy()).build();
 
                 SSLConnectionSocketFactory sslsf = new SSLConnectionSocketFactory(sslcontext, SSLConnectionSocketFactory.getDefaultHostnameVerifier());
-
-                HttpPost httpPost = new HttpPost(url);
-                if (params != null) {
-                    List<NameValuePair> paramList = new ArrayList<NameValuePair>();
-                    Set<Map.Entry<String, String>> set = params.entrySet();
-
-                    for (Map.Entry<String, String> entry : set) {
-                        paramList.add(new BasicNameValuePair(entry.getKey(), entry.getValue()));
-                    }
-
-                    UrlEncodedFormEntity uefEntity = new UrlEncodedFormEntity(paramList, CHARSET);
-                    httpPost.setEntity(uefEntity);
-                }
 
                 httpclient = HttpClients.custom()
                         .setSSLSocketFactory(sslsf)
@@ -668,15 +765,15 @@ public class HttpUtils {
                         } else {
                             BufferedInputStream bis = new BufferedInputStream(entity.getContent());
 
-                            String ds =  response.getLastHeader("Content-disposition").getValue();
+                            String ds = response.getLastHeader("Content-disposition").getValue();
                             String fullName = ds.substring(ds.indexOf("filename=\"") + 10, ds.length() - 1);
                             String relName = fullName.substring(0, fullName.lastIndexOf("."));
-                            String suffix = fullName.substring(relName.length()+1);
+                            String suffix = fullName.substring(relName.length() + 1);
 
                             mediaFile.setFullName(fullName);
                             mediaFile.setFileName(relName);
                             mediaFile.setSuffix(suffix);
-                            mediaFile.setContentLength(entity.getContentLength()+ "");
+                            mediaFile.setContentLength(entity.getContentLength() + "");
                             mediaFile.setFileStream(bis);
                         }
                         return mediaFile;
@@ -776,8 +873,10 @@ public class HttpUtils {
             public X509Certificate[] getAcceptedIssuers() {
                 return null;
             }
+
             public void checkClientTrusted(X509Certificate[] chain, String authType) throws CertificateException {
             }
+
             public void checkServerTrusted(X509Certificate[] chain, String authType) throws CertificateException {
             }
         }
@@ -787,24 +886,23 @@ public class HttpUtils {
 
         private static SSLSocketFactory initSSLSocketFactory() {
             try {
-                TrustManager[] tm = {new TrustAnyTrustManager() };
-                SSLContext sslContext = SSLContext.getInstance("TLS");	// ("TLS", "SunJSSE");
+                TrustManager[] tm = {new TrustAnyTrustManager()};
+                SSLContext sslContext = SSLContext.getInstance("TLS");    // ("TLS", "SunJSSE");
 
                 sslContext.init(null, tm, new java.security.SecureRandom());
                 return sslContext.getSocketFactory();
-            }
-            catch (Exception e) {
+            } catch (Exception e) {
                 throw new RuntimeException(e);
             }
         }
 
         private static HttpURLConnection getHttpConnection(String url, String method, Map<String, String> headers)
-                throws IOException, NoSuchAlgorithmException, NoSuchProviderException, KeyManagementException {
+                throws IOException {
             URL _url = new URL(url);
-            HttpURLConnection conn = (HttpURLConnection)_url.openConnection();
+            HttpURLConnection conn = (HttpURLConnection) _url.openConnection();
             if (conn instanceof HttpsURLConnection) {
-                ((HttpsURLConnection)conn).setSSLSocketFactory(sslSocketFactory);
-                ((HttpsURLConnection)conn).setHostnameVerifier(trustAnyHostnameVerifier);
+                ((HttpsURLConnection) conn).setSSLSocketFactory(sslSocketFactory);
+                ((HttpsURLConnection) conn).setHostnameVerifier(trustAnyHostnameVerifier);
             }
             conn.setRequestMethod(method);
             conn.setDoOutput(true);
@@ -813,7 +911,7 @@ public class HttpUtils {
             conn.setConnectTimeout(20000);
             conn.setReadTimeout(20000);
 
-            conn.setRequestProperty("Content-Type","application/x-www-form-urlencoded");
+            conn.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
             conn.setRequestProperty("User-Agent", DEFAULT_USER_AGENT);
 
             if (headers != null && !headers.isEmpty()) {
@@ -871,6 +969,30 @@ public class HttpUtils {
         }
 
         @Override
+        public String post(String url, String data) {
+            HttpURLConnection conn = null;
+            try {
+                conn = getHttpConnection(url, POST, null);
+                conn.connect();
+
+                if (data != null) {
+                    OutputStream out = conn.getOutputStream();
+                    out.write(data.getBytes(CHARSET));
+                    out.flush();
+                    out.close();
+                }
+
+                return readResponseString(conn);
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            } finally {
+                if (conn != null) {
+                    conn.disconnect();
+                }
+            }
+        }
+
+        @Override
         public String postSSL(String url, Map<String, String> params, String certPath, String certPass) {
             HttpsURLConnection conn = null;
             OutputStream out = null;
@@ -895,7 +1017,7 @@ public class HttpUtils {
                 conn.setDoOutput(true);
                 conn.setDoInput(true);
 
-                conn.setRequestProperty("Content-Type","application/x-www-form-urlencoded");
+                conn.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
                 conn.setRequestProperty("User-Agent", DEFAULT_USER_AGENT);
                 conn.connect();
 
@@ -911,7 +1033,63 @@ public class HttpUtils {
                 reader = new BufferedReader(new InputStreamReader(inputStream, Charsets.UTF_8));
                 StringBuilder sb = new StringBuilder();
                 String line = null;
-                while ((line = reader.readLine()) != null){
+                while ((line = reader.readLine()) != null) {
+                    sb.append(line).append("\n");
+                }
+                return sb.toString();
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            } finally {
+                IOUtils.closeQuietly(out);
+                IOUtils.closeQuietly(reader);
+                IOUtils.closeQuietly(inputStream);
+                if (conn != null) {
+                    conn.disconnect();
+                }
+            }
+        }
+
+        @Override
+        public String postSSL(String url, String data, String certPath, String certPass) {
+            HttpsURLConnection conn = null;
+            OutputStream out = null;
+            InputStream inputStream = null;
+            BufferedReader reader = null;
+            try {
+                KeyStore clientStore = KeyStore.getInstance("PKCS12");
+                clientStore.load(new FileInputStream(certPath), certPass.toCharArray());
+                KeyManagerFactory kmf = KeyManagerFactory.getInstance(KeyManagerFactory.getDefaultAlgorithm());
+                kmf.init(clientStore, certPass.toCharArray());
+                KeyManager[] kms = kmf.getKeyManagers();
+                SSLContext sslContext = SSLContext.getInstance("TLSv1");
+
+                sslContext.init(kms, null, new SecureRandom());
+                HttpsURLConnection.setDefaultSSLSocketFactory(sslContext.getSocketFactory());
+                URL _url = new URL(url);
+                conn = (HttpsURLConnection) _url.openConnection();
+
+                conn.setConnectTimeout(25000);
+                conn.setReadTimeout(25000);
+                conn.setRequestMethod("POST");
+                conn.setDoOutput(true);
+                conn.setDoInput(true);
+
+                conn.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
+                conn.setRequestProperty("User-Agent", DEFAULT_USER_AGENT);
+                conn.connect();
+
+                if (data != null) {
+                    out = conn.getOutputStream();
+                    out.write(data.getBytes(Charsets.UTF_8));
+                    out.flush();
+                    out.close();
+                }
+
+                inputStream = conn.getInputStream();
+                reader = new BufferedReader(new InputStreamReader(inputStream, Charsets.UTF_8));
+                StringBuilder sb = new StringBuilder();
+                String line = null;
+                while ((line = reader.readLine()) != null) {
                     sb.append(line).append("\n");
                 }
                 return sb.toString();
@@ -939,30 +1117,30 @@ public class HttpUtils {
                 // 读取超时 --服务器响应比较慢，增大时间
                 conn.setReadTimeout(25000);
                 conn.setRequestMethod("GET");
-                conn.setRequestProperty("Content-Type","application/x-www-form-urlencoded");
+                conn.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
                 conn.setRequestProperty("User-Agent", DEFAULT_USER_AGENT);
                 conn.setDoOutput(true);
                 conn.setDoInput(true);
                 conn.connect();
 
-                if("text/plain".equalsIgnoreCase(conn.getContentType())){
+                if ("text/plain".equalsIgnoreCase(conn.getContentType())) {
                     // 定义BufferedReader输入流来读取URL的响应
                     InputStream in = conn.getInputStream();
                     BufferedReader read = new BufferedReader(new InputStreamReader(in, Charsets.UTF_8));
                     String valueString = null;
                     StringBuffer bufferRes = new StringBuffer();
-                    while ((valueString = read.readLine()) != null){
+                    while ((valueString = read.readLine()) != null) {
                         bufferRes.append(valueString);
                     }
                     read.close();
                     IOUtils.closeQuietly(in);
                     mediaFile.setError(bufferRes.toString());
-                }else{
+                } else {
                     BufferedInputStream bis = new BufferedInputStream(conn.getInputStream());
                     String ds = conn.getHeaderField("Content-disposition");
                     String fullName = ds.substring(ds.indexOf("filename=\"") + 10, ds.length() - 1);
                     String relName = fullName.substring(0, fullName.lastIndexOf("."));
-                    String suffix = fullName.substring(relName.length()+1);
+                    String suffix = fullName.substring(relName.length() + 1);
 
                     mediaFile.setFullName(fullName);
                     mediaFile.setFileName(relName);
@@ -1038,7 +1216,7 @@ public class HttpUtils {
 
                 StringBuilder mediaData = new StringBuilder();
                 mediaData.append("--").append(BOUNDARY).append("\r\n");
-                mediaData.append("Content-Disposition: form-data;name=\"media\";filename=\""+ file.getName() + "\"\r\n");
+                mediaData.append("Content-Disposition: form-data;name=\"media\";filename=\"" + file.getName() + "\"\r\n");
                 mediaData.append("Content-Type:application/octet-stream\r\n\r\n");
                 byte[] mediaDatas = mediaData.toString().getBytes();
                 out.write(mediaDatas);
@@ -1059,7 +1237,7 @@ public class HttpUtils {
                     StringBuilder paramData = new StringBuilder();
                     for (Map.Entry<String, String> entry : params.entrySet()) {
                         paramData.append("--").append(BOUNDARY).append("\r\n");
-                        paramData.append("Content-Disposition: form-data; name=\""+entry.getKey()+"\"\r\n");
+                        paramData.append("Content-Disposition: form-data; name=\"" + entry.getKey() + "\"\r\n");
                         paramData.append("Content-Type: text/plain; charset=" + CHARSET + "\r\n");
                         paramData.append("Content-Transfer-Encoding: 8bit" + "\r\n");
                         paramData.append("\r\n").append(entry.getValue()).append("\r\n");
@@ -1079,7 +1257,7 @@ public class HttpUtils {
                 String valueString = null;
                 StringBuffer bufferRes = null;
                 bufferRes = new StringBuffer();
-                while ((valueString = read.readLine()) != null){
+                while ((valueString = read.readLine()) != null) {
                     bufferRes.append(valueString);
                 }
                 IOUtils.closeQuietly(in);
@@ -1108,8 +1286,7 @@ public class HttpUtils {
         if (url.indexOf('?') == -1) {
             isFirst = true;
             sb.append('?');
-        }
-        else {
+        } else {
             isFirst = false;
         }
 
@@ -1123,7 +1300,11 @@ public class HttpUtils {
             String key = entry.getKey();
             String value = entry.getValue();
             if (value != null) {
-                try {value = URLEncoder.encode(value, CHARSET);} catch (UnsupportedEncodingException e) {throw new RuntimeException(e);}
+                try {
+                    value = URLEncoder.encode(value, CHARSET);
+                } catch (UnsupportedEncodingException e) {
+                    throw new RuntimeException(e);
+                }
             }
             sb.append(key).append('=').append(value);
         }
@@ -1185,7 +1366,8 @@ public class HttpUtils {
             if (reader != null) {
                 try {
                     reader.close();
-                } catch (IOException e) { }
+                } catch (IOException e) {
+                }
             }
         }
     }
