@@ -20,11 +20,12 @@ public class MenuApi {
 
     /**
      * 创建自定义菜单
+     *
      * @param accessToken
      * @param menu
      * @return
      */
-    public static ApiResult createMenu(String accessToken, Menu menu){
+    public static ApiResult createMenu(String accessToken, Menu menu) {
         if (accessToken == null) {
             throw new RuntimeException("accessToken Cannot be null");
         }
@@ -39,10 +40,11 @@ public class MenuApi {
 
     /**
      * 查询菜单
+     *
      * @param accessToken
      * @return
      */
-    public static ApiResult getMenu(String accessToken){
+    public static ApiResult getMenu(String accessToken) {
         if (accessToken == null) {
             throw new RuntimeException("accessToken Cannot be null");
         }
@@ -54,10 +56,11 @@ public class MenuApi {
 
     /**
      * 删除自定义菜单
+     *
      * @param accessToken
      * @return
      */
-    public static ApiResult deleteMenu(String accessToken){
+    public static ApiResult deleteMenu(String accessToken) {
         if (accessToken == null) {
             throw new RuntimeException("accessToken Cannot be null");
         }

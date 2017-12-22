@@ -3,6 +3,7 @@ package com.rsh.framework.weixin.model.msg;
 /**
  * 事件类型
  * Created By Rsh
+ *
  * @Description
  * @Date: 2017/12/21
  * @Time: 9:23
@@ -19,6 +20,8 @@ public enum Event {
     pic_sysphoto, // 弹出系统拍照发图的事件推送
     pic_photo_or_album, // 弹出拍照或者相册发图的事件推送
     pic_weixin, // 弹出微信相册发图器的事件推送
-    location_select // 弹出地理位置选择器的事件推送
+    location_select, // 弹出地理位置选择器的事件推送
+    MASSSENDJOBFINISH, // 群发结果推送
+    TEMPLATESENDJOBFINISH // 模板消息发送结束推送
 
 }

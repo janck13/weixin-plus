@@ -114,6 +114,9 @@ public class ReceiveMessage extends BaseReceiveMessage {
     @XmlElement(name = "SendLocationInfo")
     private SendLocationInfo sendLocationInfo;
 
+    // 模板消息发送结束事件推送
+    @XmlElement(name = "Status")
+    private String status; // success：成功，failed:user block：用户拒收，failed: system failed：失败
 
     public String getContent() {
         return content;
@@ -297,5 +300,13 @@ public class ReceiveMessage extends BaseReceiveMessage {
 
     public void setSendLocationInfo(SendLocationInfo sendLocationInfo) {
         this.sendLocationInfo = sendLocationInfo;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }

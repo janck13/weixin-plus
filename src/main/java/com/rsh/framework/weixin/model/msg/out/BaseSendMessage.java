@@ -1,5 +1,6 @@
 package com.rsh.framework.weixin.model.msg.out;
 
+import com.alibaba.fastjson.annotation.JSONField;
 import com.rsh.framework.weixin.utils.adapter.AdapterCDATA;
 
 import javax.xml.bind.annotation.XmlElement;
@@ -16,6 +17,7 @@ public abstract class BaseSendMessage {
 
     protected String touser;
     protected String msgtype;
+    protected Customservice customservice;
 
     public String getTouser() {
         return touser;
@@ -35,4 +37,25 @@ public abstract class BaseSendMessage {
 
     public abstract String toJsonString();
 
+    public Customservice getCustomservice() {
+        return customservice;
+    }
+
+    public void setCustomservice(Customservice customservice) {
+        this.customservice = customservice;
+    }
+}
+
+class Customservice {
+
+    @JSONField(name = "kf_account")
+    protected String kfAccount;
+
+    public String getKfAccount() {
+        return kfAccount;
+    }
+
+    public void setKfAccount(String kfAccount) {
+        this.kfAccount = kfAccount;
+    }
 }
