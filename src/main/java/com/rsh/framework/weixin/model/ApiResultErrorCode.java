@@ -15,8 +15,19 @@ public class ApiResultErrorCode {
     private static final Map<Integer, String> errCodeToErrMsg = new HashMap<Integer, String>(){{
         put(-1, "系统繁忙，此时请开发者稍候再试");
         put(0, "请求成功");
+        put(10003, "redirect_uri域名与后台配置不一致");
+        put(10004, "此公众号被封禁");
+        put(10005, "此公众号并没有这些scope的权限");
+        put(10006, "必须关注此测试号");
+        put(10009, "操作太频繁了，请稍后重试");
+        put(10010, "scope不能为空");
+        put(10011, "redirect_uri不能为空");
+        put(10012, "appid不能为空");
+        put(10013, "state不能为空");
+        put(10015, "公众号未授权第三方平台，请检查授权状态");
+        put(10016, "open帐号不允许网页授权");
         put(40001, "获取 access_token 时 AppSecret 错误，或者 access_token 无效。请开发者认真比对 AppSecret 的正确性，或查看是否正在为恰当的公众号调用接口");
-        put(40002, "不合法的凭证类型");
+        put(40002, "不合法的凭证类型，请确保grant_type字段值为client_credential");
         put(40003, "不合法的 OpenID ，请开发者确认 OpenID （该用户）是否已关注公众号，或是否是其他公众号的 OpenID");
         put(40004, "不合法的媒体文件类型");
         put(40005, "不合法的文件类型");
@@ -62,6 +73,7 @@ public class ApiResultErrorCode {
         put(40132, "微信号不合法");
         put(40137, "不支持的图片格式");
         put(40155, "请勿添加其他公众号的主页链接");
+        put(40164, "调用接口的IP地址不在白名单中，请在接口IP白名单中进行设置");
         put(41001, "缺少 access_token 参数");
         put(41002, "缺少 appid 参数");
         put(41003, "缺少 refresh_token 参数");

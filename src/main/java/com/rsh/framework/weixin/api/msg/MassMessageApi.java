@@ -1,9 +1,11 @@
 package com.rsh.framework.weixin.api.msg;
 
 import com.alibaba.fastjson.JSON;
+import com.rsh.framework.weixin.api.base.AccessTokenApi;
 import com.rsh.framework.weixin.model.ApiResult;
 import com.rsh.framework.weixin.model.msg.out.BaseSendMessage;
 import com.rsh.framework.weixin.utils.HttpUtils;
+import com.rsh.framework.weixin.utils.StringUtils;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -29,17 +31,14 @@ public class MassMessageApi {
     /**
      * 根据标签进行群发【订阅号与服务号认证后均可用】
      *
-     * @param accessToken
      * @param json
      * @return
      */
-    public ApiResult sendAll(String accessToken, String json) {
-        if (accessToken == null) {
-            throw new RuntimeException("accessToken Cannot be null");
-        }
-        if (json == null) {
+    public static ApiResult sendAll(String json) {
+        if (StringUtils.isBlank(json)) {
             throw new RuntimeException("json Cannot be null");
         }
+        String accessToken = AccessTokenApi.getAccessToken().getToken();
 
         String url = sendAllUrl;
         url = url.replace("ACCESS_TOKEN", accessToken);
@@ -50,17 +49,14 @@ public class MassMessageApi {
     /**
      * 根据OpenID列表群发【订阅号不可用，服务号认证后可用】
      *
-     * @param accessToken
      * @param json
      * @return
      */
-    public ApiResult send(String accessToken, String json) {
-        if (accessToken == null) {
-            throw new RuntimeException("accessToken Cannot be null");
-        }
-        if (json == null) {
+    public static ApiResult send(String json) {
+        if (StringUtils.isBlank(json)) {
             throw new RuntimeException("json Cannot be null");
         }
+        String accessToken = AccessTokenApi.getAccessToken().getToken();
 
         String url = sendUrl;
         url = url.replace("ACCESS_TOKEN", accessToken);
@@ -71,17 +67,14 @@ public class MassMessageApi {
     /**
      * 删除群发【订阅号与服务号认证后均可用】
      *
-     * @param accessToken
      * @param json
      * @return
      */
-    public ApiResult delete(String accessToken, String json) {
-        if (accessToken == null) {
-            throw new RuntimeException("accessToken Cannot be null");
-        }
-        if (json == null) {
+    public static ApiResult delete(String json) {
+        if (StringUtils.isBlank(json)) {
             throw new RuntimeException("json Cannot be null");
         }
+        String accessToken = AccessTokenApi.getAccessToken().getToken();
 
         String url = deleteUrl;
         url = url.replace("ACCESS_TOKEN", accessToken);
@@ -92,17 +85,14 @@ public class MassMessageApi {
     /**
      * 预览接口【订阅号与服务号认证后均可用】
      *
-     * @param accessToken
      * @param json
      * @return
      */
-    public ApiResult preview(String accessToken, String json) {
-        if (accessToken == null) {
-            throw new RuntimeException("accessToken Cannot be null");
-        }
-        if (json == null) {
+    public static ApiResult preview(String json) {
+        if (StringUtils.isBlank(json)) {
             throw new RuntimeException("json Cannot be null");
         }
+        String accessToken = AccessTokenApi.getAccessToken().getToken();
 
         String url = previewUrl;
         url = url.replace("ACCESS_TOKEN", accessToken);
@@ -114,17 +104,14 @@ public class MassMessageApi {
      * 查询群发消息发送状态【订阅号与服务号认证后均可用】
      * msg_status	消息发送后的状态，SEND_SUCCESS表示发送成功，SENDING表示发送中，SEND_FAIL表示发送失败，DELETE表示已删除
      *
-     * @param accessToken
      * @param json
      * @return
      */
-    public ApiResult getStatus(String accessToken, String json) {
-        if (accessToken == null) {
-            throw new RuntimeException("accessToken Cannot be null");
-        }
-        if (json == null) {
+    public static ApiResult getStatus(String json) {
+        if (StringUtils.isBlank(json)) {
             throw new RuntimeException("json Cannot be null");
         }
+        String accessToken = AccessTokenApi.getAccessToken().getToken();
 
         String url = getUrl;
         url = url.replace("ACCESS_TOKEN", accessToken);
@@ -135,13 +122,10 @@ public class MassMessageApi {
     /**
      * 获取群发速度
      *
-     * @param accessToken
      * @return
      */
-    public ApiResult getSpeed(String accessToken) {
-        if (accessToken == null) {
-            throw new RuntimeException("accessToken Cannot be null");
-        }
+    public static ApiResult getSpeed() {
+        String accessToken = AccessTokenApi.getAccessToken().getToken();
 
         String url = getSpeedrl;
         url = url.replace("ACCESS_TOKEN", accessToken);
@@ -152,19 +136,17 @@ public class MassMessageApi {
     /**
      * 设置群发速度
      *
-     * @param accessToken
-     * @param speed       群发速度的级别，是一个0到4的整数，数字越大表示群发速度越慢。
-     *                    0	80w/分钟
-     *                    1	60w/分钟
-     *                    2	45w/分钟
-     *                    3	30w/分钟
-     *                    4	10w/分钟
+     * @param speed 群发速度的级别，是一个0到4的整数，数字越大表示群发速度越慢。
+     *              0	80w/分钟
+     *              1	60w/分钟
+     *              2	45w/分钟
+     *              3	30w/分钟
+     *              4	10w/分钟
      * @return
      */
-    public ApiResult setSpeed(String accessToken, int speed) {
-        if (accessToken == null) {
-            throw new RuntimeException("accessToken Cannot be null");
-        }
+    public static ApiResult setSpeed(int speed) {
+        String accessToken = AccessTokenApi.getAccessToken().getToken();
+
         Map<String, Integer> param = new HashMap<>();
         param.put("speed", speed);
 

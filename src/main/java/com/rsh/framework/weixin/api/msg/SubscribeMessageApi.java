@@ -1,8 +1,10 @@
 package com.rsh.framework.weixin.api.msg;
 
 import com.alibaba.fastjson.JSON;
+import com.rsh.framework.weixin.api.base.AccessTokenApi;
 import com.rsh.framework.weixin.model.ApiResult;
 import com.rsh.framework.weixin.utils.HttpUtils;
+import com.rsh.framework.weixin.utils.StringUtils;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
@@ -28,7 +30,7 @@ import java.util.Map;
  */
 public class SubscribeMessageApi {
 
-    private static final String subscribemsgUrl = "https://mp.weixin.qq.com/mp/subscribemsg?action=ACTION&appid=APPID&scene=SCENE&template_id=TEMPLATE_ID&redirect_url=REDIRECT_URL&reserved=RESERVED#wechat_redirect";
+    private static final String authorizeUrl = "https://mp.weixin.qq.com/mp/subscribemsg?action=ACTION&appid=APPID&scene=SCENE&template_id=TEMPLATE_ID&redirect_url=REDIRECT_URL&reserved=RESERVED#wechat_redirect";
     private static final String pushSubscribemsgUrl = "https://api.weixin.qq.com/cgi-bin/message/template/subscribe?access_token=ACCESS_TOKEN";
 
     /**
@@ -41,15 +43,16 @@ public class SubscribeMessageApi {
      * @param reserved    用于保持请求和回调的状态，授权请后原样带回给第三方。该参数可用于防止csrf攻击（跨站请求伪造攻击），建议第三方带上该参数，可设置为简单的随机数加session进行校验，开发者可以填写a-zA-Z0-9的参数值，最多128字节，要求做urlencode
      * @return
      */
-    public String getSubscribeMsgAuthUrl(String appId, int scene, String templateId, String redirectUrl, String reserved) {
-        if (redirectUrl != null) {
+    public static String getAuthorizeURL(String appId, int scene, String templateId, String redirectUrl, String reserved) {
+        if (StringUtils.isNotBlank(redirectUrl)) {
             try {
                 redirectUrl = URLEncoder.encode(redirectUrl, "UTF-8");
             } catch (UnsupportedEncodingException e) {
                 e.printStackTrace();
             }
         }
-        return subscribemsgUrl.replace("ACTION", "get_confirm")
+
+        return authorizeUrl.replace("ACTION", "get_confirm")
                 .replace("APPID", appId)
                 .replace("SCENE", scene + "")
                 .replace("TEMPLATE_ID", templateId)
@@ -60,17 +63,14 @@ public class SubscribeMessageApi {
     /**
      * 推送订阅模板消息给到授权微信用户
      *
-     * @param accessToken
-     * @param json        消息json报文
+     * @param json 消息json报文
      * @return
      */
-    public ApiResult pushSubscribeMsg(String accessToken, String json) {
-        if (accessToken == null) {
-            throw new RuntimeException("accessToken Cannot be null");
-        }
-        if (json == null) {
+    public static ApiResult pushSubscribeMsg(String json) {
+        if (StringUtils.isBlank(json)) {
             throw new RuntimeException("json Cannot be null");
         }
+        String accessToken = AccessTokenApi.getAccessToken().getToken();
 
         String url = pushSubscribemsgUrl;
         url = url.replace("ACCESS_TOKEN", accessToken);

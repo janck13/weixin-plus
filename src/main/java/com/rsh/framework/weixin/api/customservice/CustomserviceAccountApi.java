@@ -1,9 +1,11 @@
 package com.rsh.framework.weixin.api.customservice;
 
+import com.rsh.framework.weixin.api.base.AccessTokenApi;
 import com.rsh.framework.weixin.model.ApiResult;
 import com.rsh.framework.weixin.model.customservice.Kfaccount;
 import com.rsh.framework.weixin.model.menu.Menu;
 import com.rsh.framework.weixin.utils.HttpUtils;
+import com.rsh.framework.weixin.utils.StringUtils;
 
 import java.io.File;
 
@@ -26,17 +28,15 @@ public class CustomserviceAccountApi {
     /**
      * 添加客服帐号
      *
-     * @param accessToken
      * @param kfaccount
      * @return
      */
-    public static ApiResult addAccount(String accessToken, Kfaccount kfaccount) {
-        if (accessToken == null) {
-            throw new RuntimeException("accessToken Cannot be null");
-        }
+    public static ApiResult addAccount(Kfaccount kfaccount) {
         if (kfaccount == null) {
             throw new RuntimeException("kfaccount Cannot be null");
         }
+        String accessToken = AccessTokenApi.getAccessToken().getToken();
+
         String url = addAccountUrl;
         url = url.replace("ACCESS_TOKEN", accessToken);
         String jsonResult = HttpUtils.post(url, kfaccount.toJsonString());
@@ -46,17 +46,15 @@ public class CustomserviceAccountApi {
     /**
      * 修改客服帐号
      *
-     * @param accessToken
      * @param kfaccount
      * @return
      */
-    public static ApiResult updateAccount(String accessToken, Kfaccount kfaccount) {
-        if (accessToken == null) {
-            throw new RuntimeException("accessToken Cannot be null");
-        }
+    public static ApiResult updateAccount(Kfaccount kfaccount) {
         if (kfaccount == null) {
             throw new RuntimeException("kfaccount Cannot be null");
         }
+        String accessToken = AccessTokenApi.getAccessToken().getToken();
+
         String url = updateAccountUrl;
         url = url.replace("ACCESS_TOKEN", accessToken);
         String jsonResult = HttpUtils.post(url, kfaccount.toJsonString());
@@ -66,17 +64,15 @@ public class CustomserviceAccountApi {
     /**
      * 删除客服帐号
      *
-     * @param accessToken
      * @param kfaccount
      * @return
      */
-    public static ApiResult deleteAccount(String accessToken, Kfaccount kfaccount) {
-        if (accessToken == null) {
-            throw new RuntimeException("accessToken Cannot be null");
-        }
+    public static ApiResult deleteAccount(Kfaccount kfaccount) {
         if (kfaccount == null) {
             throw new RuntimeException("kfaccount Cannot be null");
         }
+        String accessToken = AccessTokenApi.getAccessToken().getToken();
+
         String url = deleteAccountUrl;
         url = url.replace("ACCESS_TOKEN", accessToken);
         String jsonResult = HttpUtils.post(url, kfaccount.toJsonString());
@@ -86,17 +82,19 @@ public class CustomserviceAccountApi {
     /**
      * 设置客服帐号的头像
      *
-     * @param accessToken
      * @param kfaccount
+     * @param headImg
      * @return
      */
-    public static ApiResult updateAccountHeadimg(String accessToken, String kfaccount, File headImg) {
-        if (accessToken == null) {
-            throw new RuntimeException("accessToken Cannot be null");
-        }
-        if (kfaccount == null) {
+    public static ApiResult updateAccountHeadimg(String kfaccount, File headImg) {
+        if (StringUtils.isBlank(kfaccount)) {
             throw new RuntimeException("kfaccount Cannot be null");
         }
+        if (headImg == null || !headImg.exists()) {
+            throw new RuntimeException("headImg file is null or not exists");
+        }
+        String accessToken = AccessTokenApi.getAccessToken().getToken();
+
         String url = uploadAccountHeadimgUrl;
         url = url.replace("ACCESS_TOKEN", accessToken);
         url = url + kfaccount;
@@ -107,13 +105,11 @@ public class CustomserviceAccountApi {
     /**
      * 获取所有客服账号
      *
-     * @param accessToken
      * @return
      */
-    public static ApiResult getAccountList(String accessToken) {
-        if (accessToken == null) {
-            throw new RuntimeException("accessToken Cannot be null");
-        }
+    public static ApiResult getAccountList() {
+        String accessToken = AccessTokenApi.getAccessToken().getToken();
+
         String url = getAccountListUrl;
         url = url.replace("ACCESS_TOKEN", accessToken);
         String jsonResult = HttpUtils.get(url);

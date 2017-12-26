@@ -1,9 +1,11 @@
 package com.rsh.framework.weixin.api.msg;
 
 import com.alibaba.fastjson.JSON;
+import com.rsh.framework.weixin.api.base.AccessTokenApi;
 import com.rsh.framework.weixin.model.ApiResult;
 import com.rsh.framework.weixin.model.msg.out.BaseSendMessage;
 import com.rsh.framework.weixin.utils.HttpUtils;
+import com.rsh.framework.weixin.utils.StringUtils;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -24,14 +26,11 @@ public class CustomserviceMessageApi {
     /**
      * 发消息
      *
-     * @param accessToken
      * @param baseSendMessage
      * @return
      */
-    public ApiResult sendMessage(String accessToken, BaseSendMessage baseSendMessage) {
-        if (accessToken == null) {
-            throw new RuntimeException("accessToken Cannot be null");
-        }
+    public static ApiResult sendMessage(BaseSendMessage baseSendMessage) {
+        String accessToken = AccessTokenApi.getAccessToken().getToken();
 
         String url = sendUrl;
         url = url.replace("ACCESS_TOKEN", accessToken);
@@ -42,18 +41,15 @@ public class CustomserviceMessageApi {
     /**
      * 客服输入状态
      *
-     * @param accessToken
      * @param touserOpenId 普通用户（openid）
      * @param isTyping     true:对用户下发“正在输入"状态，false:取消对用户的”正在输入"状态
      * @return
      */
-    public ApiResult typing(String accessToken, String touserOpenId, boolean isTyping) {
-        if (accessToken == null) {
-            throw new RuntimeException("accessToken Cannot be null");
-        }
-        if (touserOpenId == null) {
+    public static ApiResult typing(String touserOpenId, boolean isTyping) {
+        if (StringUtils.isBlank(touserOpenId)) {
             throw new RuntimeException("touserOpenId Cannot be null");
         }
+        String accessToken = AccessTokenApi.getAccessToken().getToken();
 
         Map<String, String> param = new HashMap<>();
         param.put("touser", touserOpenId);

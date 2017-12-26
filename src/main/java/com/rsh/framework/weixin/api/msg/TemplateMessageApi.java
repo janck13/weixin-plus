@@ -1,8 +1,10 @@
 package com.rsh.framework.weixin.api.msg;
 
 import com.alibaba.fastjson.JSON;
+import com.rsh.framework.weixin.api.base.AccessTokenApi;
 import com.rsh.framework.weixin.model.ApiResult;
 import com.rsh.framework.weixin.utils.HttpUtils;
+import com.rsh.framework.weixin.utils.StringUtils;
 
 import java.util.HashMap;
 import java.util.List;
@@ -29,21 +31,18 @@ public class TemplateMessageApi {
     /**
      * 设置所属行业
      *
-     * @param accessToken
      * @param industryId1 公众号模板消息所属行业编号
      * @param industryId2 公众号模板消息所属行业编号
      * @return
      */
-    public ApiResult setIndustry(String accessToken, String industryId1, String industryId2) {
-        if (accessToken == null) {
-            throw new RuntimeException("accessToken Cannot be null");
-        }
-        if (industryId1 == null) {
+    public static ApiResult setIndustry(String industryId1, String industryId2) {
+        if (StringUtils.isBlank(industryId1)) {
             throw new RuntimeException("industryId1 Cannot be null");
         }
-        if (industryId2 == null) {
+        if (StringUtils.isBlank(industryId2)) {
             throw new RuntimeException("industryId2 Cannot be null");
         }
+        String accessToken = AccessTokenApi.getAccessToken().getToken();
 
         Map<String, String> param = new HashMap<>();
         param.put("industry_id1", industryId1);
@@ -58,13 +57,10 @@ public class TemplateMessageApi {
     /**
      * 获取设置的行业信息
      *
-     * @param accessToken
      * @return
      */
-    public ApiResult getIndustry(String accessToken) {
-        if (accessToken == null) {
-            throw new RuntimeException("accessToken Cannot be null");
-        }
+    public static ApiResult getIndustry() {
+        String accessToken = AccessTokenApi.getAccessToken().getToken();
 
         String url = getIndustryUrl;
         url = url.replace("ACCESS_TOKEN", accessToken);
@@ -75,17 +71,14 @@ public class TemplateMessageApi {
     /**
      * 获得模板ID
      *
-     * @param accessToken
      * @param templateIdShort 模板库中模板的编号，有“TM**”和“OPENTMTM**”等形式
      * @return
      */
-    public ApiResult addTemplate(String accessToken, String templateIdShort) {
-        if (accessToken == null) {
-            throw new RuntimeException("accessToken Cannot be null");
-        }
-        if (templateIdShort == null) {
+    public static ApiResult getTemplateId(String templateIdShort) {
+        if (StringUtils.isBlank(templateIdShort)) {
             throw new RuntimeException("templateIdShort Cannot be null");
         }
+        String accessToken = AccessTokenApi.getAccessToken().getToken();
 
         Map<String, String> param = new HashMap<>();
         param.put("template_id_short", templateIdShort);
@@ -99,13 +92,10 @@ public class TemplateMessageApi {
     /**
      * 获取模板列表
      *
-     * @param accessToken
      * @return
      */
-    public ApiResult getAllPrivateTemplate(String accessToken) {
-        if (accessToken == null) {
-            throw new RuntimeException("accessToken Cannot be null");
-        }
+    public static ApiResult getAllPrivateTemplate() {
+        String accessToken = AccessTokenApi.getAccessToken().getToken();
 
         String url = getAllPrivateTemplateUrl;
         url = url.replace("ACCESS_TOKEN", accessToken);
@@ -116,17 +106,14 @@ public class TemplateMessageApi {
     /**
      * 删除模板
      *
-     * @param accessToken
      * @param templateId  公众帐号下模板消息ID
      * @return
      */
-    public ApiResult deletePrivateTemplate(String accessToken, String templateId) {
-        if (accessToken == null) {
-            throw new RuntimeException("accessToken Cannot be null");
-        }
-        if (templateId == null) {
+    public static ApiResult deletePrivateTemplate(String templateId) {
+        if (StringUtils.isBlank(templateId)) {
             throw new RuntimeException("templateId Cannot be null");
         }
+        String accessToken = AccessTokenApi.getAccessToken().getToken();
 
         Map<String, String> param = new HashMap<>();
         param.put("template_id", templateId);
@@ -140,17 +127,14 @@ public class TemplateMessageApi {
     /**
      * 发送模板消息
      *
-     * @param accessToken
      * @param json        post报文
      * @return
      */
-    public ApiResult sendTemplateMessage(String accessToken, String json) {
-        if (accessToken == null) {
-            throw new RuntimeException("accessToken Cannot be null");
-        }
-        if (json == null) {
+    public static ApiResult sendTemplateMessage(String json) {
+        if (StringUtils.isBlank(json)) {
             throw new RuntimeException("json Cannot be null");
         }
+        String accessToken = AccessTokenApi.getAccessToken().getToken();
 
         String url = sendTemplateMessageUrl;
         url = url.replace("ACCESS_TOKEN", accessToken);

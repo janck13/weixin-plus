@@ -19,8 +19,10 @@ public class RetryUtils {
      * 回调结果检查
      */
     public interface ResultCheck {
-        boolean matching();
+        // 判断是否成功
+        boolean isSuccessful();
 
+        // 返回接口json字符串
         String getJson();
     }
 
@@ -33,7 +35,6 @@ public class RetryUtils {
      * @return V 结果
      */
     public static <V extends ResultCheck> V retryOnException(int retryLimit, java.util.concurrent.Callable<V> retryCallable) {
-
         V v = null;
         for (int i = 0; i < retryLimit; i++) {
             try {
@@ -41,7 +42,9 @@ public class RetryUtils {
             } catch (Exception e) {
                 logger.warn("retry on " + (i + 1) + " times v = " + (v == null ? null : v.getJson()), e);
             }
-            if (null != v && v.matching()) break;
+            if (null != v && v.isSuccessful()) {
+                break;
+            }
             logger.error("retry on " + (i + 1) + " times but not matching v = " + (v == null ? null : v.getJson()));
         }
         return v;
@@ -67,8 +70,11 @@ public class RetryUtils {
             } catch (Exception e) {
                 logger.warn("retry on " + (i + 1) + " times v = " + (v == null ? null : v.getJson()), e);
             }
-            if (null != v && v.matching()) break;
+            if (null != v && v.isSuccessful()) {
+                break;
+            }
             logger.error("retry on " + (i + 1) + " times but not matching v = " + (v == null ? null : v.getJson()));
+            // 休眠
             Thread.sleep(sleepMillis);
         }
         return v;

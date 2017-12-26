@@ -1,8 +1,10 @@
 package com.rsh.framework.weixin.api.menu;
 
+import com.rsh.framework.weixin.api.base.AccessTokenApi;
 import com.rsh.framework.weixin.model.ApiResult;
 import com.rsh.framework.weixin.model.menu.Menu;
 import com.rsh.framework.weixin.utils.HttpUtils;
+import com.rsh.framework.weixin.utils.StringUtils;
 
 /**
  * 自定义菜单接口
@@ -21,17 +23,15 @@ public class MenuApi {
     /**
      * 创建自定义菜单
      *
-     * @param accessToken
      * @param menu
      * @return
      */
-    public static ApiResult createMenu(String accessToken, Menu menu) {
-        if (accessToken == null) {
-            throw new RuntimeException("accessToken Cannot be null");
-        }
+    public static ApiResult createMenu(Menu menu) {
         if (menu == null) {
             throw new RuntimeException("menu Cannot be null");
         }
+        String accessToken = AccessTokenApi.getAccessToken().getToken();
+
         String url = createMenuUrl;
         url = url.replace("ACCESS_TOKEN", accessToken);
         String jsonResult = HttpUtils.post(url, menu.toJsonString());
@@ -41,13 +41,11 @@ public class MenuApi {
     /**
      * 查询菜单
      *
-     * @param accessToken
      * @return
      */
-    public static ApiResult getMenu(String accessToken) {
-        if (accessToken == null) {
-            throw new RuntimeException("accessToken Cannot be null");
-        }
+    public static ApiResult getMenu() {
+        String accessToken = AccessTokenApi.getAccessToken().getToken();
+
         String url = getMenuUrl;
         url = url.replace("ACCESS_TOKEN", accessToken);
         String jsonResult = HttpUtils.get(url);
@@ -57,13 +55,11 @@ public class MenuApi {
     /**
      * 删除自定义菜单
      *
-     * @param accessToken
      * @return
      */
-    public static ApiResult deleteMenu(String accessToken) {
-        if (accessToken == null) {
-            throw new RuntimeException("accessToken Cannot be null");
-        }
+    public static ApiResult deleteMenu() {
+        String accessToken = AccessTokenApi.getAccessToken().getToken();
+
         String url = deleteMenuUrl;
         url = url.replace("ACCESS_TOKEN", accessToken);
         String jsonResult = HttpUtils.get(url);
