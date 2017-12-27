@@ -63,7 +63,8 @@ public class ApiResult implements Serializable {
      */
     public boolean isSucceed() {
         Integer errorCode = getErrorCode();
-        return (errorCode != null && errorCode == 0);
+        // 没有errorCode或者errorCode==0 时成功
+        return (errorCode == null || errorCode == 0);
     }
 
     public Integer getErrorCode() {

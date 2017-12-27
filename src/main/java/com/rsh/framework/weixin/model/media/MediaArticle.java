@@ -25,11 +25,17 @@ public class MediaArticle implements Serializable {
     @JSONField(name = "digest")
     private String digest; // 图文消息的摘要，仅有单图文消息才有摘要，多图文此处为空。如果本字段为没有填写，则默认抓取正文前64个字。
     @JSONField(name = "show_cover_pic")
-    private String showCoverPic; // 是否显示封面，0为false，即不显示，1为true，即显示
+    private int showCoverPic; // 是否显示封面，0为false，即不显示，1为true，即显示
     @JSONField(name = "content")
     private String content; // 图文消息的具体内容，支持HTML标签，必须少于2万字符，小于1M，且此处会去除JS,涉及图片url必须来源 "上传图文消息内的图片获取URL"接口获取。外部图片url将被过滤。
     @JSONField(name = "content_source_url")
     private String contentSourceUrl; // 图文消息的原文地址，即点击“阅读原文”后的URL
+
+    // 以下字段为【图文消息评论能力管理-新增永久素材】新增字段
+    @JSONField(name = "need_open_comment")
+    private Integer needOpenComment; // 是否打开评论，0不打开，1打开
+    @JSONField(name = "only_fans_can_comment")
+    private Integer onlyFansCanComment; // 是否粉丝才可评论，0所有人可评论，1粉丝才可评论
 
     public String getTitle() {
         return title;
@@ -67,11 +73,11 @@ public class MediaArticle implements Serializable {
         this.digest = digest;
     }
 
-    public String getShowCoverPic() {
+    public int getShowCoverPic() {
         return showCoverPic;
     }
 
-    public void setShowCoverPic(String showCoverPic) {
+    public void setShowCoverPic(int showCoverPic) {
         this.showCoverPic = showCoverPic;
     }
 
@@ -89,5 +95,21 @@ public class MediaArticle implements Serializable {
 
     public void setContentSourceUrl(String contentSourceUrl) {
         this.contentSourceUrl = contentSourceUrl;
+    }
+
+    public Integer getNeedOpenComment() {
+        return needOpenComment;
+    }
+
+    public void setNeedOpenComment(Integer needOpenComment) {
+        this.needOpenComment = needOpenComment;
+    }
+
+    public Integer getOnlyFansCanComment() {
+        return onlyFansCanComment;
+    }
+
+    public void setOnlyFansCanComment(Integer onlyFansCanComment) {
+        this.onlyFansCanComment = onlyFansCanComment;
     }
 }
