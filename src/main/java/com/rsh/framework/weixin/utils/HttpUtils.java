@@ -1,6 +1,6 @@
 package com.rsh.framework.weixin.utils;
 
-import com.rsh.framework.weixin.model.msg.MediaFile;
+import com.rsh.framework.weixin.model.media.MediaFile;
 import com.squareup.okhttp.FormEncodingBuilder;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpStatus;
@@ -33,10 +33,7 @@ import java.security.KeyStore;
 import java.security.SecureRandom;
 import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
@@ -84,6 +81,10 @@ public class HttpUtils {
         return delegate.download(url);
     }
 
+    public static MediaFile download(String url, String data) {
+        return delegate.download(url, data);
+    }
+
     public static InputStream download(String url, Map<String, String> params) {
         return delegate.download(url, params);
     }
@@ -111,6 +112,8 @@ public class HttpUtils {
         String postSSL(String url, String data, String certPath, String certPass);
 
         MediaFile download(String url);
+
+        MediaFile download(String url, String data);
 
         InputStream download(String url, Map<String, String> params);
 
@@ -284,8 +287,19 @@ public class HttpUtils {
 
         @Override
         public MediaFile download(String url) {
-            com.squareup.okhttp.Request request = new com.squareup.okhttp.Request.Builder().url(url).get().build();
+            return download(url, "");
+        }
+
+        @Override
+        public MediaFile download(String url, String data) {
             try {
+                com.squareup.okhttp.Request request;
+                if (StringUtils.isNotBlank(data)) {
+                    com.squareup.okhttp.RequestBody body = com.squareup.okhttp.RequestBody.create(CONTENT_TYPE_FORM, data);
+                    request = new com.squareup.okhttp.Request.Builder().url(url).post(body).build();
+                } else {
+                    request = new com.squareup.okhttp.Request.Builder().url(url).get().build();
+                }
                 com.squareup.okhttp.Response response = httpClient.newCall(request).execute();
 
                 if (!response.isSuccessful()) throw new RuntimeException("Unexpected code " + response);
@@ -294,7 +308,7 @@ public class HttpUtils {
                 com.squareup.okhttp.MediaType mediaType = body.contentType();
                 MediaFile mediaFile = new MediaFile();
                 if (mediaType.type().equals("text")) {
-                    mediaFile.setError(body.string());
+                    mediaFile.setContent(body.string());
                 } else {
                     BufferedInputStream bis = new BufferedInputStream(body.byteStream());
 
@@ -338,7 +352,6 @@ public class HttpUtils {
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
-
         }
 
         @Override
@@ -351,10 +364,8 @@ public class HttpUtils {
                     .addFormDataPart("media", file.getName(), fileBody);
 
             if (params != null) {
-                if (params != null) {
-                    for (Map.Entry<String, String> entry : params.entrySet()) {
-                        builder.addFormDataPart(entry.getKey(), entry.getValue());
-                    }
+                for (Map.Entry<String, String> entry : params.entrySet()) {
+                    builder.addFormDataPart(entry.getKey(), entry.getValue());
                 }
                 //builder.addFormDataPart("description", params);
             }
@@ -475,8 +486,6 @@ public class HttpUtils {
         }
 
         private String postSSL(okhttp3.Request request, String certPath, String certPass) {
-
-
             InputStream inputStream = null;
             try {
                 KeyStore clientStore = KeyStore.getInstance("PKCS12");
@@ -488,15 +497,22 @@ public class HttpUtils {
                 kmf.init(clientStore, passArray);
                 KeyManager[] kms = kmf.getKeyManagers();
                 SSLContext sslContext = SSLContext.getInstance("TLSv1");
-
                 sslContext.init(kms, null, new SecureRandom());
+
+                TrustManagerFactory trustManagerFactory = TrustManagerFactory.getInstance(TrustManagerFactory.getDefaultAlgorithm());
+                trustManagerFactory.init(clientStore);
+                TrustManager[] trustManagers = trustManagerFactory.getTrustManagers();
+                if (trustManagers.length != 1 || !(trustManagers[0] instanceof X509TrustManager)) {
+                    throw new IllegalStateException("Unexpected default trust managers:" + Arrays.toString(trustManagers));
+                }
+                X509TrustManager trustManager = (X509TrustManager) trustManagers[0];
 
                 okhttp3.OkHttpClient httpsClient = new okhttp3.OkHttpClient()
                         .newBuilder()
                         .connectTimeout(10, TimeUnit.SECONDS)
                         .writeTimeout(10, TimeUnit.SECONDS)
                         .readTimeout(30, TimeUnit.SECONDS)
-                        .sslSocketFactory(sslContext.getSocketFactory())
+                        .sslSocketFactory(sslContext.getSocketFactory(), trustManager)
                         .build();
 
                 okhttp3.Response response = httpsClient.newCall(request).execute();
@@ -513,8 +529,19 @@ public class HttpUtils {
 
         @Override
         public MediaFile download(String url) {
-            okhttp3.Request request = new okhttp3.Request.Builder().url(url).get().build();
+            return download(url, "");
+        }
+
+        @Override
+        public MediaFile download(String url, String data) {
             try {
+                okhttp3.Request request;
+                if (StringUtils.isNotBlank(data)) {
+                    okhttp3.RequestBody body = okhttp3.RequestBody.create(CONTENT_TYPE_FORM, data);
+                    request = new okhttp3.Request.Builder().url(url).post(body).build();
+                } else {
+                    request = new okhttp3.Request.Builder().url(url).get().build();
+                }
                 okhttp3.Response response = httpClient.newCall(request).execute();
 
                 if (!response.isSuccessful()) throw new RuntimeException("Unexpected code " + response);
@@ -523,7 +550,7 @@ public class HttpUtils {
                 okhttp3.MediaType mediaType = body.contentType();
                 MediaFile mediaFile = new MediaFile();
                 if (mediaType.type().equals("text")) {
-                    mediaFile.setError(body.string());
+                    mediaFile.setContent(body.string());
                 } else {
                     BufferedInputStream bis = new BufferedInputStream(body.byteStream());
 
@@ -581,10 +608,8 @@ public class HttpUtils {
                     .addFormDataPart("media", file.getName(), fileBody);
 
             if (params != null) {
-                if (params != null) {
-                    for (Map.Entry<String, String> entry : params.entrySet()) {
-                        builder.addFormDataPart(entry.getKey(), entry.getValue());
-                    }
+                for (Map.Entry<String, String> entry : params.entrySet()) {
+                    builder.addFormDataPart(entry.getKey(), entry.getValue());
                 }
                 //builder.addFormDataPart("description", params);
             }
@@ -753,15 +778,23 @@ public class HttpUtils {
 
         @Override
         public MediaFile download(String url) {
+            return download(url, "");
+        }
+
+        @Override
+        public MediaFile download(String url, String data) {
             try {
                 HttpPost httpPost = new HttpPost(url);
+                if (StringUtils.isNotBlank(data)) {
+                    httpPost.setEntity(new StringEntity(data, Charsets.UTF_8));
+                }
                 try (CloseableHttpResponse response = httpclient.execute(httpPost);) {
                     if (HttpStatus.SC_OK == response.getStatusLine().getStatusCode()) {
                         HttpEntity entity = response.getEntity();
                         MediaFile mediaFile = new MediaFile();
                         mediaFile.setContentType(entity.getContentType().getValue());
                         if ("text/plain".equalsIgnoreCase(entity.getContentType().getValue())) {
-                            mediaFile.setError(EntityUtils.toString(entity, CHARSET));
+                            mediaFile.setContent(EntityUtils.toString(entity, CHARSET));
                         } else {
                             BufferedInputStream bis = new BufferedInputStream(entity.getContent());
 
@@ -1107,6 +1140,11 @@ public class HttpUtils {
 
         @Override
         public MediaFile download(String url) {
+            return download(url, "");
+        }
+
+        @Override
+        public MediaFile download(String url, String data) {
             HttpURLConnection conn = null;
             try {
                 MediaFile mediaFile = new MediaFile();
@@ -1123,6 +1161,13 @@ public class HttpUtils {
                 conn.setDoInput(true);
                 conn.connect();
 
+                if (StringUtils.isNotBlank(data)) {
+                    OutputStream out = conn.getOutputStream();
+                    out.write(data.getBytes(Charsets.UTF_8));
+                    out.flush();
+                    IOUtils.closeQuietly(out);
+                }
+
                 if ("text/plain".equalsIgnoreCase(conn.getContentType())) {
                     // 定义BufferedReader输入流来读取URL的响应
                     InputStream in = conn.getInputStream();
@@ -1134,7 +1179,7 @@ public class HttpUtils {
                     }
                     read.close();
                     IOUtils.closeQuietly(in);
-                    mediaFile.setError(bufferRes.toString());
+                    mediaFile.setContent(bufferRes.toString());
                 } else {
                     BufferedInputStream bis = new BufferedInputStream(conn.getInputStream());
                     String ds = conn.getHeaderField("Content-disposition");

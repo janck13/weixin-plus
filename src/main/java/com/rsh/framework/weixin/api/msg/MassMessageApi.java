@@ -2,6 +2,7 @@ package com.rsh.framework.weixin.api.msg;
 
 import com.alibaba.fastjson.JSON;
 import com.rsh.framework.weixin.api.base.AccessTokenApi;
+import com.rsh.framework.weixin.exception.WeixinApiException;
 import com.rsh.framework.weixin.model.ApiResult;
 import com.rsh.framework.weixin.model.msg.out.BaseSendMessage;
 import com.rsh.framework.weixin.utils.HttpUtils;
@@ -36,7 +37,7 @@ public class MassMessageApi {
      */
     public static ApiResult sendAll(String json) {
         if (StringUtils.isBlank(json)) {
-            throw new RuntimeException("json Cannot be null");
+            throw new WeixinApiException("json Cannot be null");
         }
         String accessToken = AccessTokenApi.getAccessToken().getToken();
 
@@ -54,7 +55,7 @@ public class MassMessageApi {
      */
     public static ApiResult send(String json) {
         if (StringUtils.isBlank(json)) {
-            throw new RuntimeException("json Cannot be null");
+            throw new WeixinApiException("json Cannot be null");
         }
         String accessToken = AccessTokenApi.getAccessToken().getToken();
 
@@ -72,7 +73,7 @@ public class MassMessageApi {
      */
     public static ApiResult delete(String json) {
         if (StringUtils.isBlank(json)) {
-            throw new RuntimeException("json Cannot be null");
+            throw new WeixinApiException("json Cannot be null");
         }
         String accessToken = AccessTokenApi.getAccessToken().getToken();
 
@@ -90,7 +91,7 @@ public class MassMessageApi {
      */
     public static ApiResult preview(String json) {
         if (StringUtils.isBlank(json)) {
-            throw new RuntimeException("json Cannot be null");
+            throw new WeixinApiException("json Cannot be null");
         }
         String accessToken = AccessTokenApi.getAccessToken().getToken();
 
@@ -109,7 +110,7 @@ public class MassMessageApi {
      */
     public static ApiResult getStatus(String json) {
         if (StringUtils.isBlank(json)) {
-            throw new RuntimeException("json Cannot be null");
+            throw new WeixinApiException("json Cannot be null");
         }
         String accessToken = AccessTokenApi.getAccessToken().getToken();
 

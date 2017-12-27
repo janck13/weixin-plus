@@ -2,6 +2,7 @@ package com.rsh.framework.weixin.api.msg;
 
 import com.alibaba.fastjson.JSON;
 import com.rsh.framework.weixin.api.base.AccessTokenApi;
+import com.rsh.framework.weixin.exception.WeixinApiException;
 import com.rsh.framework.weixin.model.ApiResult;
 import com.rsh.framework.weixin.model.msg.out.BaseSendMessage;
 import com.rsh.framework.weixin.utils.HttpUtils;
@@ -47,7 +48,7 @@ public class CustomserviceMessageApi {
      */
     public static ApiResult typing(String touserOpenId, boolean isTyping) {
         if (StringUtils.isBlank(touserOpenId)) {
-            throw new RuntimeException("touserOpenId Cannot be null");
+            throw new WeixinApiException("touserOpenId Cannot be null");
         }
         String accessToken = AccessTokenApi.getAccessToken().getToken();
 

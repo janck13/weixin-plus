@@ -1,5 +1,6 @@
 package com.rsh.framework.weixin.api.web;
 
+import com.rsh.framework.weixin.exception.WeixinApiException;
 import com.rsh.framework.weixin.model.ApiResult;
 import com.rsh.framework.weixin.model.web.WebAccessToken;
 import com.rsh.framework.weixin.model.web.WebUserinfo;
@@ -72,13 +73,13 @@ public class WebAccessTokenApi {
      */
     public static WebAccessToken getWebAccessToken(String appid, String appsecret, String code) {
         if (StringUtils.isBlank(appid)) {
-            throw new RuntimeException("appid Cannot be null");
+            throw new WeixinApiException("appid Cannot be null");
         }
         if (StringUtils.isBlank(appsecret)) {
-            throw new RuntimeException("appsecret Cannot be null");
+            throw new WeixinApiException("appsecret Cannot be null");
         }
         if (StringUtils.isBlank(code)) {
-            throw new RuntimeException("code Cannot be null");
+            throw new WeixinApiException("code Cannot be null");
         }
 
         final String url = getWebAccessTokenUrl.replace("APPID", appid).replace("SECRET", appsecret).replace("CODE", code);
@@ -102,10 +103,10 @@ public class WebAccessTokenApi {
      */
     public static WebAccessToken refreshWebAccessToken(String appid, String refreshToken) {
         if (StringUtils.isBlank(appid)) {
-            throw new RuntimeException("appid Cannot be null");
+            throw new WeixinApiException("appid Cannot be null");
         }
         if (StringUtils.isBlank(refreshToken)) {
-            throw new RuntimeException("refreshToken Cannot be null");
+            throw new WeixinApiException("refreshToken Cannot be null");
         }
 
         final String url = refreshWebAccessTokenUrl.replace("APPID", appid).replace("REFRESH_TOKEN", refreshToken);
@@ -128,10 +129,10 @@ public class WebAccessTokenApi {
      */
     public static WebUserinfo getUserinfo(String openid, String accessToken) {
         if (StringUtils.isBlank(openid)) {
-            throw new RuntimeException("openid Cannot be null");
+            throw new WeixinApiException("openid Cannot be null");
         }
         if (StringUtils.isBlank(accessToken)) {
-            throw new RuntimeException("accessToken Cannot be null");
+            throw new WeixinApiException("accessToken Cannot be null");
         }
 
         String url = getUserinfoUrl.replace("ACCESS_TOKEN", accessToken).replace("OPENID", openid);
@@ -148,10 +149,10 @@ public class WebAccessTokenApi {
      */
     public static ApiResult checkAccessToken(String openid, String accessToken) {
         if (StringUtils.isBlank(openid)) {
-            throw new RuntimeException("openid Cannot be null");
+            throw new WeixinApiException("openid Cannot be null");
         }
         if (StringUtils.isBlank(accessToken)) {
-            throw new RuntimeException("accessToken Cannot be null");
+            throw new WeixinApiException("accessToken Cannot be null");
         }
 
         String url = checkAccessTokenUrl.replace("ACCESS_TOKEN", accessToken).replace("OPENID", openid);

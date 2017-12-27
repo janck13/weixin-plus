@@ -1,6 +1,7 @@
 package com.rsh.framework.weixin.api.menu;
 
 import com.rsh.framework.weixin.api.base.AccessTokenApi;
+import com.rsh.framework.weixin.exception.WeixinApiException;
 import com.rsh.framework.weixin.model.ApiResult;
 import com.rsh.framework.weixin.model.menu.Menu;
 import com.rsh.framework.weixin.utils.HttpUtils;
@@ -28,7 +29,7 @@ public class MenuApi {
      */
     public static ApiResult createMenu(Menu menu) {
         if (menu == null) {
-            throw new RuntimeException("menu Cannot be null");
+            throw new WeixinApiException("menu Cannot be null");
         }
         String accessToken = AccessTokenApi.getAccessToken().getToken();
 

@@ -1,5 +1,7 @@
 package com.rsh.framework.weixin.api;
 
+import com.rsh.framework.weixin.exception.WeixinApiException;
+
 import java.io.Serializable;
 
 /**
@@ -35,42 +37,42 @@ public class AppConfig implements Serializable {
 
     public String getAppId() {
         if (appId == null) {
-            throw new IllegalArgumentException("appId 为空！");
+            throw new WeixinApiException("appId 为空！");
         }
         return appId;
     }
 
     public void setAppId(String appId) {
         if (appId == null) {
-            throw new IllegalArgumentException("appId 不能为空！");
+            throw new WeixinApiException("appId 不能为空！");
         }
         this.appId = appId;
     }
 
     public String getAppSecret() {
         if (appSecret == null) {
-            throw new IllegalArgumentException("appSecret 为空！");
+            throw new WeixinApiException("appSecret 为空！");
         }
         return appSecret;
     }
 
     public void setAppSecret(String appSecret) {
         if (appSecret == null) {
-            throw new IllegalArgumentException("appSecret 不能为空！");
+            throw new WeixinApiException("appSecret 不能为空！");
         }
         this.appSecret = appSecret;
     }
 
     public String getEncodingAesKey() {
         if (encodingAesKey == null) {
-            throw new IllegalArgumentException("encodingAesKey 为空！");
+            throw new WeixinApiException("encodingAesKey 为空！");
         }
         return encodingAesKey;
     }
 
     public void setEncodingAesKey(String encodingAesKey) {
         if (encodingAesKey == null) {
-            throw new IllegalArgumentException("encodingAesKey 不能为空！");
+            throw new WeixinApiException("encodingAesKey 不能为空！");
         }
         this.encodingAesKey = encodingAesKey;
     }

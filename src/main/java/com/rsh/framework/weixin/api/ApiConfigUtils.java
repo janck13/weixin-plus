@@ -4,6 +4,7 @@ import com.rsh.framework.weixin.cache.IAccessTokenCache;
 import com.rsh.framework.weixin.cache.IJsapiTicketCache;
 import com.rsh.framework.weixin.cache.impl.DefaultAccessTokenCache;
 import com.rsh.framework.weixin.cache.impl.DefaultJsapiTicketCache;
+import com.rsh.framework.weixin.exception.WeixinApiException;
 import com.rsh.framework.weixin.utils.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -69,10 +70,10 @@ public class ApiConfigUtils {
      */
     public static void setAppIdToThreadLocal(String appId) {
         if (StringUtils.isBlank(appId)) {
-            throw new IllegalStateException("appId Cannot be null");
+            throw new WeixinApiException("appId Cannot be null");
         }
         if (appConfigMap.get(appId) == null) {
-            throw new IllegalStateException("该appId未配置，需先调用ApiConfigUtils.putAppConfig(AppConfig appConfig)存入AppConfig.");
+            throw new WeixinApiException("该appId未配置，需先调用ApiConfigUtils.putAppConfig(AppConfig appConfig)存入AppConfig.");
         }
         appidTL.set(appId);
     }
@@ -95,7 +96,7 @@ public class ApiConfigUtils {
             appId = appConfigMap.get(DEFAULT_APPCONFIG_KEY).getAppId();
         }
         if (StringUtils.isBlank(appId)) {
-            throw new IllegalStateException("需先调用ApiConfigUtils.putAppConfig(AppConfig appConfig)存入AppConfig，\n" +
+            throw new WeixinApiException("需先调用ApiConfigUtils.putAppConfig(AppConfig appConfig)存入AppConfig，\n" +
                     "如存在多个AppConfig需先调用ApiConfigUtils.setAppIdToThreadLocal(String appId)线程绑定appId.");
         }
         return appId;
@@ -120,7 +121,7 @@ public class ApiConfigUtils {
     public static AppConfig getAppConfig(String appId) {
         AppConfig cfg = appConfigMap.get(appId);
         if (cfg == null)
-            throw new IllegalStateException("该appId对应的AppConfig为配置，需先调用ApiConfigUtils.putAppConfig(AppConfig appConfig)存入AppConfig.");
+            throw new WeixinApiException("该appId对应的AppConfig为配置，需先调用ApiConfigUtils.putAppConfig(AppConfig appConfig)存入AppConfig.");
         return cfg;
     }
 

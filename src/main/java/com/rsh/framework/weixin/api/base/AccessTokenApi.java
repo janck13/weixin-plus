@@ -3,6 +3,7 @@ package com.rsh.framework.weixin.api.base;
 import com.rsh.framework.weixin.api.ApiConfigUtils;
 import com.rsh.framework.weixin.api.AppConfig;
 import com.rsh.framework.weixin.cache.IAccessTokenCache;
+import com.rsh.framework.weixin.exception.WeixinApiException;
 import com.rsh.framework.weixin.model.base.AccessToken;
 import com.rsh.framework.weixin.utils.HttpUtils;
 import com.rsh.framework.weixin.utils.RetryUtils;
@@ -47,7 +48,7 @@ public class AccessTokenApi {
         // 刷新AccessToken
         accessToken = refreshAccessTokenIsInvalid(appConfig);
         if (accessToken == null) {
-            throw new RuntimeException("获取access_token失败，请检查公众号基础配置！");
+            throw new WeixinApiException("获取access_token失败，请检查公众号基础配置！");
         }
         return accessToken;
     }

@@ -2,6 +2,7 @@ package com.rsh.framework.weixin.api.msg;
 
 import com.alibaba.fastjson.JSON;
 import com.rsh.framework.weixin.api.base.AccessTokenApi;
+import com.rsh.framework.weixin.exception.WeixinApiException;
 import com.rsh.framework.weixin.model.ApiResult;
 import com.rsh.framework.weixin.utils.HttpUtils;
 import com.rsh.framework.weixin.utils.StringUtils;
@@ -51,7 +52,6 @@ public class SubscribeMessageApi {
                 e.printStackTrace();
             }
         }
-
         return authorizeUrl.replace("ACTION", "get_confirm")
                 .replace("APPID", appId)
                 .replace("SCENE", scene + "")
@@ -68,7 +68,7 @@ public class SubscribeMessageApi {
      */
     public static ApiResult pushSubscribeMsg(String json) {
         if (StringUtils.isBlank(json)) {
-            throw new RuntimeException("json Cannot be null");
+            throw new WeixinApiException("json Cannot be null");
         }
         String accessToken = AccessTokenApi.getAccessToken().getToken();
 

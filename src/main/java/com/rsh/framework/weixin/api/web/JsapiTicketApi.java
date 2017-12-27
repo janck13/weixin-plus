@@ -4,6 +4,7 @@ import com.rsh.framework.weixin.api.ApiConfigUtils;
 import com.rsh.framework.weixin.api.AppConfig;
 import com.rsh.framework.weixin.api.base.AccessTokenApi;
 import com.rsh.framework.weixin.cache.IJsapiTicketCache;
+import com.rsh.framework.weixin.exception.WeixinApiException;
 import com.rsh.framework.weixin.model.web.JsapiTicket;
 import com.rsh.framework.weixin.model.web.JsapiTicketType;
 import com.rsh.framework.weixin.utils.HttpUtils;
@@ -41,7 +42,7 @@ public class JsapiTicketApi {
         // 刷新JsapiTicket
         jsapiTicket = refreshJsapiTicketIsInvalid(appConfig, jsapiTicketType);
         if (jsapiTicket == null) {
-            throw new RuntimeException("获取jsapi_ticket失败，请检查access_token是否有效！");
+            throw new WeixinApiException("获取jsapi_ticket失败，请检查access_token是否有效！");
         }
         return jsapiTicket;
     }

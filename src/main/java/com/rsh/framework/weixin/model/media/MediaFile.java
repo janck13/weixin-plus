@@ -1,4 +1,4 @@
-package com.rsh.framework.weixin.model.msg;
+package com.rsh.framework.weixin.model.media;
 
 import java.io.BufferedInputStream;
 
@@ -17,7 +17,7 @@ public class MediaFile {
     private String contentLength;
     private String contentType;
     private BufferedInputStream fileStream;
-    private String error;
+    private String content;
 
     public String getFileName() {
         return fileName;
@@ -67,11 +67,15 @@ public class MediaFile {
         this.fileStream = fileStream;
     }
 
-    public String getError() {
-        return error;
+    public String getContent() {
+        return content;
     }
 
-    public void setError(String error) {
-        this.error = error;
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public boolean isFile(){
+        return getContent() == null;
     }
 }

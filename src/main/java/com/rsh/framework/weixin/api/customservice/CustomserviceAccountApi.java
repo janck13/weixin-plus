@@ -1,6 +1,7 @@
 package com.rsh.framework.weixin.api.customservice;
 
 import com.rsh.framework.weixin.api.base.AccessTokenApi;
+import com.rsh.framework.weixin.exception.WeixinApiException;
 import com.rsh.framework.weixin.model.ApiResult;
 import com.rsh.framework.weixin.model.customservice.Kfaccount;
 import com.rsh.framework.weixin.model.menu.Menu;
@@ -33,7 +34,7 @@ public class CustomserviceAccountApi {
      */
     public static ApiResult addAccount(Kfaccount kfaccount) {
         if (kfaccount == null) {
-            throw new RuntimeException("kfaccount Cannot be null");
+            throw new WeixinApiException("kfaccount Cannot be null");
         }
         String accessToken = AccessTokenApi.getAccessToken().getToken();
 
@@ -51,7 +52,7 @@ public class CustomserviceAccountApi {
      */
     public static ApiResult updateAccount(Kfaccount kfaccount) {
         if (kfaccount == null) {
-            throw new RuntimeException("kfaccount Cannot be null");
+            throw new WeixinApiException("kfaccount Cannot be null");
         }
         String accessToken = AccessTokenApi.getAccessToken().getToken();
 
@@ -69,7 +70,7 @@ public class CustomserviceAccountApi {
      */
     public static ApiResult deleteAccount(Kfaccount kfaccount) {
         if (kfaccount == null) {
-            throw new RuntimeException("kfaccount Cannot be null");
+            throw new WeixinApiException("kfaccount Cannot be null");
         }
         String accessToken = AccessTokenApi.getAccessToken().getToken();
 
@@ -88,10 +89,10 @@ public class CustomserviceAccountApi {
      */
     public static ApiResult updateAccountHeadimg(String kfaccount, File headImg) {
         if (StringUtils.isBlank(kfaccount)) {
-            throw new RuntimeException("kfaccount Cannot be null");
+            throw new WeixinApiException("kfaccount Cannot be null");
         }
         if (headImg == null || !headImg.exists()) {
-            throw new RuntimeException("headImg file is null or not exists");
+            throw new WeixinApiException("headImg file is null or not exists");
         }
         String accessToken = AccessTokenApi.getAccessToken().getToken();
 

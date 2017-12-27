@@ -1,6 +1,7 @@
 package com.rsh.framework.weixin.api.web;
 
 import com.rsh.framework.weixin.api.ApiConfigUtils;
+import com.rsh.framework.weixin.exception.WeixinApiException;
 import com.rsh.framework.weixin.model.web.*;
 import com.rsh.framework.weixin.utils.HttpUtils;
 import com.rsh.framework.weixin.utils.RetryUtils;
@@ -28,7 +29,7 @@ public class JsapiConfigApi {
      */
     public static JsapiConfig getJsapiConfig(String url) {
         if (StringUtils.isBlank(url)) {
-            throw new RuntimeException("url Cannot be null");
+            throw new WeixinApiException("url Cannot be null");
         }
         String appId = ApiConfigUtils.getAppId();
         String jsapiTicket = JsapiTicketApi.getJsapiTicket(JsapiTicketType.jsapi).getTicket();
