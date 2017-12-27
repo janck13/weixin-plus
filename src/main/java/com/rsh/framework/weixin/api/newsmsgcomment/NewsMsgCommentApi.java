@@ -4,7 +4,6 @@ import com.alibaba.fastjson.JSON;
 import com.rsh.framework.weixin.api.base.AccessTokenApi;
 import com.rsh.framework.weixin.exception.WeixinApiException;
 import com.rsh.framework.weixin.model.ApiResult;
-import com.rsh.framework.weixin.model.media.UpdateMediaArticle;
 import com.rsh.framework.weixin.utils.HttpUtils;
 import com.rsh.framework.weixin.utils.StringUtils;
 
@@ -256,5 +255,5 @@ public class NewsMsgCommentApi {
         String json = HttpUtils.post(url, JSON.toJSONString(param));
         return new ApiResult(json);
     }
-    
+
 }

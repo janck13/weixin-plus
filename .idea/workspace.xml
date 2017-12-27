@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b1d9781-847d-4ed4-8de6-d5e9dabec572" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/msg/CallbackIpApi.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/newsmsgcomment/NewsMsgCommentApi.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/user/UserTagApi.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/ApiResult.java" afterPath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/ApiResult.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/newsmsgcomment/NewsMsgCommentApi.java" afterPath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/newsmsgcomment/NewsMsgCommentApi.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/ApiResultErrorCode.java" afterPath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/ApiResultErrorCode.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/media/MediaArticle.java" afterPath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/media/MediaArticle.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -51,14 +49,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MediaApi.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/media/MediaApi.java">
+      <file leaf-file-name="ApiResultErrorCode.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/ApiResultErrorCode.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="355" column="33" lean-forward="true" selection-start-line="355" selection-start-column="33" selection-end-line="355" selection-end-column="33" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="205">
+              <caret line="126" column="32" lean-forward="true" selection-start-line="126" selection-start-column="32" selection-end-line="126" selection-end-column="32" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -101,6 +97,12 @@
       <find>88000</find>
       <find>uploadnews</find>
       <find>45009</find>
+      <find>45056</find>
+      <find>45058</find>
+      <find>45057</find>
+      <find>45159</find>
+      <find>取消</find>
+      <find>49003</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -394,7 +396,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/msg/in/ReceiveMessage.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/msg/Event.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/web/WebAuthApi.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/utils/StringUtils.java" />
@@ -445,6 +446,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/newsmsgcomment/NewsMsgcommentApi.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/ApiResultErrorCode.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/newsmsgcomment/NewsMsgCommentApi.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/user/UserTagApi.java" />
       </list>
     </option>
   </component>
@@ -558,7 +560,8 @@
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="weixin" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="newsmsgcomment" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -569,7 +572,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="vcs.Subversion" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -791,7 +794,7 @@
       <workItem from="1513652971308" duration="20163000" />
       <workItem from="1513737592938" duration="57318000" />
       <workItem from="1513930390906" duration="20000" />
-      <workItem from="1513931091533" duration="66297000" />
+      <workItem from="1513931091533" duration="70931000" />
     </task>
     <task id="LOCAL-00001" summary="add utils">
       <created>1513331231626</created>
@@ -856,11 +859,18 @@
       <option name="project" value="LOCAL" />
       <updated>1514353062201</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="add NewMsgCommentApi-图文消息评论接口">
+      <created>1514358902390</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1514358902390</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="147343000" />
+    <option name="totallyTimeSpent" value="151977000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -913,7 +923,8 @@
     <MESSAGE value="add 消息管理" />
     <MESSAGE value="add ApiConfigUtils、AccessTokenApi、JsapiTicketApi" />
     <MESSAGE value="add MediaApi" />
-    <option name="LAST_COMMIT_MESSAGE" value="add MediaApi" />
+    <MESSAGE value="add NewMsgCommentApi-图文消息评论接口" />
+    <option name="LAST_COMMIT_MESSAGE" value="add NewMsgCommentApi-图文消息评论接口" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -941,14 +952,6 @@
     <select />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/caches/modules-2/files-2.1/com.alibaba/fastjson/1.2.31/36730d81d068a72e89b1009df8a512235e3b0b77/fastjson-1.2.31-sources.jar!/com/alibaba/fastjson/serializer/JSONSerializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="274" column="22" lean-forward="false" selection-start-line="274" selection-start-column="22" selection-end-line="274" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/caches/modules-2/files-2.1/com.alibaba/fastjson/1.2.31/36730d81d068a72e89b1009df8a512235e3b0b77/fastjson-1.2.31-sources.jar!/com/alibaba/fastjson/JSON.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="387">
@@ -1278,33 +1281,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/utils/HttpUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="67" column="54" lean-forward="true" selection-start-line="67" selection-start-column="54" selection-end-line="67" selection-end-column="54" />
-          <folding>
-            <element signature="e#2201#2202#0" expanded="false" />
-            <element signature="e#2250#2251#0" expanded="false" />
-            <element signature="e#2308#2309#0" expanded="false" />
-            <element signature="e#2355#2356#0" expanded="false" />
-            <element signature="e#2754#2755#0" expanded="false" />
-            <element signature="e#2799#2800#0" expanded="false" />
-            <element signature="e#2864#2865#0" expanded="false" />
-            <element signature="e#2915#2916#0" expanded="false" />
-            <element signature="e#10913#10914#0" expanded="false" />
-            <element signature="e#10961#10962#0" expanded="false" />
-            <element signature="e#21653#21654#0" expanded="false" />
-            <element signature="e#21701#21702#0" expanded="false" />
-            <element signature="e#32272#32273#0" expanded="false" />
-            <element signature="e#32320#32321#0" expanded="false" />
-            <element signature="e#38253#38254#0" expanded="false" />
-            <element signature="e#38296#38297#0" expanded="false" />
-            <element signature="e#47655#47656#0" expanded="false" />
-            <element signature="e#47703#47704#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/media/UpdateMediaArticle.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
@@ -1480,36 +1456,59 @@
         <state relative-caret-position="264">
           <caret line="12" column="20" lean-forward="true" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/ApiResultErrorCode.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/utils/HttpUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="164" column="31" lean-forward="true" selection-start-line="164" selection-start-column="31" selection-end-line="164" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/newsmsgcomment/NewsMsgCommentApi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="244" column="9" lean-forward="true" selection-start-line="244" selection-start-column="9" selection-end-line="244" selection-end-column="9" />
+        <state relative-caret-position="298">
+          <caret line="59" column="25" lean-forward="false" selection-start-line="59" selection-start-column="25" selection-end-line="59" selection-end-column="25" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#2080#2081#0" expanded="true" />
+            <element signature="e#2128#2129#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/media/MediaApi.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="355" column="33" lean-forward="true" selection-start-line="355" selection-start-column="33" selection-end-line="355" selection-end-column="33" />
+        <state relative-caret-position="161">
+          <caret line="22" column="20" lean-forward="true" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/newsmsgcomment/NewsMsgCommentApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="23" column="43" lean-forward="false" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/user/UserTagApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="77">
+          <caret line="150" column="33" lean-forward="true" selection-start-line="150" selection-start-column="33" selection-end-line="150" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4067#4068#0" expanded="true" />
+            <element signature="e#4113#4114#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/ApiResultErrorCode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="126" column="32" lean-forward="true" selection-start-line="126" selection-start-column="32" selection-end-line="126" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>
