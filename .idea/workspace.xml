@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1b1d9781-847d-4ed4-8de6-d5e9dabec572" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/user/UserApi.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/user/UserInfo.java" />
+    <list default="true" id="1b1d9781-847d-4ed4-8de6-d5e9dabec572" name="Default" comment="add 账号管理相关接口">
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/account/LinkApi.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/account/QrcodeApi.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/ApiResult.java" afterPath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/ApiResult.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/web/WebUserinfo.java" afterPath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/web/WebUserinfo.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/msg/Event.java" afterPath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/msg/Event.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/msg/in/ReceiveMessage.java" afterPath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/msg/in/ReceiveMessage.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -50,11 +50,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ApiResultErrorCode.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/ApiResultErrorCode.java">
+      <file leaf-file-name="Event.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/msg/Event.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="59" column="17" lean-forward="false" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="17" />
+            <state relative-caret-position="660">
+              <caret line="30" column="31" lean-forward="false" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReceiveMessage.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/msg/in/ReceiveMessage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="359">
+              <caret line="126" column="20" lean-forward="true" selection-start-line="126" selection-start-column="20" selection-end-line="126" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -74,9 +84,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>kotlin_version</find>
-      <find>create</find>
-      <find>colse</find>
       <find>close(</find>
       <find>ThumbMediaId</find>
       <find>&lt;![CDATA</find>
@@ -104,6 +111,9 @@
       <find>45159</find>
       <find>取消</find>
       <find>49003</find>
+      <find>场景</find>
+      <find>扫描带参数二维码事件</find>
+      <find>ExpiredTime</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -397,11 +407,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/utils/StringUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/utils/MD5Util.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/utils/Sha1Util.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/base/WebAccessToken.java" />
-        <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/cache/impl/DefaultAccessTokenCache.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/cache/impl/RedisAccessTokenCache.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/ApiConfig.java" />
@@ -448,6 +453,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/user/UserInfo.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/ApiResult.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/user/UserApi.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/account/AccountApi.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/account/QrcodeApi.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/account/LinkApi.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/msg/Event.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/msg/in/ReceiveMessage.java" />
       </list>
     </option>
   </component>
@@ -562,7 +572,7 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="weixin" type="462c0819:PsiDirectoryNode" />
               <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
+              <item name="account" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="weixin-plus" type="b2602c69:ProjectViewProjectNode" />
@@ -572,6 +582,27 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="weixin" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="weixin-plus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="weixin-plus" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="weixin" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="msg" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="weixin-plus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="weixin-plus" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="weixin" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="msg" type="462c0819:PsiDirectoryNode" />
+              <item name="in" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -815,7 +846,7 @@
       <workItem from="1513652971308" duration="20163000" />
       <workItem from="1513737592938" duration="57318000" />
       <workItem from="1513930390906" duration="20000" />
-      <workItem from="1513931091533" duration="77893000" />
+      <workItem from="1513931091533" duration="82845000" />
     </task>
     <task id="LOCAL-00001" summary="add utils">
       <created>1513331231626</created>
@@ -894,11 +925,18 @@
       <option name="project" value="LOCAL" />
       <updated>1514363875057</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="add UserApi-用户管理接口">
+      <created>1514424351835</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1514424351835</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="158939000" />
+    <option name="totallyTimeSpent" value="163891000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -953,7 +991,8 @@
     <MESSAGE value="add MediaApi" />
     <MESSAGE value="add NewMsgCommentApi-图文消息评论接口" />
     <MESSAGE value="add UserTagApi-用户标签管理接口" />
-    <option name="LAST_COMMIT_MESSAGE" value="add UserTagApi-用户标签管理接口" />
+    <MESSAGE value="add UserApi-用户管理接口" />
+    <option name="LAST_COMMIT_MESSAGE" value="add UserApi-用户管理接口" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -981,109 +1020,6 @@
     <select />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/caches/modules-2/files-2.1/org.apache.httpcomponents/httpclient/4.4.1/30cb4791019c7280227e027b01814f4964a02482/httpclient-4.4.1-sources.jar!/org/apache/http/conn/ssl/TrustSelfSignedStrategy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="37" column="56" lean-forward="true" selection-start-line="37" selection-start-column="56" selection-end-line="37" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.6.0/7ebc06b0cc7c2752a4883747e2c70b2b301df9c0/okhttp-3.6.0-sources.jar!/okhttp3/OkHttpClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="664" column="77" lean-forward="true" selection-start-line="656" selection-start-column="9" selection-end-line="664" selection-end-column="77" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Program Files/Java/jdk1.8.0_101/src.zip!/java/lang/RuntimeException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1047">
-          <caret line="83" column="40" lean-forward="false" selection-start-line="83" selection-start-column="40" selection-end-line="83" selection-end-column="40" />
-          <folding>
-            <element signature="e#1175#1176#0" expanded="false" />
-            <element signature="e#1198#1199#0" expanded="false" />
-            <element signature="e#3078#3079#0" expanded="false" />
-            <element signature="e#3106#3107#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Program Files/Java/jdk1.8.0_101/src.zip!/java/lang/IllegalStateException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="37" column="52" lean-forward="false" selection-start-line="37" selection-start-column="36" selection-end-line="37" selection-end-column="52" />
-          <folding>
-            <element signature="e#1073#1074#0" expanded="false" />
-            <element signature="e#1097#1098#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/exception/WeixinApiException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="31" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="31" />
-          <folding>
-            <element signature="e#217#218#0" expanded="false" />
-            <element signature="e#240#241#0" expanded="false" />
-            <element signature="e#288#289#0" expanded="false" />
-            <element signature="e#318#319#0" expanded="false" />
-            <element signature="e#367#368#0" expanded="false" />
-            <element signature="e#395#396#0" expanded="false" />
-            <element signature="e#460#461#0" expanded="false" />
-            <element signature="e#497#498#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/ApiConfigUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="123" column="40" lean-forward="false" selection-start-line="123" selection-start-column="40" selection-end-line="123" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#870#878#0" expanded="false" />
-            <element signature="e#966#985#0" expanded="false" />
-            <element signature="e#1849#1850#0" expanded="false" />
-            <element signature="e#1898#1899#0" expanded="false" />
-            <element signature="e#2666#2667#0" expanded="false" />
-            <element signature="e#2698#2699#0" expanded="false" />
-            <element signature="e#3872#3873#0" expanded="false" />
-            <element signature="e#3915#3916#0" expanded="false" />
-            <element signature="e#3965#3966#0" expanded="false" />
-            <element signature="e#4009#4010#0" expanded="false" />
-            <element signature="e#4218#4219#0" expanded="false" />
-            <element signature="e#4272#4273#0" expanded="false" />
-            <element signature="e#4333#4334#0" expanded="false" />
-            <element signature="e#4372#4373#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/AppConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="651">
-          <caret line="74" column="56" lean-forward="false" selection-start-line="74" selection-start-column="42" selection-end-line="74" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#2099#2100#0" expanded="false" />
-            <element signature="e#2136#2137#0" expanded="false" />
-            <element signature="e#2197#2198#0" expanded="false" />
-            <element signature="e#2249#2250#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/cache/impl/DefaultAccessTokenCache.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="21" column="61" lean-forward="true" selection-start-line="21" selection-start-column="61" selection-end-line="21" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/caches/modules-2/files-2.1/com.squareup.okhttp/okhttp/2.7.5/6b16ea4e0a54f9eada97779ae33cb4d3223f5d35/okhttp-2.7.5-sources.jar!/com/squareup/okhttp/Response.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
@@ -1119,14 +1055,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/msg/MassMessageApi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-317">
-          <caret line="112" column="40" lean-forward="false" selection-start-line="112" selection-start-column="40" selection-end-line="112" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/msg/SubscribeMessageApi.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="439">
@@ -1139,22 +1067,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="497">
           <caret line="135" column="40" lean-forward="false" selection-start-line="135" selection-start-column="40" selection-end-line="135" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/web/JsapiTicketApi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-867">
-          <caret line="44" column="40" lean-forward="false" selection-start-line="44" selection-start-column="40" selection-end-line="44" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/web/JsapiConfigApi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="673">
-          <caret line="71" column="64" lean-forward="false" selection-start-line="71" selection-start-column="60" selection-end-line="71" selection-end-column="64" />
           <folding />
         </state>
       </provider>
@@ -1384,27 +1296,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/msg/CallbackIpApi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="20" lean-forward="true" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/utils/HttpUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="59" column="25" lean-forward="false" selection-start-line="59" selection-start-column="25" selection-end-line="59" selection-end-column="25" />
-          <folding>
-            <element signature="e#2080#2081#0" expanded="false" />
-            <element signature="e#2128#2129#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/media/MediaApi.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
@@ -1601,6 +1492,117 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="271">
           <caret line="59" column="17" lean-forward="false" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/account/AccountApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="11" lean-forward="false" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/msg/in/BaseReceiveMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="607">
+          <caret line="31" column="17" lean-forward="true" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/msg/CallbackIpApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="29" column="5" lean-forward="true" selection-start-line="17" selection-start-column="4" selection-end-line="29" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/web/JsapiConfigApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="673">
+          <caret line="71" column="64" lean-forward="false" selection-start-line="71" selection-start-column="60" selection-end-line="71" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/web/JsapiTicketApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="44" column="82" lean-forward="true" selection-start-line="44" selection-start-column="12" selection-end-line="44" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/msg/MassMessageApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="112" column="61" lean-forward="false" selection-start-line="112" selection-start-column="47" selection-end-line="112" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/msg/OutMsgType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="12" lean-forward="false" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/msg/InMsgType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="12" lean-forward="false" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/utils/HttpUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="79" column="27" lean-forward="false" selection-start-line="79" selection-start-column="18" selection-end-line="79" selection-end-column="27" />
+          <folding>
+            <element signature="e#2754#2755#0" expanded="true" />
+            <element signature="e#2799#2800#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/account/LinkApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="673">
+          <caret line="34" column="39" lean-forward="false" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/account/QrcodeApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="717">
+          <caret line="124" column="35" lean-forward="true" selection-start-line="123" selection-start-column="8" selection-end-line="124" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/msg/Event.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="30" column="31" lean-forward="false" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/msg/in/ReceiveMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="126" column="20" lean-forward="true" selection-start-line="126" selection-start-column="20" selection-end-line="126" selection-end-column="20" />
           <folding />
         </state>
       </provider>

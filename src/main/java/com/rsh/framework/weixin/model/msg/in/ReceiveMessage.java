@@ -82,6 +82,8 @@ public class ReceiveMessage extends BaseReceiveMessage {
     // 关注、取消关注事件
 
     // 扫描带参数二维码事件
+    // 用户未关注时，进行关注后的事件推送 EventKey	事件KEY值，qrscene_为前缀，后面为二维码的参数值
+    // 用户已关注时的事件推送 EventKey	事件KEY值，是一个32位无符号整数，即创建二维码时的二维码scene_id
     @XmlElement(name = "Ticket")
     private String ticket; // 二维码的ticket，可用来换取二维码图片
 
@@ -117,6 +119,16 @@ public class ReceiveMessage extends BaseReceiveMessage {
     // 模板消息发送结束事件推送
     @XmlElement(name = "Status")
     private String status; // success：成功，failed:user block：用户拒收，failed: system failed：失败
+
+    // 资质认证成功，名称认证成功，年审通知，认证过期失效通知
+    @XmlElement(name = "ExpiredTime")
+    private Integer expiredTime; // 有效期 (整形)，指的是时间戳，将于该时间戳认证过期
+
+    // 资质认证失败，名称认证失败
+    @XmlElement(name = "FailTime")
+    private Integer failTime; // 失败发生时间 (整形)，时间戳
+    @XmlElement(name = "FailReason")
+    private String failReason; // 认证失败的原因
 
     public String getContent() {
         return content;

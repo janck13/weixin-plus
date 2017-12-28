@@ -22,6 +22,11 @@ public enum Event {
     pic_weixin, // 弹出微信相册发图器的事件推送
     location_select, // 弹出地理位置选择器的事件推送
     MASSSENDJOBFINISH, // 群发结果推送
-    TEMPLATESENDJOBFINISH // 模板消息发送结束推送
-
+    TEMPLATESENDJOBFINISH, // 模板消息发送结束推送
+    qualification_verify_success, // 资质认证成功
+    qualification_verify_fail, // 资质认证失败
+    naming_verify_success, // 名称认证成功
+    naming_verify_fail, // 名称认证失败
+    annual_renew, // 年审通知
+    verify_expired, // 认证过期失效通知
 }
