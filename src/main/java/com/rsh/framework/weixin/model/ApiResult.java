@@ -128,4 +128,40 @@ public class ApiResult implements Serializable {
         return this.attrs;
     }
 
+    public static void main(String[] args) {
+        String str = "{\n" +
+                "   \"user_info_list\": [\n" +
+                "       {\n" +
+                "           \"subscribe\": 1, \n" +
+                "           \"openid\": \"otvxTs4dckWG7imySrJd6jSi0CWE\", \n" +
+                "           \"nickname\": \"iWithery\", \n" +
+                "           \"sex\": 1, \n" +
+                "           \"language\": \"zh_CN\", \n" +
+                "           \"city\": \"揭阳\", \n" +
+                "           \"province\": \"广东\", \n" +
+                "           \"country\": \"中国\", \n" +
+                "\n" +
+                "           \"headimgurl\": \"http://wx.qlogo.cn/mmopen/xbIQx1GRqdvyqkMMhEaGOX802l1CyqMJNgUzKP8MeAeHFicRDSnZH7FY4XB7p8XHXIf6uJA2SCunTPicGKezDC4saKISzRj3nz/0\",\n" +
+                "\n" +
+                "          \"subscribe_time\": 1434093047, \n" +
+                "           \"unionid\": \"oR5GjjgEhCMJFyzaVZdrxZ2zRRF4\", \n" +
+                "           \"remark\": \"\", \n" +
+                "\n" +
+                "           \"groupid\": 0,\n" +
+                "           \"tagid_list\":[128,2]\n" +
+                "\n" +
+                "      }, \n" +
+                "       {\n" +
+                "           \"subscribe\": 0, \n" +
+                "           \"openid\": \"otvxTs_JZ6SEiP0imdhpi50fuSZg\"\n" +
+                "       }\n" +
+                "   ]\n" +
+                "}";
+
+        ApiResult result = new ApiResult(str);
+        List list = result.getList("user_info_list");
+        for (int i = 0; i < list.size(); i++) {
+            System.out.println(list.get(i).getClass());
+        }
+    }
 }

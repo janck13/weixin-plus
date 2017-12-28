@@ -7,7 +7,7 @@ import com.alibaba.fastjson.JSONObject;
 import java.util.List;
 
 /**
- * 用户信息(需scope为 snsapi_userinfo)
+ * 微信网页开发用户授权后通过该接口获取用户信息(需scope为 snsapi_userinfo)
  * Created By Rsh
  *
  * @Description
