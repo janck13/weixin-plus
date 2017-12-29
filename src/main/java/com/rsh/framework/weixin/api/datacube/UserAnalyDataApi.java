@@ -65,8 +65,8 @@ public class UserAnalyDataApi {
             throw new WeixinApiException("endDate Cannot be null");
         }
         int days = (int) ((endDate.getTime() - beginDate.getTime()) / (1000 * 3600 * 24));
-        if (days >= 7) {
-            throw new WeixinApiException("endDate max time limit");
+        if (days >= maxTimeLimit) {
+            throw new WeixinApiException("date range error, max " + maxTimeLimit);
         }
         url = url.replace("ACCESS_TOKEN", AccessTokenApi.getAccessToken().getToken());
 

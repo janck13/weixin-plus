@@ -29,4 +29,17 @@ public enum Event {
     naming_verify_fail, // 名称认证失败
     annual_renew, // 年审通知
     verify_expired, // 认证过期失效通知
+    user_pay_from_pay_cell, // 微信卡券买单事件推送
+    card_pass_check, // 卡券通过审核
+    card_not_pass_check, // 卡券未通过审核
+    user_get_card, // 用户领取卡券
+    user_gifting_card, // 用户转赠卡券
+    user_del_card, // 用户删除卡券
+    user_consume_card, // 核销事件
+    user_view_card, // 用户点击会员卡
+    user_enter_session_from_card, // 从卡券进入公众号会话事件推送
+    update_member_card, // 会员卡内容更新事件
+    card_sku_remind, // 库存报警
+    card_pay_order, // 券点流水详情事件
+    submit_membercard_user_info // 会员卡激活事件推送
 }

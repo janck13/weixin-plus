@@ -125,7 +125,7 @@ public class MessageAnalyDataApi {
         }
         int days = (int) ((endDate.getTime() - beginDate.getTime()) / (1000 * 3600 * 24));
         if (days >= maxTimeLimit) {
-            throw new WeixinApiException("endDate max time limit");
+            throw new WeixinApiException("date range error, max " + maxTimeLimit);
         }
         url = url.replace("ACCESS_TOKEN", AccessTokenApi.getAccessToken().getToken());
 

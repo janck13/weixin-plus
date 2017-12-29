@@ -6,13 +6,14 @@ import java.util.Map;
 /**
  * 微信接口全局返回码
  * Created By Rsh
+ *
  * @Description
  * @Date: 2017/12/21
  * @Time: 16:00
  */
 public class ApiResultErrorCode {
 
-    private static final Map<Integer, String> errCodeToErrMsg = new HashMap<Integer, String>(){{
+    private static final Map<Integer, String> errCodeToErrMsg = new HashMap<Integer, String>() {{
         put(-1, "系统繁忙，此时请开发者稍候再试");
         put(0, "请求成功");
         put(10003, "redirect_uri域名与后台配置不一致");
@@ -65,6 +66,7 @@ public class ApiResultErrorCode {
         put(40050, "不合法的分组 id");
         put(40051, "分组名字不合法");
         put(40060, "删除单篇图文时，指定的 article_idx 不合法");
+        put(40109, "code数量超过100个");
         put(40117, "分组名字不合法");
         put(40118, "media_id 大小不合法");
         put(40119, "button 类型错误");
@@ -92,6 +94,7 @@ public class ApiResultErrorCode {
         put(43003, "需要 HTTPS 请求");
         put(43004, "需要接收者关注");
         put(43005, "需要好友关系");
+        put(43008, "商户没有开通微信支付权限或者没有在商户后台申请微信买单功能");
         put(43019, "需要将接收者从黑名单中移除");
         put(44001, "多媒体文件为空");
         put(44002, "POST 的数据包为空");
@@ -112,6 +115,7 @@ public class ApiResultErrorCode {
         put(45016, "系统分组，不允许修改");
         put(45017, "分组名字过长");
         put(45018, "分组数量超过上限");
+        put(45046, "该card_id已经设置了买单功能，不可变更为自助核销功能，设置冲突");
         put(45047, "客服接口下行条数超过上限");
         put(45065, "相同 clientmsgid 已存在群发记录，返回数据中带有已存在的群发任务的 msgid");
         put(45066, "相同 clientmsgid 重试速度过快，请间隔1分钟重试");
@@ -151,6 +155,7 @@ public class ApiResultErrorCode {
         put(61457, "无效头像文件类型 (invalid file type)");
         put(61450, "系统错误 (system error)");
         put(61500, "日期格式错误");
+        put(61501, "查询日期时间区间错误");
         put(65301, "不存在此 menuid 对应的个性化菜单");
         put(65302, "没有相应的用户");
         put(65303, "没有默认菜单，不能创建个性化菜单");
@@ -208,6 +213,7 @@ public class ApiResultErrorCode {
 
     /**
      * 通过返回码获取返回信息
+     *
      * @param errCode 错误码
      * @return {String}
      */
