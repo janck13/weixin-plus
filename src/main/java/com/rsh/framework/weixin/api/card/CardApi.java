@@ -44,7 +44,7 @@ public class CardApi {
      */
     public static ApiResult createCard(String jsonData) {
         if (StringUtils.isBlank(jsonData)) {
-            throw new WeixinApiException("json Cannot be null");
+            throw new WeixinApiException("jsonData Cannot be null");
         }
 
         String url = createCardUrl.replace("ACCESS_TOKEN", AccessTokenApi.getAccessToken().getToken());

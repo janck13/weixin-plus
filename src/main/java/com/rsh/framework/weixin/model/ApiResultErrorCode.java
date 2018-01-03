@@ -65,7 +65,9 @@ public class ApiResultErrorCode {
         put(40039, "不合法的 URL 长度");
         put(40050, "不合法的分组 id");
         put(40051, "分组名字不合法");
+        put(40053, "JSON结构错误");
         put(40060, "删除单篇图文时，指定的 article_idx 不合法");
+        put(40079, "须将有效期设置为90天以内");
         put(40109, "code数量超过100个");
         put(40117, "分组名字不合法");
         put(40118, "media_id 大小不合法");
@@ -74,6 +76,7 @@ public class ApiResultErrorCode {
         put(40121, "不合法的 media_id 类型");
         put(40132, "微信号不合法");
         put(40137, "不支持的图片格式");
+        put(40141, "须使用将图片上传至CDN后获得的url");
         put(40155, "请勿添加其他公众号的主页链接");
         put(40164, "调用接口的IP地址不在白名单中，请在接口IP白名单中进行设置");
         put(41001, "缺少 access_token 参数");
@@ -85,6 +88,7 @@ public class ApiResultErrorCode {
         put(41007, "缺少子菜单数据");
         put(41008, "缺少 oauth code");
         put(41009, "缺少 openid");
+        put(41025, "创建的JSON中须填入location_list(即poi_id，门店id)");
         put(42001, "access_token 超时，请检查 access_token 的有效期，请参考基础支持 - 获取 access_token 中，对 access_token 的详细机制说明");
         put(42002, "refresh_token 超时");
         put(42003, "oauth_code 超时");
@@ -115,6 +119,7 @@ public class ApiResultErrorCode {
         put(45016, "系统分组，不允许修改");
         put(45017, "分组名字过长");
         put(45018, "分组数量超过上限");
+        put(45021, "赠券规则列表长度高于10个");
         put(45046, "该card_id已经设置了买单功能，不可变更为自助核销功能，设置冲突");
         put(45047, "客服接口下行条数超过上限");
         put(45065, "相同 clientmsgid 已存在群发记录，返回数据中带有已存在的群发任务的 msgid");
