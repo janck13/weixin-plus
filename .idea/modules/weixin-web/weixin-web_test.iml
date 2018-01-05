@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module external.linked.project.id=":weixin-mp:test" external.linked.project.path="$MODULE_DIR$/../../../weixin-mp" external.root.project.path="$MODULE_DIR$/../../.." external.system.id="GRADLE" external.system.module.group="com.rsh.framework" external.system.module.type="sourceSet" external.system.module.version="1.0-SNAPSHOT" type="JAVA_MODULE" version="4">
+<module external.linked.project.id=":weixin-web:test" external.linked.project.path="$MODULE_DIR$/../../../weixin-web" external.root.project.path="$MODULE_DIR$/../../.." external.system.id="GRADLE" external.system.module.group="com.rsh.framework" external.system.module.type="sourceSet" external.system.module.version="1.0-SNAPSHOT" type="JAVA_MODULE" version="4">
   <component name="FacetManager">
     <facet type="Spring" name="Spring">
       <configuration />
     </facet>
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
-    <output-test url="file://$MODULE_DIR$/../../../weixin-mp/out/test/classes" />
+    <output-test url="file://$MODULE_DIR$/../../../weixin-web/out/test/classes" />
     <exclude-output />
-    <content url="file://$MODULE_DIR$/../../../weixin-mp/src/test">
-      <sourceFolder url="file://$MODULE_DIR$/../../../weixin-mp/src/test/java" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/../../../weixin-mp/src/test/resources" type="java-test-resource" />
+    <content url="file://$MODULE_DIR$/../../../weixin-web/src/test">
+      <sourceFolder url="file://$MODULE_DIR$/../../../weixin-web/src/test/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../weixin-web/src/test/resources" type="java-test-resource" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="weixin-mp_main" />
-    <orderEntry type="module" module-name="weixin-common_main" />
+    <orderEntry type="module" module-name="weixin-web_main" />
     <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jre8:1.1.4-3" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.data:spring-data-redis:2.0.2.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.data:spring-data-keyvalue:2.0.2.RELEASE" level="project" />
@@ -47,5 +46,5 @@
     <orderEntry type="library" name="Gradle: org.springframework:spring-core:5.0.2.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework:spring-jcl:5.0.2.RELEASE" level="project" />
   </component>
-  <component name="TestModuleProperties" production-module="weixin-mp_main" />
+  <component name="TestModuleProperties" production-module="weixin-web_main" />
 </module>

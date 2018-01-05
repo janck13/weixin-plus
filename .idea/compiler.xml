@@ -8,8 +8,8 @@
       <module name="weixin-mp_test" target="1.8" />
       <module name="weixin-pay_main" target="1.8" />
       <module name="weixin-pay_test" target="1.8" />
-      <module name="weixin-plus_main" target="1.8" />
-      <module name="weixin-plus_test" target="1.8" />
+      <module name="weixin-web_main" target="1.8" />
+      <module name="weixin-web_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

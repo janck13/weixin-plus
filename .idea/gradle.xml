@@ -12,6 +12,7 @@
             <option value="$PROJECT_DIR$/weixin-common" />
             <option value="$PROJECT_DIR$/weixin-mp" />
             <option value="$PROJECT_DIR$/weixin-pay" />
+            <option value="$PROJECT_DIR$/weixin-web" />
           </set>
         </option>
       </GradleProjectSettings>

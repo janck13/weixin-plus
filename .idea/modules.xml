@@ -12,6 +12,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/weixin-pay/weixin-pay_main.iml" filepath="$PROJECT_DIR$/.idea/modules/weixin-pay/weixin-pay_main.iml" group="weixin-pay" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/weixin-pay/weixin-pay_test.iml" filepath="$PROJECT_DIR$/.idea/modules/weixin-pay/weixin-pay_test.iml" group="weixin-pay" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/weixin-plus.iml" filepath="$PROJECT_DIR$/.idea/modules/weixin-plus.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/weixin-web.iml" filepath="$PROJECT_DIR$/.idea/modules/weixin-web.iml" group="weixin-web" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/weixin-web/weixin-web_main.iml" filepath="$PROJECT_DIR$/.idea/modules/weixin-web/weixin-web_main.iml" group="weixin-web" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/weixin-web/weixin-web_test.iml" filepath="$PROJECT_DIR$/.idea/modules/weixin-web/weixin-web_test.iml" group="weixin-web" />
     </modules>
   </component>
 </project>

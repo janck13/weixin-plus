@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module external.linked.project.id=":weixin-common" external.linked.project.path="$MODULE_DIR$/../../weixin-common" external.root.project.path="$MODULE_DIR$/../.." external.system.id="GRADLE" external.system.module.group="com.rsh.framework" external.system.module.version="1.0-SNAPSHOT" type="JAVA_MODULE" version="4">
+<module type="JAVA_MODULE" version="4">
+  <component name="ExternalSystem" externalSystem="GRADLE" externalSystemModuleGroup="com.rsh.framework" externalSystemModuleVersion="1.0-SNAPSHOT" linkedProjectId=":weixin-common" linkedProjectPath="$MODULE_DIR$/../../weixin-common" rootProjectPath="$MODULE_DIR$/../.." />
   <component name="NewModuleRootManager" inherit-compiler-output="true">
-    <exclude-output />
     <content url="file://$MODULE_DIR$/../../weixin-common">
       <excludeFolder url="file://$MODULE_DIR$/../../weixin-common/.gradle" />
       <excludeFolder url="file://$MODULE_DIR$/../../weixin-common/build" />

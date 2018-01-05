@@ -1,6 +1,5 @@
 package com.rsh.framework.weixin.utils;
 
-import kotlin.text.Charsets;
 
 import java.io.*;
 import java.nio.charset.Charset;
