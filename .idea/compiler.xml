@@ -2,6 +2,12 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
+      <module name="weixin-common_main" target="1.8" />
+      <module name="weixin-common_test" target="1.8" />
+      <module name="weixin-mp_main" target="1.8" />
+      <module name="weixin-mp_test" target="1.8" />
+      <module name="weixin-pay_main" target="1.8" />
+      <module name="weixin-pay_test" target="1.8" />
       <module name="weixin-plus_main" target="1.8" />
       <module name="weixin-plus_test" target="1.8" />
     </bytecodeTargetLevel>

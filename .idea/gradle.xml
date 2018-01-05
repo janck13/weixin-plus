@@ -9,6 +9,9 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/weixin-common" />
+            <option value="$PROJECT_DIR$/weixin-mp" />
+            <option value="$PROJECT_DIR$/weixin-pay" />
           </set>
         </option>
       </GradleProjectSettings>

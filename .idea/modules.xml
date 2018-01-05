@@ -2,9 +2,16 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/weixin-common.iml" filepath="$PROJECT_DIR$/.idea/modules/weixin-common.iml" group="weixin-common" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/weixin-common/weixin-common_main.iml" filepath="$PROJECT_DIR$/.idea/modules/weixin-common/weixin-common_main.iml" group="weixin-common" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/weixin-common/weixin-common_test.iml" filepath="$PROJECT_DIR$/.idea/modules/weixin-common/weixin-common_test.iml" group="weixin-common" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/weixin-mp.iml" filepath="$PROJECT_DIR$/.idea/modules/weixin-mp.iml" group="weixin-mp" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/weixin-mp/weixin-mp_main.iml" filepath="$PROJECT_DIR$/.idea/modules/weixin-mp/weixin-mp_main.iml" group="weixin-mp" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/weixin-mp/weixin-mp_test.iml" filepath="$PROJECT_DIR$/.idea/modules/weixin-mp/weixin-mp_test.iml" group="weixin-mp" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/weixin-pay.iml" filepath="$PROJECT_DIR$/.idea/modules/weixin-pay.iml" group="weixin-pay" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/weixin-pay/weixin-pay_main.iml" filepath="$PROJECT_DIR$/.idea/modules/weixin-pay/weixin-pay_main.iml" group="weixin-pay" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/weixin-pay/weixin-pay_test.iml" filepath="$PROJECT_DIR$/.idea/modules/weixin-pay/weixin-pay_test.iml" group="weixin-pay" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/weixin-plus.iml" filepath="$PROJECT_DIR$/.idea/modules/weixin-plus.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/weixin-plus_main.iml" filepath="$PROJECT_DIR$/.idea/modules/weixin-plus_main.iml" group="weixin-plus" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/weixin-plus_test.iml" filepath="$PROJECT_DIR$/.idea/modules/weixin-plus_test.iml" group="weixin-plus" />
     </modules>
   </component>
 </project>

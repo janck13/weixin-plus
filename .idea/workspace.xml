@@ -2,14 +2,176 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b1d9781-847d-4ed4-8de6-d5e9dabec572" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/card/CardExtApi.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/card/CardType.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/modules/weixin-common.iml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/modules/weixin-common/weixin-common_main.iml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/modules/weixin-common/weixin-common_test.iml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/modules/weixin-mp.iml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/modules/weixin-mp/weixin-mp_main.iml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/modules/weixin-mp/weixin-mp_test.iml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/modules/weixin-pay.iml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/modules/weixin-pay/weixin-pay_main.iml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/modules/weixin-pay/weixin-pay_test.iml" />
+      <change beforePath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/fileHashes.bin" />
+      <change beforePath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/fileSnapshots.bin" />
+      <change beforePath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/taskHistory.bin" />
+      <change beforePath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/taskHistory.lock" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/kotlinc.xml" afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/weixin-plus_main.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/weixin-plus_test.iml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/ApiResultErrorCode.java" afterPath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/ApiResultErrorCode.java" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" afterPath="$PROJECT_DIR$/settings.gradle" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/Main.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/WxapiApplicationConfig.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/ApiConfigUtils.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/AppConfig.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/account/LinkApi.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/account/QrcodeApi.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/account/package-info.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/base/AccessTokenApi.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/base/package-info.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/card/CardApi.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/card/CardExtApi.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/card/CardMiniprogramApi.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/card/FriendCardApi.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/card/MemberCardApi.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/card/package-info.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/customservice/CustomserviceAccountApi.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/customservice/package-info.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/datacube/ApiAnalyDataApi.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/datacube/ArticlesAnalyDataApi.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/datacube/MessageAnalyDataApi.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/datacube/UserAnalyDataApi.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/datacube/package-info.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/device/package-info.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/media/MediaApi.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/media/package-info.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/menu/MenuApi.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/menu/package-info.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/msg/CallbackIpApi.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/msg/CustomserviceMessageApi.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/msg/MassMessageApi.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/msg/SubscribeMessageApi.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/msg/TemplateMessageApi.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/msg/package-info.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/newsmsgcomment/NewsMsgCommentApi.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/newsmsgcomment/package-info.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/pay/package-info.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/shakearound/package-info.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/shop/package-info.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/store/StoreApi.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/store/StoreMiniprogramApi.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/store/package-info.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/user/UserApi.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/user/UserTagApi.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/user/package-info.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/web/JsapiConfigApi.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/web/JsapiTicketApi.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/web/WebAccessTokenApi.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/web/package-info.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/cache/IAccessTokenCache.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/cache/IJsapiTicketCache.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/cache/impl/DefaultAccessTokenCache.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/cache/impl/DefaultJsapiTicketCache.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/cache/impl/RedisAccessTokenCache.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/cache/impl/RedisJsapiTicketCache.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/exception/WeixinApiException.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/ApiResult.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/ApiResultErrorCode.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/IndustryCode.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/base/AccessToken.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/card/ActivateMembercard.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/card/CardLandingPage.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/card/CardPayOrderStatus.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/card/CardPayOrderType.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/card/CardType.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/card/QrcardInfo.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/customservice/Kfaccount.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/media/MediaArticle.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/media/MediaFile.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/media/MediaFileType.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/media/MediaType.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/media/UpdateMediaArticle.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/menu/Menu.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/menu/MenuItem.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/menu/MenuType.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/msg/Event.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/msg/InMsgType.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/msg/OutMsgType.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/msg/in/BaseReceiveMessage.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/msg/in/ReceiveMessage.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/msg/in/ScanCodeInfo.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/msg/in/SendLocationInfo.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/msg/in/SendPicsInfo.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/msg/in/package-info.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/msg/out/ArticleItem.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/msg/out/BaseReplyMessage.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/msg/out/BaseSendMessage.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/msg/out/ImageItem.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/msg/out/MiniprogrampageItem.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/msg/out/MpnewsItem.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/msg/out/MusicItem.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/msg/out/NewsItem.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/msg/out/NewsItemArticle.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/msg/out/ReplyImageMessage.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/msg/out/ReplyMusicMessage.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/msg/out/ReplyNewsMessage.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/msg/out/ReplyTextMessage.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/msg/out/ReplyVideoMessage.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/msg/out/ReplyVoiceMessage.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/msg/out/SendImageMessage.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/msg/out/SendMiniprogrampageMessage.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/msg/out/SendMpnewsMessage.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/msg/out/SendMusicMessage.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/msg/out/SendNewsMessage.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/msg/out/SendTextMessage.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/msg/out/SendVideoMessage.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/msg/out/SendVoiceMessage.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/msg/out/SendWxcardMessage.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/msg/out/TextItem.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/msg/out/VideoItem.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/msg/out/VoiceItem.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/msg/out/WxcardItem.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/msg/out/package-info.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/pay/package-info.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/user/UserInfo.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/web/JsapiCardConfig.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/web/JsapiCardExtConfig.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/web/JsapiConfig.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/web/JsapiTicket.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/web/JsapiTicketType.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/web/WebAccessToken.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/web/WebUserinfo.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/utils/Charsets.java" afterPath="$PROJECT_DIR$/weixin-common/src/main/java/com/rsh/framework/weixin/utils/Charsets.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/utils/ClassUtils.java" afterPath="$PROJECT_DIR$/weixin-common/src/main/java/com/rsh/framework/weixin/utils/ClassUtils.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/utils/FileUtil.java" afterPath="$PROJECT_DIR$/weixin-common/src/main/java/com/rsh/framework/weixin/utils/FileUtil.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/utils/HttpUtils.java" afterPath="$PROJECT_DIR$/weixin-common/src/main/java/com/rsh/framework/weixin/utils/HttpUtils.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/utils/IOUtils.java" afterPath="$PROJECT_DIR$/weixin-common/src/main/java/com/rsh/framework/weixin/utils/IOUtils.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/utils/MD5Util.java" afterPath="$PROJECT_DIR$/weixin-common/src/main/java/com/rsh/framework/weixin/utils/MD5Util.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/utils/RetryUtils.java" afterPath="$PROJECT_DIR$/weixin-common/src/main/java/com/rsh/framework/weixin/utils/RetryUtils.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/utils/Sha1Util.java" afterPath="$PROJECT_DIR$/weixin-common/src/main/java/com/rsh/framework/weixin/utils/Sha1Util.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/utils/StringUtils.java" afterPath="$PROJECT_DIR$/weixin-common/src/main/java/com/rsh/framework/weixin/utils/StringUtils.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/utils/Test.java" afterPath="$PROJECT_DIR$/weixin-common/src/main/java/com/rsh/framework/weixin/utils/Test.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/utils/adapter/AdapterCDATA.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-dev.properties" afterPath="$PROJECT_DIR$/weixin-mp/src/main/resources/application-dev.properties" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/weixin-mp/src/main/resources/application.properties" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/create_table.sql" afterPath="$PROJECT_DIR$/weixin-mp/src/main/resources/create_table.sql" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
+    <ignored path="$PROJECT_DIR$/weixin-mp/.gradle/" />
+    <ignored path="$PROJECT_DIR$/weixin-mp/build/" />
+    <ignored path="$PROJECT_DIR$/weixin-mp/out/" />
+    <ignored path="$PROJECT_DIR$/weixin-pay/.gradle/" />
+    <ignored path="$PROJECT_DIR$/weixin-pay/build/" />
+    <ignored path="$PROJECT_DIR$/weixin-pay/out/" />
+    <ignored path="$PROJECT_DIR$/weixin-common/.gradle/" />
+    <ignored path="$PROJECT_DIR$/weixin-common/build/" />
+    <ignored path="$PROJECT_DIR$/weixin-common/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,6 +190,9 @@
         <task path="$PROJECT_DIR$">
           <activation />
         </task>
+        <task path="$PROJECT_DIR$/weixin-mp">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
@@ -38,7 +203,20 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="weixin-plus" type="f1a62948:ProjectNode" />
+                <item name=":weixin-mp" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="weixin-plus" type="f1a62948:ProjectNode" />
+                <item name=":weixin-mp" type="2d1252cf:ModuleNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="weixin-plus" type="f1a62948:ProjectNode" />
+                <item name=":weixin-mp" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -48,58 +226,7 @@
     </system>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CardApi.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/card/CardApi.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="622" column="57" lean-forward="true" selection-start-line="622" selection-start-column="57" selection-end-line="622" selection-end-column="57" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#4411#4412#0" expanded="true" />
-                <element signature="e#4468#4469#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MemberCardApi.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/card/MemberCardApi.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="194" column="60" lean-forward="true" selection-start-line="194" selection-start-column="60" selection-end-line="194" selection-end-column="60" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FriendCardApi.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/card/FriendCardApi.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1140">
-              <caret line="68" column="68" lean-forward="true" selection-start-line="64" selection-start-column="8" selection-end-line="68" selection-end-column="68" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CardExtApi.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/card/CardExtApi.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="139" column="43" lean-forward="true" selection-start-line="139" selection-start-column="43" selection-end-line="139" selection-end-column="43" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -113,8 +240,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>update</find>
-      <find>微信卡券用户领取卡券事件推送</find>
       <find>locationName</find>
       <find>outerStr</find>
       <find>OuterStr</find>
@@ -139,10 +264,12 @@
       <find>https://api.weixin.qq.com/card/create?</find>
       <find>getticket</find>
       <find>47001</find>
-      <find>getcardbizuininfo</find>
       <find>40053</find>
       <find>40056</find>
       <find>CASH</find>
+      <find>sourceCompatibility</find>
+      <find>getcardbizuininfo</find>
+      <find>compileKotlin</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -193,6 +320,18 @@
                 <option name="name" value="weixin-plus" />
                 <option name="path" value="$PROJECT_DIR$" />
               </ExternalProjectPojo>
+              <ExternalProjectPojo>
+                <option name="name" value=":weixin-common" />
+                <option name="path" value="$PROJECT_DIR$/weixin-common" />
+              </ExternalProjectPojo>
+              <ExternalProjectPojo>
+                <option name="name" value=":weixin-mp" />
+                <option name="path" value="$PROJECT_DIR$/weixin-mp" />
+              </ExternalProjectPojo>
+              <ExternalProjectPojo>
+                <option name="name" value=":weixin-pay" />
+                <option name="path" value="$PROJECT_DIR$/weixin-pay" />
+              </ExternalProjectPojo>
             </list>
           </value>
         </entry>
@@ -209,24 +348,24 @@
                 <option name="name" value="components" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Assembles and tests this project and all projects that depend on it." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="buildDependents" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
                 <option name="description" value="Displays the sub-projects of root project 'weixin-plus'." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="projects" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Assembles main classes." />
+                <option name="description" value="Assembles and tests this project and all projects that depend on it." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="classes" />
+                <option name="name" value="buildDependents" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Displays the dependent components of components in root project 'weixin-plus'. [incubating]" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="dependentComponents" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles main classes." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="classes" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Displays all buildscript dependencies declared in root project 'weixin-plus'." />
@@ -253,18 +392,14 @@
                 <option name="name" value="javadoc" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Assembles a jar archive containing the main classes." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="jar" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
                 <option name="description" value="Displays the configuration model of root project 'weixin-plus'. [incubating]" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="model" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Assembles a jar archive containing the main classes." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="copyMainKotlinClasses" />
+                <option name="name" value="jar" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Processes main resources." />
@@ -272,7 +407,7 @@
                 <option name="name" value="processResources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the tasks runnable from root project 'weixin-plus'." />
+                <option name="description" value="Displays the tasks runnable from root project 'weixin-plus' (some of the displayed tasks may belong to subprojects)." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="tasks" />
               </ExternalTaskPojo>
@@ -280,10 +415,6 @@
                 <option name="description" value="Initializes a new Gradle build." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="init" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="copyTestKotlinClasses" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Runs the unit tests." />
@@ -294,11 +425,6 @@
                 <option name="description" value="Compiles main Java source." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="compileJava" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Compiles the source set 'test'.kotlin." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="compileTestKotlin" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
@@ -345,11 +471,6 @@
                 <option name="name" value="help" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Compiles the source set 'main'.kotlin." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="compileKotlin" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
                 <option name="description" value="Assembles and tests this project." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="build" />
@@ -367,14 +488,434 @@
             </list>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/weixin-common">
+          <value>
+            <list>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the components produced by project ':weixin-common'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-common" />
+                <option name="name" value="components" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project and all projects that depend on it." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-common" />
+                <option name="name" value="buildDependents" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the sub-projects of project ':weixin-common'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-common" />
+                <option name="name" value="projects" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles main classes." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-common" />
+                <option name="name" value="classes" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the dependent components of components in project ':weixin-common'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-common" />
+                <option name="name" value="dependentComponents" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays all buildscript dependencies declared in project ':weixin-common'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-common" />
+                <option name="name" value="buildEnvironment" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-common" />
+                <option name="name" value="sourcesJar" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles test classes." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-common" />
+                <option name="name" value="testClasses" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Generates Javadoc API documentation for the main source code." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-common" />
+                <option name="name" value="javadoc" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles a jar archive containing the main classes." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-common" />
+                <option name="name" value="jar" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the configuration model of project ':weixin-common'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-common" />
+                <option name="name" value="model" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Processes main resources." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-common" />
+                <option name="name" value="processResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the tasks runnable from project ':weixin-common'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-common" />
+                <option name="name" value="tasks" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs the unit tests." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-common" />
+                <option name="name" value="test" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles main Java source." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-common" />
+                <option name="name" value="compileJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-common" />
+                <option name="name" value="javadocJar" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the insight into a specific dependency in project ':weixin-common'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-common" />
+                <option name="name" value="dependencyInsight" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs all checks." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-common" />
+                <option name="name" value="check" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles the outputs of this project." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-common" />
+                <option name="name" value="assemble" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Deletes the build directory." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-common" />
+                <option name="name" value="clean" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles test Java source." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-common" />
+                <option name="name" value="compileTestJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays all dependencies declared in project ':weixin-common'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-common" />
+                <option name="name" value="dependencies" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Processes test resources." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-common" />
+                <option name="name" value="processTestResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays a help message." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-common" />
+                <option name="name" value="help" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-common" />
+                <option name="name" value="build" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project and all projects it depends on." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-common" />
+                <option name="name" value="buildNeeded" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the properties of project ':weixin-common'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-common" />
+                <option name="name" value="properties" />
+              </ExternalTaskPojo>
+            </list>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/weixin-mp">
+          <value>
+            <list>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the components produced by project ':weixin-mp'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-mp" />
+                <option name="name" value="components" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project and all projects that depend on it." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-mp" />
+                <option name="name" value="buildDependents" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the sub-projects of project ':weixin-mp'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-mp" />
+                <option name="name" value="projects" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles main classes." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-mp" />
+                <option name="name" value="classes" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the dependent components of components in project ':weixin-mp'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-mp" />
+                <option name="name" value="dependentComponents" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays all buildscript dependencies declared in project ':weixin-mp'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-mp" />
+                <option name="name" value="buildEnvironment" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-mp" />
+                <option name="name" value="sourcesJar" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles test classes." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-mp" />
+                <option name="name" value="testClasses" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Generates Javadoc API documentation for the main source code." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-mp" />
+                <option name="name" value="javadoc" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles a jar archive containing the main classes." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-mp" />
+                <option name="name" value="jar" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the configuration model of project ':weixin-mp'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-mp" />
+                <option name="name" value="model" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Processes main resources." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-mp" />
+                <option name="name" value="processResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the tasks runnable from project ':weixin-mp'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-mp" />
+                <option name="name" value="tasks" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs the unit tests." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-mp" />
+                <option name="name" value="test" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles main Java source." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-mp" />
+                <option name="name" value="compileJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-mp" />
+                <option name="name" value="javadocJar" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the insight into a specific dependency in project ':weixin-mp'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-mp" />
+                <option name="name" value="dependencyInsight" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs all checks." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-mp" />
+                <option name="name" value="check" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles the outputs of this project." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-mp" />
+                <option name="name" value="assemble" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Deletes the build directory." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-mp" />
+                <option name="name" value="clean" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles test Java source." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-mp" />
+                <option name="name" value="compileTestJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays all dependencies declared in project ':weixin-mp'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-mp" />
+                <option name="name" value="dependencies" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Processes test resources." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-mp" />
+                <option name="name" value="processTestResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays a help message." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-mp" />
+                <option name="name" value="help" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-mp" />
+                <option name="name" value="build" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project and all projects it depends on." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-mp" />
+                <option name="name" value="buildNeeded" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the properties of project ':weixin-mp'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-mp" />
+                <option name="name" value="properties" />
+              </ExternalTaskPojo>
+            </list>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/weixin-pay">
+          <value>
+            <list>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the components produced by project ':weixin-pay'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-pay" />
+                <option name="name" value="components" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project and all projects that depend on it." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-pay" />
+                <option name="name" value="buildDependents" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the sub-projects of project ':weixin-pay'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-pay" />
+                <option name="name" value="projects" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles main classes." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-pay" />
+                <option name="name" value="classes" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the dependent components of components in project ':weixin-pay'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-pay" />
+                <option name="name" value="dependentComponents" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays all buildscript dependencies declared in project ':weixin-pay'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-pay" />
+                <option name="name" value="buildEnvironment" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-pay" />
+                <option name="name" value="sourcesJar" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles test classes." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-pay" />
+                <option name="name" value="testClasses" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Generates Javadoc API documentation for the main source code." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-pay" />
+                <option name="name" value="javadoc" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles a jar archive containing the main classes." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-pay" />
+                <option name="name" value="jar" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the configuration model of project ':weixin-pay'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-pay" />
+                <option name="name" value="model" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Processes main resources." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-pay" />
+                <option name="name" value="processResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the tasks runnable from project ':weixin-pay'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-pay" />
+                <option name="name" value="tasks" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs the unit tests." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-pay" />
+                <option name="name" value="test" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles main Java source." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-pay" />
+                <option name="name" value="compileJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-pay" />
+                <option name="name" value="javadocJar" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the insight into a specific dependency in project ':weixin-pay'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-pay" />
+                <option name="name" value="dependencyInsight" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs all checks." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-pay" />
+                <option name="name" value="check" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles the outputs of this project." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-pay" />
+                <option name="name" value="assemble" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Deletes the build directory." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-pay" />
+                <option name="name" value="clean" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles test Java source." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-pay" />
+                <option name="name" value="compileTestJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays all dependencies declared in project ':weixin-pay'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-pay" />
+                <option name="name" value="dependencies" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Processes test resources." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-pay" />
+                <option name="name" value="processTestResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays a help message." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-pay" />
+                <option name="name" value="help" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-pay" />
+                <option name="name" value="build" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project and all projects it depends on." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-pay" />
+                <option name="name" value="buildNeeded" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the properties of project ':weixin-pay'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/weixin-pay" />
+                <option name="name" value="properties" />
+              </ExternalTaskPojo>
+            </list>
+          </value>
+        </entry>
       </map>
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="4541552092159" />
-        <entry key="$PROJECT_DIR$/build.gradle" value="1631540444" />
+        <entry key="$PROJECT_DIR$" value="9089244102260" />
+        <entry key="$PROJECT_DIR$/build.gradle" value="940001961" />
         <entry key="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" value="1061797022" />
-        <entry key="$PROJECT_DIR$/settings.gradle" value="2054121499" />
+        <entry key="$PROJECT_DIR$/settings.gradle" value="3249431820" />
+        <entry key="$PROJECT_DIR$/weixin-common/build.gradle" value="552190625" />
+        <entry key="$PROJECT_DIR$/weixin-mp/build.gradle" value="2504899148" />
+        <entry key="$PROJECT_DIR$/weixin-pay/build.gradle" value="2607142797" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -411,6 +952,87 @@
                       </ExternalModuleBuildClasspathPojo>
                     </value>
                   </entry>
+                  <entry key="$PROJECT_DIR$/weixin-common">
+                    <value>
+                      <ExternalModuleBuildClasspathPojo>
+                        <option name="entries">
+                          <list>
+                            <option value="$MAVEN_REPOSITORY$/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin/1.1.4-3/3ea7740688bca8555a1b52d17fcd3133f8054bfe/kotlin-gradle-plugin-1.1.4-3-sources.jar" />
+                            <option value="$MAVEN_REPOSITORY$/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin/1.1.4-3/4e7a7626085b9bb0b45fbe17d4fd5b5deaf2c9af/kotlin-gradle-plugin-1.1.4-3.jar" />
+                            <option value="$MAVEN_REPOSITORY$/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin-api/1.1.4-3/255a5792671f60d5f014535117b4ae5c4ba177f6/kotlin-gradle-plugin-api-1.1.4-3-sources.jar" />
+                            <option value="$MAVEN_REPOSITORY$/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin-api/1.1.4-3/8fc1349f96383ec6472190959241cb2d2c8132a1/kotlin-gradle-plugin-api-1.1.4-3.jar" />
+                            <option value="$MAVEN_REPOSITORY$/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.1.4-3/3f64b358bd71a3b615c8cb90f35c3152492d4b27/kotlin-stdlib-1.1.4-3-sources.jar" />
+                            <option value="$MAVEN_REPOSITORY$/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.1.4-3/7f07ece855a7d40d5ef430218593e92282ae2a74/kotlin-stdlib-1.1.4-3.jar" />
+                            <option value="$MAVEN_REPOSITORY$/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-android-extensions/1.1.4-3/1a9abf7e30064646cfa03cb4af6e8b094cee3eb/kotlin-android-extensions-1.1.4-3-sources.jar" />
+                            <option value="$MAVEN_REPOSITORY$/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-android-extensions/1.1.4-3/e55dfe192c42b4295facf4157a8f8f47670feb81/kotlin-android-extensions-1.1.4-3.jar" />
+                            <option value="$MAVEN_REPOSITORY$/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-embeddable/1.1.4-3/1dec774ed3dd1f446290c982f93d63d88fd74ff4/kotlin-compiler-embeddable-1.1.4-3-sources.jar" />
+                            <option value="$MAVEN_REPOSITORY$/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-embeddable/1.1.4-3/15ddf7af18d9931317d118834d71de5ba67b8035/kotlin-compiler-embeddable-1.1.4-3.jar" />
+                            <option value="$MAVEN_REPOSITORY$/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-runner/1.1.4-3/b4de9ae86deb0f490fec51f5e0381b986b0ac63b/kotlin-compiler-runner-1.1.4-3-sources.jar" />
+                            <option value="$MAVEN_REPOSITORY$/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-runner/1.1.4-3/6bde318ad22bc3f8d698897ff8f711ee43d4e151/kotlin-compiler-runner-1.1.4-3.jar" />
+                            <option value="$MAVEN_REPOSITORY$/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-annotation-processing/1.1.4-3/f58985fa5a60dd3311dfa0897d702cd7379f38e0/kotlin-annotation-processing-1.1.4-3-sources.jar" />
+                            <option value="$MAVEN_REPOSITORY$/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-annotation-processing/1.1.4-3/2e7044cbbc1aba3383f14cfd5dfcad5c0497c03b/kotlin-annotation-processing-1.1.4-3.jar" />
+                            <option value="$MAVEN_REPOSITORY$/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/5991ca87ef1fb5544943d9abc5a9a37583fabe03/annotations-13.0-sources.jar" />
+                            <option value="$MAVEN_REPOSITORY$/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar" />
+                          </list>
+                        </option>
+                        <option name="path" value="$PROJECT_DIR$/weixin-common" />
+                      </ExternalModuleBuildClasspathPojo>
+                    </value>
+                  </entry>
+                  <entry key="$PROJECT_DIR$/weixin-mp">
+                    <value>
+                      <ExternalModuleBuildClasspathPojo>
+                        <option name="entries">
+                          <list>
+                            <option value="$MAVEN_REPOSITORY$/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin/1.1.4-3/3ea7740688bca8555a1b52d17fcd3133f8054bfe/kotlin-gradle-plugin-1.1.4-3-sources.jar" />
+                            <option value="$MAVEN_REPOSITORY$/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin/1.1.4-3/4e7a7626085b9bb0b45fbe17d4fd5b5deaf2c9af/kotlin-gradle-plugin-1.1.4-3.jar" />
+                            <option value="$MAVEN_REPOSITORY$/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin-api/1.1.4-3/255a5792671f60d5f014535117b4ae5c4ba177f6/kotlin-gradle-plugin-api-1.1.4-3-sources.jar" />
+                            <option value="$MAVEN_REPOSITORY$/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin-api/1.1.4-3/8fc1349f96383ec6472190959241cb2d2c8132a1/kotlin-gradle-plugin-api-1.1.4-3.jar" />
+                            <option value="$MAVEN_REPOSITORY$/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.1.4-3/3f64b358bd71a3b615c8cb90f35c3152492d4b27/kotlin-stdlib-1.1.4-3-sources.jar" />
+                            <option value="$MAVEN_REPOSITORY$/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.1.4-3/7f07ece855a7d40d5ef430218593e92282ae2a74/kotlin-stdlib-1.1.4-3.jar" />
+                            <option value="$MAVEN_REPOSITORY$/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-android-extensions/1.1.4-3/1a9abf7e30064646cfa03cb4af6e8b094cee3eb/kotlin-android-extensions-1.1.4-3-sources.jar" />
+                            <option value="$MAVEN_REPOSITORY$/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-android-extensions/1.1.4-3/e55dfe192c42b4295facf4157a8f8f47670feb81/kotlin-android-extensions-1.1.4-3.jar" />
+                            <option value="$MAVEN_REPOSITORY$/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-embeddable/1.1.4-3/1dec774ed3dd1f446290c982f93d63d88fd74ff4/kotlin-compiler-embeddable-1.1.4-3-sources.jar" />
+                            <option value="$MAVEN_REPOSITORY$/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-embeddable/1.1.4-3/15ddf7af18d9931317d118834d71de5ba67b8035/kotlin-compiler-embeddable-1.1.4-3.jar" />
+                            <option value="$MAVEN_REPOSITORY$/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-runner/1.1.4-3/b4de9ae86deb0f490fec51f5e0381b986b0ac63b/kotlin-compiler-runner-1.1.4-3-sources.jar" />
+                            <option value="$MAVEN_REPOSITORY$/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-runner/1.1.4-3/6bde318ad22bc3f8d698897ff8f711ee43d4e151/kotlin-compiler-runner-1.1.4-3.jar" />
+                            <option value="$MAVEN_REPOSITORY$/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-annotation-processing/1.1.4-3/f58985fa5a60dd3311dfa0897d702cd7379f38e0/kotlin-annotation-processing-1.1.4-3-sources.jar" />
+                            <option value="$MAVEN_REPOSITORY$/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-annotation-processing/1.1.4-3/2e7044cbbc1aba3383f14cfd5dfcad5c0497c03b/kotlin-annotation-processing-1.1.4-3.jar" />
+                            <option value="$MAVEN_REPOSITORY$/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/5991ca87ef1fb5544943d9abc5a9a37583fabe03/annotations-13.0-sources.jar" />
+                            <option value="$MAVEN_REPOSITORY$/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar" />
+                          </list>
+                        </option>
+                        <option name="path" value="$PROJECT_DIR$/weixin-mp" />
+                      </ExternalModuleBuildClasspathPojo>
+                    </value>
+                  </entry>
+                  <entry key="$PROJECT_DIR$/weixin-pay">
+                    <value>
+                      <ExternalModuleBuildClasspathPojo>
+                        <option name="entries">
+                          <list>
+                            <option value="$MAVEN_REPOSITORY$/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin/1.1.4-3/3ea7740688bca8555a1b52d17fcd3133f8054bfe/kotlin-gradle-plugin-1.1.4-3-sources.jar" />
+                            <option value="$MAVEN_REPOSITORY$/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin/1.1.4-3/4e7a7626085b9bb0b45fbe17d4fd5b5deaf2c9af/kotlin-gradle-plugin-1.1.4-3.jar" />
+                            <option value="$MAVEN_REPOSITORY$/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin-api/1.1.4-3/255a5792671f60d5f014535117b4ae5c4ba177f6/kotlin-gradle-plugin-api-1.1.4-3-sources.jar" />
+                            <option value="$MAVEN_REPOSITORY$/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin-api/1.1.4-3/8fc1349f96383ec6472190959241cb2d2c8132a1/kotlin-gradle-plugin-api-1.1.4-3.jar" />
+                            <option value="$MAVEN_REPOSITORY$/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.1.4-3/3f64b358bd71a3b615c8cb90f35c3152492d4b27/kotlin-stdlib-1.1.4-3-sources.jar" />
+                            <option value="$MAVEN_REPOSITORY$/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.1.4-3/7f07ece855a7d40d5ef430218593e92282ae2a74/kotlin-stdlib-1.1.4-3.jar" />
+                            <option value="$MAVEN_REPOSITORY$/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-android-extensions/1.1.4-3/1a9abf7e30064646cfa03cb4af6e8b094cee3eb/kotlin-android-extensions-1.1.4-3-sources.jar" />
+                            <option value="$MAVEN_REPOSITORY$/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-android-extensions/1.1.4-3/e55dfe192c42b4295facf4157a8f8f47670feb81/kotlin-android-extensions-1.1.4-3.jar" />
+                            <option value="$MAVEN_REPOSITORY$/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-embeddable/1.1.4-3/1dec774ed3dd1f446290c982f93d63d88fd74ff4/kotlin-compiler-embeddable-1.1.4-3-sources.jar" />
+                            <option value="$MAVEN_REPOSITORY$/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-embeddable/1.1.4-3/15ddf7af18d9931317d118834d71de5ba67b8035/kotlin-compiler-embeddable-1.1.4-3.jar" />
+                            <option value="$MAVEN_REPOSITORY$/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-runner/1.1.4-3/b4de9ae86deb0f490fec51f5e0381b986b0ac63b/kotlin-compiler-runner-1.1.4-3-sources.jar" />
+                            <option value="$MAVEN_REPOSITORY$/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-runner/1.1.4-3/6bde318ad22bc3f8d698897ff8f711ee43d4e151/kotlin-compiler-runner-1.1.4-3.jar" />
+                            <option value="$MAVEN_REPOSITORY$/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-annotation-processing/1.1.4-3/f58985fa5a60dd3311dfa0897d702cd7379f38e0/kotlin-annotation-processing-1.1.4-3-sources.jar" />
+                            <option value="$MAVEN_REPOSITORY$/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-annotation-processing/1.1.4-3/2e7044cbbc1aba3383f14cfd5dfcad5c0497c03b/kotlin-annotation-processing-1.1.4-3.jar" />
+                            <option value="$MAVEN_REPOSITORY$/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/5991ca87ef1fb5544943d9abc5a9a37583fabe03/annotations-13.0-sources.jar" />
+                            <option value="$MAVEN_REPOSITORY$/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar" />
+                          </list>
+                        </option>
+                        <option name="path" value="$PROJECT_DIR$/weixin-pay" />
+                      </ExternalModuleBuildClasspathPojo>
+                    </value>
+                  </entry>
                 </map>
               </option>
               <option name="name" value="weixin-plus" />
@@ -437,14 +1059,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/msg/MassMessageApi.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/msg/SubscribeMessageApi.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/msg/TemplateMessageApi.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/web/JsapiConfigApi.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/web/JsapiTicketApi.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/web/WebAccessTokenApi.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/media/MediaFile.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/utils/HttpUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/media/UpdateMediaArticle.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/media/MediaType.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/media/MediaApi.java" />
@@ -488,6 +1102,14 @@
         <option value="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/card/CardExtApi.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/ApiResultErrorCode.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/card/CardType.java" />
+        <option value="$PROJECT_DIR$/weixin-common/src/main/java/com/rsh/framework/weixin/utils/RetryUtils.java" />
+        <option value="$PROJECT_DIR$/weixin-mp/build.gradle" />
+        <option value="$PROJECT_DIR$/weixin-pay/build.gradle" />
+        <option value="$PROJECT_DIR$/weixin-common/src/main/java/com/rsh/framework/weixin/common/UniqueIdGenerator.java" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/weixin-common/src/main/java/com/rsh/framework/weixin/common/model/MediaFile.java" />
+        <option value="$PROJECT_DIR$/weixin-common/src/main/java/com/rsh/framework/weixin/utils/HttpUtils.java" />
+        <option value="$PROJECT_DIR$/weixin-common/src/main/java/com/rsh/framework/weixin/common/model/ApiResult.java" />
       </list>
     </option>
   </component>
@@ -563,75 +1185,7 @@
             <path>
               <item name="weixin-plus" type="b2602c69:ProjectViewProjectNode" />
               <item name="weixin-plus" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="weixin-plus" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weixin-plus" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="weixin-plus" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weixin-plus" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="weixin-plus" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weixin-plus" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="weixin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="weixin-plus" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weixin-plus" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="weixin" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="weixin-plus" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weixin-plus" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="weixin" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="card" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="weixin-plus" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weixin-plus" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="weixin" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="weixin-plus" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weixin-plus" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="weixin" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="card" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="weixin-plus" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weixin-plus" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="weixin" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
+              <item name="weixin-mp" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -664,6 +1218,7 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="459" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/weixin-common/src/main/java/com" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -674,6 +1229,8 @@
       <recent name="com.rsh.framework.weixin.cache.impl" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\workspace\intellij IDEA\weixin-plus\weixin-common\src\main\java\com\rsh\framework\weixin\utils" />
+      <recent name="E:\workspace\intellij IDEA\weixin-plus\weixin-mp\src\main\resources" />
       <recent name="E:\workspace\intellij IDEA\weixin-plus\src\main\java\com\rsh\framework\weixin\utils" />
       <recent name="E:\workspace\intellij IDEA\weixin-plus\src\main\java\com\rsh\framework\weixin\api\customservice" />
       <recent name="F:\work\project\weixin-plus\src\main\resources" />
@@ -691,7 +1248,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ApiResult">
+  <component name="RunManager" selected="Gradle.weixin-plus:weixin-mp [build]">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
@@ -701,11 +1258,11 @@
     <configuration name="ApiResult" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.rsh.framework.weixin.model.*" />
+          <option name="PATTERN" value="com.rsh.framework.weixin.common.model.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="com.rsh.framework.weixin.model.ApiResult" />
+      <option name="MAIN_CLASS_NAME" value="com.rsh.framework.weixin.common.model.ApiResult" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -714,13 +1271,13 @@
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="weixin-plus_main" />
+      <module name="weixin-common_main" />
       <envs />
     </configuration>
     <configuration name="MediaArticle" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.rsh.framework.weixin.model.media.*" />
+          <option name="PATTERN" value="com.rsh.framework.weixin.common.model.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -787,13 +1344,23 @@
       </ExternalSystemSettings>
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
     </configuration>
-    <configuration name="build (2)" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
-      <module name="weixin-plus" />
-      <setting name="path" value="file://$PROJECT_DIR$/build.gradle" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workDir" value="file://$PROJECT_DIR$" />
-      <setting name="debug" value="false" />
+    <configuration name="weixin-plus:weixin-mp [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/weixin-mp" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -814,6 +1381,18 @@
       </option>
       <envs />
       <patterns />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="weixin-plus_test" />
+      <envs />
     </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
@@ -856,19 +1435,19 @@
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Groovy.build (2)" />
-      <item index="1" class="java.lang.String" itemvalue="Application.Test" />
-      <item index="2" class="java.lang.String" itemvalue="Gradle.weixin-plus [javadocJar]" />
-      <item index="3" class="java.lang.String" itemvalue="Application.MediaArticle" />
-      <item index="4" class="java.lang.String" itemvalue="Application.ApiResult" />
+      <item index="0" class="java.lang.String" itemvalue="Application.Test" />
+      <item index="1" class="java.lang.String" itemvalue="Gradle.weixin-plus [javadocJar]" />
+      <item index="2" class="java.lang.String" itemvalue="Application.MediaArticle" />
+      <item index="3" class="java.lang.String" itemvalue="Application.ApiResult" />
+      <item index="4" class="java.lang.String" itemvalue="Gradle.weixin-plus:weixin-mp [build]" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.ApiResult" />
-        <item index="1" class="java.lang.String" itemvalue="Application.MediaArticle" />
-        <item index="2" class="java.lang.String" itemvalue="Gradle.weixin-plus [javadocJar]" />
-        <item index="3" class="java.lang.String" itemvalue="Application.Test" />
-        <item index="4" class="java.lang.String" itemvalue="Groovy.build (2)" />
+        <item index="0" class="java.lang.String" itemvalue="Gradle.weixin-plus:weixin-mp [build]" />
+        <item index="1" class="java.lang.String" itemvalue="Application.ApiResult" />
+        <item index="2" class="java.lang.String" itemvalue="Application.MediaArticle" />
+        <item index="3" class="java.lang.String" itemvalue="Gradle.weixin-plus [javadocJar]" />
+        <item index="4" class="java.lang.String" itemvalue="Application.Test" />
       </list>
     </recent_temporary>
   </component>
@@ -892,7 +1471,7 @@
       <workItem from="1513930390906" duration="20000" />
       <workItem from="1513931091533" duration="92559000" />
       <workItem from="1514449666000" duration="28226000" />
-      <workItem from="1514855723174" duration="35134000" />
+      <workItem from="1514855723174" duration="39336000" />
     </task>
     <task id="LOCAL-00001" summary="add utils">
       <created>1513331231626</created>
@@ -1006,11 +1585,18 @@
       <option name="project" value="LOCAL" />
       <updated>1514972352692</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="add 特殊劵接口">
+      <created>1515059132784</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1515059132784</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="236965000" />
+    <option name="totallyTimeSpent" value="241167000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1027,8 +1613,9 @@
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2510661" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="combo" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23809524" sideWeight="0.49791667" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1652452" sideWeight="0.49573562" order="0" side_tool="false" content_ui="tabs" x="724" y="204" width="472" height="632" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16471216" sideWeight="0.49573562" order="0" side_tool="false" content_ui="tabs" x="724" y="204" width="472" height="632" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1039,7 +1626,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.49791667" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32792208" sideWeight="0.48541668" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1080,7 +1666,8 @@
     <MESSAGE value="add 数据分析相关接口" />
     <MESSAGE value="add 卡券相关接口" />
     <MESSAGE value="add 微信会员卡及朋友劵接口" />
-    <option name="LAST_COMMIT_MESSAGE" value="add 微信会员卡及朋友劵接口" />
+    <MESSAGE value="add 特殊劵接口" />
+    <option name="LAST_COMMIT_MESSAGE" value="add 特殊劵接口" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1108,194 +1695,11 @@
     <select />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://D:/Program Files/Java/jdk1.8.0_101/src.zip!/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="105" column="20" lean-forward="false" selection-start-line="105" selection-start-column="20" selection-end-line="105" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/utils/IOUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="70" column="29" lean-forward="false" selection-start-line="70" selection-start-column="23" selection-end-line="70" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/newsmsgcomment/package-info.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" column="9" lean-forward="false" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/base/package-info.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" column="9" lean-forward="false" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/shop/package-info.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" column="7" lean-forward="false" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/msg/OutMsgType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="18" column="8" lean-forward="false" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/msg/InMsgType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="12" lean-forward="false" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/store/StoreApi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="17" column="20" lean-forward="true" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/account/LinkApi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="27" column="14" lean-forward="false" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/utils/HttpUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="47" column="13" lean-forward="false" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/account/QrcodeApi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="565">
-          <caret line="78" column="30" lean-forward="false" selection-start-line="78" selection-start-column="19" selection-end-line="78" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/cache/impl/DefaultAccessTokenCache.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="23" column="46" lean-forward="false" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/datacube/ApiAnalyDataApi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="58" column="72" lean-forward="false" selection-start-line="58" selection-start-column="60" selection-end-line="58" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/datacube/ArticlesAnalyDataApi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="116" column="82" lean-forward="false" selection-start-line="116" selection-start-column="82" selection-end-line="116" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/datacube/MessageAnalyDataApi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="126" column="24" lean-forward="true" selection-start-line="126" selection-start-column="24" selection-end-line="126" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/datacube/UserAnalyDataApi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="67" column="32" lean-forward="false" selection-start-line="67" selection-start-column="32" selection-end-line="67" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/store/StoreMiniprogramApi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="14" lean-forward="false" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/pay.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/pay/package-info.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" column="7" lean-forward="false" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/store/package-info.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="43" lean-forward="true" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/msg/in/ReceiveMessage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="623">
-          <caret line="233" column="16" lean-forward="false" selection-start-line="233" selection-start-column="16" selection-end-line="233" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/pay/package-info.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/AppConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="20" column="34" lean-forward="false" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/base/AccessToken.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="16" column="58" lean-forward="false" selection-start-line="16" selection-start-column="47" selection-end-line="16" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="29" lean-forward="true" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/create_table.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="39" lean-forward="true" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application-dev.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1303,37 +1707,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="290">
           <caret line="68" column="6" lean-forward="false" selection-start-line="68" selection-start-column="6" selection-end-line="68" selection-end-column="6" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#819#820#0" expanded="false" />
-            <element signature="e#848#849#0" expanded="false" />
-            <element signature="e#892#893#0" expanded="false" />
-            <element signature="e#928#929#0" expanded="false" />
-            <element signature="e#964#965#0" expanded="false" />
-            <element signature="e#996#997#0" expanded="false" />
-            <element signature="e#1046#1047#0" expanded="false" />
-            <element signature="e#1088#1089#0" expanded="false" />
-            <element signature="e#1124#1125#0" expanded="false" />
-            <element signature="e#1155#1156#0" expanded="false" />
-            <element signature="e#1204#1205#0" expanded="false" />
-            <element signature="e#1244#1245#0" expanded="false" />
-            <element signature="e#1276#1277#0" expanded="false" />
-            <element signature="e#1304#1305#0" expanded="false" />
-            <element signature="e#1346#1347#0" expanded="false" />
-            <element signature="e#1380#1381#0" expanded="false" />
-            <element signature="e#1423#1424#0" expanded="false" />
-            <element signature="e#1454#1455#0" expanded="false" />
-            <element signature="e#1510#1511#0" expanded="false" />
-            <element signature="e#1550#1551#0" expanded="false" />
-            <element signature="e#1919#1920#0" expanded="false" />
-            <element signature="e#1949#1950#0" expanded="false" />
-            <element signature="e#1995#1996#0" expanded="false" />
-            <element signature="e#2033#2034#0" expanded="false" />
-            <element signature="e#2069#2070#0" expanded="false" />
-            <element signature="e#2101#2102#0" expanded="false" />
-            <element signature="e#2151#2152#0" expanded="false" />
-            <element signature="e#2193#2194#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1373,22 +1747,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1518">
           <caret line="86" column="29" lean-forward="true" selection-start-line="86" selection-start-column="29" selection-end-line="86" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/settings.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-358">
-          <caret line="24" column="14" lean-forward="true" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
           <folding />
         </state>
       </provider>
@@ -1449,43 +1807,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/card/MemberCardApi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="194" column="60" lean-forward="true" selection-start-line="194" selection-start-column="60" selection-end-line="194" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/card/FriendCardApi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1140">
-          <caret line="68" column="68" lean-forward="true" selection-start-line="64" selection-start-column="8" selection-end-line="68" selection-end-column="68" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/model/ApiResultErrorCode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="271">
           <caret line="97" column="37" lean-forward="true" selection-start-line="97" selection-start-column="37" selection-end-line="97" selection-end-column="37" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/card/CardApi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="622" column="57" lean-forward="true" selection-start-line="622" selection-start-column="57" selection-end-line="622" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4411#4412#0" expanded="true" />
-            <element signature="e#4468#4469#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1517,20 +1843,265 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="233">
           <caret line="72" column="44" lean-forward="false" selection-start-line="72" selection-start-column="25" selection-end-line="72" selection-end-column="44" />
-          <folding>
-            <element signature="e#673#674#0" expanded="true" />
-            <element signature="e#736#737#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/card/CardExtApi.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="139" column="43" lean-forward="true" selection-start-line="139" selection-start-column="43" selection-end-line="139" selection-end-column="43" />
+        <state relative-caret-position="148">
+          <caret line="35" column="30" lean-forward="true" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/card/FriendCardApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1140">
+          <caret line="68" column="68" lean-forward="false" selection-start-line="64" selection-start-column="8" selection-end-line="68" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/card/MemberCardApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="194" column="60" lean-forward="false" selection-start-line="194" selection-start-column="60" selection-end-line="194" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rsh/framework/weixin/api/card/CardApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="622" column="57" lean-forward="false" selection-start-line="622" selection-start-column="57" selection-end-line="622" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/weixin-mp/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/weixin-mp/src/main/java/com/rsh/framework/weixin/utils/Charsets.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="38" lean-forward="false" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/weixin-mp/src/main/java/com/rsh/framework/weixin/utils/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/weixin-common/src/main/java/com/rsh/framework/weixin/utils/MD5Util.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/weixin-pay/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="38" lean-forward="true" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/weixin-common/src/main/java/com/rsh/framework/weixin/utils/RetryUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="11" column="15" lean-forward="true" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/weixin-common/src/main/java/com/rsh/framework/weixin/utils/ClassUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/weixin-common/src/main/java/com/rsh/framework/weixin/utils/Sha1Util.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/weixin-common/src/main/java/com/rsh/framework/weixin/utils/IOUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/weixin-common/src/main/java/com/rsh/framework/weixin/utils/StringUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/weixin-common/src/main/java/com/rsh/framework/weixin/utils/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/weixin-common/src/main/java/com/rsh/framework/weixin/utils/Charsets.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/weixin-common/src/main/java/com/rsh/framework/weixin/common/UniqueIdGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/weixin-common/src/main/java/com/rsh/framework/weixin/utils/FileUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/weixin-common/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/weixin-common/src/main/java/com/rsh/framework/weixin/common/exception/WeixinApiException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/weixin-mp/src/main/java/com/rsh/framework/weixin/api/account/LinkApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="59" lean-forward="false" selection-start-line="4" selection-start-column="59" selection-end-line="4" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/kotlin-build/caches/version.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/weixin-mp/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="18" lean-forward="true" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/weixin-mp/src/main/java/com/rsh/framework/weixin/model/media/MediaFileType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="12" lean-forward="false" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/weixin-common/src/main/java/com/rsh/framework/weixin/utils/HttpUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="113" column="17" lean-forward="false" selection-start-line="113" selection-start-column="8" selection-end-line="113" selection-end-column="17" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/weixin-common/src/main/java/com/rsh/framework/weixin/common/model/MediaFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="19" column="26" lean-forward="false" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/weixin-mp/src/main/java/com/rsh/framework/weixin/api/media/MediaApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="54" lean-forward="false" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/weixin-common/src/main/java/com/rsh/framework/weixin/common/model/ApiResultErrorCode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="24" column="39" lean-forward="true" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/weixin-common/src/main/java/com/rsh/framework/weixin/common/model/IndustryCode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/weixin-common/src/main/java/com/rsh/framework/weixin/common/model/ApiResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="16" column="15" lean-forward="true" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
+          <folding />
         </state>
       </provider>
     </entry>

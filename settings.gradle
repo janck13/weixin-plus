@@ -1,2 +1,5 @@
 rootProject.name = 'weixin-plus'
+include 'weixin-mp'
+include 'weixin-pay'
+include 'weixin-common'
 
