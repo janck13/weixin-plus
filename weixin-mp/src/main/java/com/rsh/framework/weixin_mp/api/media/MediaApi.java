@@ -353,9 +353,15 @@ public class MediaApi {
         if (mediaType == null) {
             throw new WeixinApiException("mediaType Cannot be null");
         }
-        if (offset < 0) offset = 0;
-        if (count < 1) count = 1;
-        if (count > 20) count = 20;
+        if (offset < 0) {
+            offset = 0;
+        }
+        if (count < 1) {
+            count = 1;
+        }
+        if (count > 20) {
+            count = 20;
+        }
 
         String url = batchgetMaterialUrl.replace("ACCESS_TOKEN", AccessTokenApi.getAccessToken().getToken());
 
@@ -394,6 +400,8 @@ public class MediaApi {
                 fileTypes = new String[]{"jpg"};
                 maxFileSize = 64 * 2014;
                 break;
+            default:
+                throw new WeixinApiException("mediaFileType无效！");
         }
 
         if (!FileUtil.checkFileType(media.getName(), fileTypes)) {

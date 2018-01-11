@@ -21,6 +21,7 @@ public class SendNewsMessage extends BaseSendMessage{
         this.news = news;
     }
 
+    @Override
     public String toJsonString(){
         return JSON.toJSONString(this);
     }

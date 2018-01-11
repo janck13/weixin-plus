@@ -39,6 +39,7 @@ public class RedisJsapiTicketCache implements IJsapiTicketCache {
     public String getJsapiTicket(String key) {
         String newkey = KEY_PREFIX + key;
         return redisTemplate.execute(new RedisCallback<String>() {
+            @Override
             public String doInRedis(RedisConnection connection) throws DataAccessException {
                 try {
                     byte[] tmp = connection.get(newkey.getBytes("UTF-8"));
@@ -59,6 +60,7 @@ public class RedisJsapiTicketCache implements IJsapiTicketCache {
     public boolean setJsapiTicket(String key, String value, int expireTime) {
         String newkey = KEY_PREFIX + key;
         return redisTemplate.execute(new RedisCallback<Boolean>() {
+            @Override
             public Boolean doInRedis(RedisConnection connection) throws DataAccessException {
                 try {
                     return connection.setEx(newkey.getBytes("UTF-8"), expireTime, value.getBytes("UTF-8"));
@@ -74,6 +76,7 @@ public class RedisJsapiTicketCache implements IJsapiTicketCache {
     public void removeJsapiTicket(String key) {
         String newkey = KEY_PREFIX + key;
         redisTemplate.execute(new RedisCallback<Long>() {
+            @Override
             public Long doInRedis(RedisConnection connection) throws DataAccessException {
                 try {
                     return connection.del(newkey.getBytes("UTF-8"));

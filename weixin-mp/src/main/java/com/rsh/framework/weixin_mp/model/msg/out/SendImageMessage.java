@@ -21,6 +21,7 @@ public class SendImageMessage extends BaseSendMessage{
         this.image = image;
     }
 
+    @Override
     public String toJsonString(){
         return JSON.toJSONString(this);
     }

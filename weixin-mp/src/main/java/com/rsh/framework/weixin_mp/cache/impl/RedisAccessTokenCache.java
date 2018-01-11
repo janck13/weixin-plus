@@ -39,6 +39,7 @@ public class RedisAccessTokenCache implements IAccessTokenCache {
     public String getAccessToken(String key) {
         String newkey = KEY_PREFIX + key;
         return redisTemplate.execute(new RedisCallback<String>() {
+            @Override
             public String doInRedis(RedisConnection connection) throws DataAccessException {
                 try {
                     byte[] tmp = connection.get(newkey.getBytes("UTF-8"));
@@ -59,6 +60,7 @@ public class RedisAccessTokenCache implements IAccessTokenCache {
     public boolean setAccessToken(String key, String value, int expireTime) {
         String newkey = KEY_PREFIX + key;
         return redisTemplate.execute(new RedisCallback<Boolean>() {
+            @Override
             public Boolean doInRedis(RedisConnection connection) throws DataAccessException {
                 try {
                     return connection.setEx(newkey.getBytes("UTF-8"), expireTime, value.getBytes("UTF-8"));
@@ -74,6 +76,7 @@ public class RedisAccessTokenCache implements IAccessTokenCache {
     public void removeAccessToken(String key) {
         String newkey = KEY_PREFIX + key;
         redisTemplate.execute(new RedisCallback<Long>() {
+            @Override
             public Long doInRedis(RedisConnection connection) throws DataAccessException {
                 try {
                     return connection.del(newkey.getBytes("UTF-8"));

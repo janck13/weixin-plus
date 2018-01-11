@@ -21,6 +21,7 @@ public class SendVideoMessage extends BaseSendMessage{
         this.video = video;
     }
 
+    @Override
     public String toJsonString(){
         return JSON.toJSONString(this);
     }

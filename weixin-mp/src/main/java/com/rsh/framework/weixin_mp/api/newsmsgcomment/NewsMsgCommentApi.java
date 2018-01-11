@@ -88,10 +88,18 @@ public class NewsMsgCommentApi {
         if (msgDataId == null) {
             throw new WeixinApiException("msgDataId Cannot be null");
         }
-        if (index == null) index = 0;
-        if (begin < 0) begin = 0;
-        if (count < 1) count = 1;
-        if (count >= 50) count = 40;
+        if (index == null) {
+            index = 0;
+        }
+        if (begin < 0) {
+            begin = 0;
+        }
+        if (count < 1) {
+            count = 1;
+        }
+        if (count >= 50) {
+            count = 40;
+        }
 
         String url = getCommentDataUrl.replace("ACCESS_TOKEN", AccessTokenApi.getAccessToken().getToken());
 

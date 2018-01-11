@@ -21,6 +21,7 @@ public class SendMusicMessage extends BaseSendMessage{
         this.music = music;
     }
 
+    @Override
     public String toJsonString(){
         return JSON.toJSONString(this);
     }

@@ -21,6 +21,7 @@ public class SendMiniprogrampageMessage extends BaseSendMessage{
         this.miniprogrampage = miniprogrampage;
     }
 
+    @Override
     public String toJsonString(){
         return JSON.toJSONString(this);
     }

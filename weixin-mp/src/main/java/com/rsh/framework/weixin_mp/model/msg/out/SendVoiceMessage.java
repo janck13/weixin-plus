@@ -21,6 +21,7 @@ public class SendVoiceMessage extends BaseSendMessage{
         this.voice = voice;
     }
 
+    @Override
     public String toJsonString(){
         return JSON.toJSONString(this);
     }

@@ -37,8 +37,9 @@ public class WebAccessToken implements RetryUtils.ResultCheck {
             errcode = jb.getInteger("errcode");
             errmsg = jb.getString("errmsg");
 
-            if (expiresIn != null)
+            if (expiresIn != null) {
                 expiredTime = System.currentTimeMillis() + ((expiresIn - 5) * 1000);
+            }
 
         } catch (Exception e) {
             throw new RuntimeException(e);
@@ -46,12 +47,15 @@ public class WebAccessToken implements RetryUtils.ResultCheck {
     }
 
     public boolean isAvailable() {
-        if (expiredTime == null)
+        if (expiredTime == null) {
             return false;
-        if (errcode != null)
+        }
+        if (errcode != null) {
             return false;
-        if (expiredTime < System.currentTimeMillis())
+        }
+        if (expiredTime < System.currentTimeMillis()) {
             return false;
+        }
         return accessToken != null;
     }
 
@@ -116,8 +120,9 @@ public class WebAccessToken implements RetryUtils.ResultCheck {
     public String getErrmsg() {
         if (errcode != null) {
             String result = ApiResultErrorCode.get(errcode);
-            if (result != null)
+            if (result != null) {
                 return result;
+            }
         }
         return errmsg;
     }

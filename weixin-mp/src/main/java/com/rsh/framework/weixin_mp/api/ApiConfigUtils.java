@@ -120,8 +120,9 @@ public class ApiConfigUtils {
      */
     public static AppConfig getAppConfig(String appId) {
         AppConfig cfg = appConfigMap.get(appId);
-        if (cfg == null)
+        if (cfg == null) {
             throw new WeixinApiException("该appId对应的AppConfig为配置，需先调用ApiConfigUtils.putAppConfig(AppConfig appConfig)存入AppConfig.");
+        }
         return cfg;
     }
 

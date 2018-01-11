@@ -65,12 +65,15 @@ public class AccessToken implements RetryUtils.ResultCheck {
      * @return
      */
     public boolean isAvailable() {
-        if (expiredTime == null)
+        if (expiredTime == null) {
             return false;
-        if (errcode != null)
+        }
+        if (errcode != null) {
             return false;
-        if (expiredTime < System.currentTimeMillis())
+        }
+        if (expiredTime < System.currentTimeMillis()) {
             return false;
+        }
         return token != null;
     }
 
@@ -111,8 +114,9 @@ public class AccessToken implements RetryUtils.ResultCheck {
     public String getErrmsg() {
         if (errcode != null) {
             String result = ApiResultErrorCode.get(errcode);
-            if (result != null)
+            if (result != null) {
                 return result;
+            }
         }
         return errmsg;
     }

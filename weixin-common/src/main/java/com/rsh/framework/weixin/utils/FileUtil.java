@@ -21,36 +21,37 @@ public class FileUtil {
 	 * @return String
 	 */
 	public static String getcontentType(String filenameExtension) {
-		if (filenameExtension == null)
-			return null;
-		if (filenameExtension.equalsIgnoreCase("bmp")) {
+		if (filenameExtension == null) {
+            return null;
+        }
+		if ("bmp".equalsIgnoreCase(filenameExtension)) {
 			return "image/bmp";
 		}
-		if (filenameExtension.equalsIgnoreCase("gif")) {
+		if ("gif".equalsIgnoreCase(filenameExtension)) {
 			return "image/gif";
 		}
-		if (filenameExtension.equalsIgnoreCase("jpeg") || filenameExtension.equalsIgnoreCase("jpg")) {
+		if ("jpeg".equalsIgnoreCase(filenameExtension) || "jpg".equalsIgnoreCase(filenameExtension)) {
 			return "image/jpeg";
 		}
-		if (filenameExtension.equalsIgnoreCase("png")) {
+		if ("png".equalsIgnoreCase(filenameExtension)) {
 			return "image/png";
 		}
-		if (filenameExtension.equalsIgnoreCase("html")) {
+		if ("html".equalsIgnoreCase(filenameExtension)) {
 			return "text/html";
 		}
-		if (filenameExtension.equalsIgnoreCase("txt")) {
+		if ("txt".equalsIgnoreCase(filenameExtension)) {
 			return "text/plain";
 		}
-		if (filenameExtension.equalsIgnoreCase("vsd")) {
+		if ("vsd".equalsIgnoreCase(filenameExtension)) {
 			return "application/vnd.visio";
 		}
-		if (filenameExtension.equalsIgnoreCase("pptx") || filenameExtension.equalsIgnoreCase("ppt")) {
+		if ("pptx".equalsIgnoreCase(filenameExtension) || "ppt".equalsIgnoreCase(filenameExtension)) {
 			return "application/vnd.ms-powerpoint";
 		}
-		if (filenameExtension.equalsIgnoreCase("docx") || filenameExtension.equalsIgnoreCase("doc")) {
+		if ("docx".equalsIgnoreCase(filenameExtension) || "doc".equalsIgnoreCase(filenameExtension)) {
 			return "application/msword";
 		}
-		if (filenameExtension.equalsIgnoreCase("xml")) {
+		if ("xml".equalsIgnoreCase(filenameExtension)) {
 			return "text/xml";
 		}
 		return "application/octet-stream";
@@ -66,11 +67,13 @@ public class FileUtil {
 	 * @return
 	 */
 	public static boolean checkFileType(String fileName, String[] allowFiles) {
-		if (StringUtils.isBlank(fileName))
-			return false;
+		if (StringUtils.isBlank(fileName)) {
+            return false;
+        }
 
-		if (allowFiles == null || allowFiles.length == 0)
-			return true;
+		if (allowFiles == null || allowFiles.length == 0) {
+            return true;
+        }
 
 		Iterator<String> type = Arrays.asList(allowFiles).iterator();
 		while (type.hasNext()) {
@@ -172,11 +175,11 @@ public class FileUtil {
 		
 		try {
 			in = new BufferedInputStream(is);
-			int buf_size = 1024;
-			byte[] buffer = new byte[buf_size];
+			int bufSize = 1024;
+			byte[] buffer = new byte[bufSize];
 			int len = 0;
 
-			while (-1 != (len = in.read(buffer, 0, buf_size))) {
+			while (-1 != (len = in.read(buffer, 0, bufSize))) {
 				bos.write(buffer, 0, len);
 			}
 

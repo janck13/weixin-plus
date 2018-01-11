@@ -21,6 +21,7 @@ public class SendTextMessage extends BaseSendMessage{
         this.text = text;
     }
 
+    @Override
     public String toJsonString(){
         return JSON.toJSONString(this);
     }

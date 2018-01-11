@@ -51,6 +51,7 @@ public class ApiResult implements Serializable {
         return json;
     }
 
+    @Override
     public String toString() {
         return getJson();
     }

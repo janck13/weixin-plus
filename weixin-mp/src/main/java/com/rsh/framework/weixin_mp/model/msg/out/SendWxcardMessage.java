@@ -21,6 +21,7 @@ public class SendWxcardMessage extends BaseSendMessage{
         this.wxcard = wxcard;
     }
 
+    @Override
     public String toJsonString(){
         return JSON.toJSONString(this);
     }

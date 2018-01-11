@@ -170,7 +170,9 @@ public class HttpUtils {
             try {
                 com.squareup.okhttp.Response response = httpClient.newCall(request).execute();
 
-                if (!response.isSuccessful()) throw new RuntimeException("Unexpected code " + response);
+                if (!response.isSuccessful()) {
+                    throw new RuntimeException("Unexpected code " + response);
+                }
 
                 return response.body().string();
             } catch (IOException e) {
@@ -274,7 +276,9 @@ public class HttpUtils {
 
                 com.squareup.okhttp.Response response = httpsClient.newCall(request).execute();
 
-                if (!response.isSuccessful()) throw new RuntimeException("Unexpected code " + response);
+                if (!response.isSuccessful()) {
+                    throw new RuntimeException("Unexpected code " + response);
+                }
 
                 return response.body().string();
             } catch (Exception e) {
@@ -302,12 +306,14 @@ public class HttpUtils {
                 }
                 com.squareup.okhttp.Response response = httpClient.newCall(request).execute();
 
-                if (!response.isSuccessful()) throw new RuntimeException("Unexpected code " + response);
+                if (!response.isSuccessful()) {
+                    throw new RuntimeException("Unexpected code " + response);
+                }
 
                 com.squareup.okhttp.ResponseBody body = response.body();
                 com.squareup.okhttp.MediaType mediaType = body.contentType();
                 MediaFile mediaFile = new MediaFile();
-                if (mediaType.type().equals("text")) {
+                if ("text".equals(mediaType.type())) {
                     mediaFile.setContent(body.string());
                 } else {
                     BufferedInputStream bis = new BufferedInputStream(body.byteStream());
@@ -346,7 +352,9 @@ public class HttpUtils {
             try {
                 com.squareup.okhttp.Response response = httpClient.newCall(request).execute();
 
-                if (!response.isSuccessful()) throw new RuntimeException("Unexpected code " + response);
+                if (!response.isSuccessful()) {
+                    throw new RuntimeException("Unexpected code " + response);
+                }
 
                 return response.body().byteStream();
             } catch (IOException e) {
@@ -401,7 +409,9 @@ public class HttpUtils {
             try {
                 okhttp3.Response response = httpClient.newCall(request).execute();
 
-                if (!response.isSuccessful()) throw new RuntimeException("Unexpected code " + response);
+                if (!response.isSuccessful()) {
+                    throw new RuntimeException("Unexpected code " + response);
+                }
 
                 return response.body().string();
             } catch (IOException e) {
@@ -517,7 +527,9 @@ public class HttpUtils {
 
                 okhttp3.Response response = httpsClient.newCall(request).execute();
 
-                if (!response.isSuccessful()) throw new RuntimeException("Unexpected code " + response);
+                if (!response.isSuccessful()) {
+                    throw new RuntimeException("Unexpected code " + response);
+                }
 
                 return response.body().string();
             } catch (Exception e) {
@@ -544,12 +556,14 @@ public class HttpUtils {
                 }
                 okhttp3.Response response = httpClient.newCall(request).execute();
 
-                if (!response.isSuccessful()) throw new RuntimeException("Unexpected code " + response);
+                if (!response.isSuccessful()) {
+                    throw new RuntimeException("Unexpected code " + response);
+                }
 
                 okhttp3.ResponseBody body = response.body();
                 okhttp3.MediaType mediaType = body.contentType();
                 MediaFile mediaFile = new MediaFile();
-                if (mediaType.type().equals("text")) {
+                if ("text".equals(mediaType.type())) {
                     mediaFile.setContent(body.string());
                 } else {
                     BufferedInputStream bis = new BufferedInputStream(body.byteStream());
@@ -589,7 +603,9 @@ public class HttpUtils {
             try {
                 okhttp3.Response response = httpClient.newCall(request).execute();
 
-                if (!response.isSuccessful()) throw new RuntimeException("Unexpected code " + response);
+                if (!response.isSuccessful()) {
+                    throw new RuntimeException("Unexpected code " + response);
+                }
 
                 return response.body().byteStream();
             } catch (IOException e) {
@@ -894,6 +910,7 @@ public class HttpUtils {
          * https 域名校验
          */
         private static class TrustAnyHostnameVerifier implements HostnameVerifier {
+            @Override
             public boolean verify(String hostname, SSLSession session) {
                 return true;
             }
@@ -903,13 +920,16 @@ public class HttpUtils {
          * https 证书管理
          */
         private static class TrustAnyTrustManager implements X509TrustManager {
+            @Override
             public X509Certificate[] getAcceptedIssuers() {
                 return null;
             }
 
+            @Override
             public void checkClientTrusted(X509Certificate[] chain, String authType) throws CertificateException {
             }
 
+            @Override
             public void checkServerTrusted(X509Certificate[] chain, String authType) throws CertificateException {
             }
         }

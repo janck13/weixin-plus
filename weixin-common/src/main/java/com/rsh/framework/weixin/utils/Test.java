@@ -11,7 +11,11 @@ public class Test {
 
     public static void main(String[] args) {
         String str = "123|456";
-        System.out.print(str.split("\\|")[0]);
+        System.out.println(str.split("\\|")[0]);
+        System.out.println(9%8);
+
+        System.out.println(Long.valueOf("10000000100"));
+        System.out.println(Integer.MAX_VALUE);
     }
 
 

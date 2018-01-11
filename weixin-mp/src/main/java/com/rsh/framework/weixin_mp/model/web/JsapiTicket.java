@@ -64,12 +64,15 @@ public class JsapiTicket implements RetryUtils.ResultCheck {
      * @return
      */
     public boolean isAvailable() {
-        if (expiredTime == null)
+        if (expiredTime == null) {
             return false;
-        if (errcode == null || errcode != 0)
+        }
+        if (errcode == null || errcode != 0) {
             return false;
-        if (expiredTime < System.currentTimeMillis())
+        }
+        if (expiredTime < System.currentTimeMillis()) {
             return false;
+        }
         return ticket != null;
     }
 

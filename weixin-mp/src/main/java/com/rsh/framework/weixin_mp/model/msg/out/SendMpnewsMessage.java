@@ -21,6 +21,7 @@ public class SendMpnewsMessage extends BaseSendMessage{
         this.mpnews = mpnews;
     }
 
+    @Override
     public String toJsonString(){
         return JSON.toJSONString(this);
     }

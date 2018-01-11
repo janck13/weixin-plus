@@ -67,32 +67,32 @@ public class CardLandingPage {
 }
 
 class CardInfo {
-    @JSONField(name = "cardId")
-    private String card_id; // 所要在页面投放的card_id
-    @JSONField(name = "thumbUrl")
-    private String thumb_url; // 缩略图url
+    @JSONField(name = "card_id")
+    private String cardId; // 所要在页面投放的card_id
+    @JSONField(name = "thumb_url")
+    private String thumbUrl; // 缩略图url
 
     public CardInfo() {
     }
 
-    public CardInfo(String card_id, String thumb_url) {
-        this.card_id = card_id;
-        this.thumb_url = thumb_url;
+    public CardInfo(String cardId, String thumbUrl) {
+        this.cardId = cardId;
+        this.thumbUrl = thumbUrl;
     }
 
-    public String getCard_id() {
-        return card_id;
+    public String getCardId() {
+        return cardId;
     }
 
-    public void setCard_id(String card_id) {
-        this.card_id = card_id;
+    public void setCardId(String cardId) {
+        this.cardId = cardId;
     }
 
-    public String getThumb_url() {
-        return thumb_url;
+    public String getThumbUrl() {
+        return thumbUrl;
     }
 
-    public void setThumb_url(String thumb_url) {
-        this.thumb_url = thumb_url;
+    public void setThumbUrl(String thumbUrl) {
+        this.thumbUrl = thumbUrl;
     }
 }
