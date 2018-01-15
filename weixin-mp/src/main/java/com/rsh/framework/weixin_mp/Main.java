@@ -8,4 +8,8 @@ package com.rsh.framework.weixin_mp;
  * @Time: 11:54
  */
 public class Main {
+
+    public static void main(String[] args) {
+
+    }
 }

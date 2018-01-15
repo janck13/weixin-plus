@@ -5,8 +5,13 @@ buildscript {
     ext.kotlin_version = '1.1.4-3'
 
     repositories {
+        mavenLocal()
         mavenCentral()
+        maven {
+            url "http://wealthlake.cn:8081/repository/maven-public/"
+        }
     }
+
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
@@ -14,13 +19,30 @@ buildscript {
 
 subprojects {
 
+    ext {
+        httpclientVersion = "4.4.1"
+    }
+
+    //def appMainClass = project.mainClass
+
     apply plugin: 'java'
+    apply plugin: 'maven'
     apply plugin: 'idea'
+    apply plugin: 'maven-publish' // maven-publish插件
+
+    // application插件
+    // 执行命令gradle build或者./gradlew build，查看build/distributions会有两个压缩文件，压缩文件包含了两个文件夹，bin为启动脚本，lib则是软件jar包和依赖。
+    //apply plugin: 'application'
+    //mainClassName = appMainClass
 
     sourceCompatibility = 1.8
     targetCompatibility = 1.8
 
     repositories {
+        mavenLocal()
+        /*maven {
+            url "http://wealthlake.cn:8081/repository/maven-public/"
+        }*/
         mavenCentral()
     }
 
@@ -30,15 +52,27 @@ subprojects {
         compile 'com.squareup.okhttp:okhttp:2.7.5'
         compile 'com.squareup.okhttp3:okhttp:3.6.0'
         compile 'com.squareup.okio:okio:1.11.0'
-        compile 'org.apache.httpcomponents:httpclient:4.4.1'
-        compile 'org.apache.httpcomponents:httpmime:4.4.1'
-        compile 'org.apache.httpcomponents:httpcore:4.4.1'
+        compile 'org.apache.httpcomponents:httpclient:'+ project.httpclientVersion
+        compile 'org.apache.httpcomponents:httpmime:'+ project.httpclientVersion
+        compile 'org.apache.httpcomponents:httpcore:'+ project.httpclientVersion
         compile 'com.alibaba:fastjson:1.2.31'
         compile group: 'redis.clients', name: 'jedis', version: '2.9.0'
         compile group: 'org.springframework.data', name: 'spring-data-redis', version: '2.0.2.RELEASE'
 
         testCompile group: 'junit', name: 'junit', version: '4.12'
     }
+
+    //main,test已默认实现，可以增加新的目录
+    /*sourceSets {
+        main {
+            java {
+                srcDir "src/main/java"
+            }
+            resources {
+                srcDir "src/main/resources"
+            }
+        }
+    }*/
 
     tasks.withType(JavaCompile) {
         options.encoding = 'UTF-8'
@@ -49,6 +83,7 @@ subprojects {
         from sourceSets.main.allSource
     }
 
+    // 添加UTF-8编码否则注释可能JAVADOC文档可能生成不了
     javadoc {
         options {
             encoding "UTF-8"
@@ -64,4 +99,33 @@ subprojects {
         classifier = 'javadoc'
         from 'build/docs/javadoc'
     }
+
+    // 配置项目的信息和和nexus的信息
+    publishing {
+        publications {
+            maven(MavenPublication) {
+                groupId project.group
+                artifactId project.name
+                version project.version
+                //若是war包，就写components.web,若是jar包，就写components.java
+                from components.java
+            }
+        }
+
+        repositories {
+            maven {
+                if (project.version.endsWith('-SNAPSHOT')) {
+                    url "${maven_snapshot_url}"
+                } else {
+                    url "${maven_release_url}"
+                }
+                //url "http://wealthlake.cn:8081/repository/maven-public/"
+                credentials {
+                    username "${artifactory_user}"
+                    password "${artifactory_password}"
+                }
+            }
+        }
+    }
+
 }
