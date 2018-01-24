@@ -41,5 +41,6 @@ public enum Event {
     update_member_card, // 会员卡内容更新事件
     card_sku_remind, // 库存报警
     card_pay_order, // 券点流水详情事件
-    submit_membercard_user_info // 会员卡激活事件推送
+    submit_membercard_user_info, // 会员卡激活事件推送
+    card_merchant_check_result, // 卡券第三方开发者模式 — 子商户审核事件
 }

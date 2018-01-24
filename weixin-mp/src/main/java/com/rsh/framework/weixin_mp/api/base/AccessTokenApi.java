@@ -1,6 +1,6 @@
 package com.rsh.framework.weixin_mp.api.base;
 
-import com.rsh.framework.weixin_mp.api.ApiConfigUtils;
+import com.rsh.framework.weixin_mp.api.WeixinMpApiConfigUtils;
 import com.rsh.framework.weixin_mp.api.AppConfig;
 import com.rsh.framework.weixin_mp.cache.IAccessTokenCache;
 import com.rsh.framework.weixin.common.exception.WeixinApiException;
@@ -40,7 +40,7 @@ public class AccessTokenApi {
      * @return
      */
     public static AccessToken getAccessToken() {
-        AppConfig appConfig = ApiConfigUtils.getAppConfig();
+        AppConfig appConfig = WeixinMpApiConfigUtils.getAppConfig();
         AccessToken accessToken = getAvailableAccessTokenByCache(appConfig.getAppId());
         if (accessToken != null) {
             return accessToken;
@@ -60,7 +60,7 @@ public class AccessTokenApi {
      * @return
      */
     private static AccessToken getAvailableAccessTokenByCache(String appId) {
-        IAccessTokenCache accessTokenCache = ApiConfigUtils.getAccessTokenCache();
+        IAccessTokenCache accessTokenCache = WeixinMpApiConfigUtils.getAccessTokenCache();
 
         String accessTokenJson = accessTokenCache.getAccessToken(appId);
         if (StringUtils.isNotBlank(accessTokenJson)) {
@@ -109,7 +109,7 @@ public class AccessTokenApi {
         });
         // 将accessToken加入缓存
         if (accessToken != null) {
-            IAccessTokenCache accessTokenCache = ApiConfigUtils.getAccessTokenCache();
+            IAccessTokenCache accessTokenCache = WeixinMpApiConfigUtils.getAccessTokenCache();
             accessTokenCache.setAccessToken(appId, accessToken.getCacheJson(), accessToken.getExpiresIn());
         }
         return accessToken;

@@ -1,6 +1,6 @@
 package com.rsh.framework.weixin_mp.api.web;
 
-import com.rsh.framework.weixin_mp.api.ApiConfigUtils;
+import com.rsh.framework.weixin_mp.api.WeixinMpApiConfigUtils;
 import com.rsh.framework.weixin.common.exception.WeixinApiException;
 import com.rsh.framework.weixin_mp.model.web.*;
 import com.rsh.framework.weixin.utils.Sha1Util;
@@ -28,7 +28,7 @@ public class JsapiConfigApi {
         if (StringUtils.isBlank(url)) {
             throw new WeixinApiException("url Cannot be null");
         }
-        String appId = ApiConfigUtils.getAppId();
+        String appId = WeixinMpApiConfigUtils.getAppId();
         String jsapiTicket = JsapiTicketApi.getJsapiTicket(JsapiTicketType.jsapi).getTicket();
         // 随机字符串
         String noncestr = UUID.randomUUID().toString().replace("-", "").substring(0, 16);
@@ -50,7 +50,7 @@ public class JsapiConfigApi {
      * @return
      */
     public static JsapiCardConfig getJsapiCardConfig(String shopId, String cardType, String cardId) {
-        String appId = ApiConfigUtils.getAppId();
+        String appId = WeixinMpApiConfigUtils.getAppId();
         String jsapiTicket = JsapiTicketApi.getJsapiTicket(JsapiTicketType.wx_card).getTicket();
         // 随机字符串
         String noncestr = UUID.randomUUID().toString().replace("-", "").substring(0, 16);
@@ -80,7 +80,7 @@ public class JsapiConfigApi {
      * @return
      */
     public static JsapiCardExtConfig getJsapiCardExtConfig(String cardId, String code, String openId) {
-        String appId = ApiConfigUtils.getAppId();
+        String appId = WeixinMpApiConfigUtils.getAppId();
         String jsapiTicket = JsapiTicketApi.getJsapiTicket(JsapiTicketType.wx_card).getTicket();
         // 随机字符串
         String noncestr = UUID.randomUUID().toString().replace("-", "").substring(0, 16);

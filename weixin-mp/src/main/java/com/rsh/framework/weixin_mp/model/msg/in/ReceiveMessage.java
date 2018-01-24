@@ -233,6 +233,15 @@ public class ReceiveMessage extends BaseReceiveMessage {
 
     // 会员卡激活事件推送
 
+    // 卡券第三方开发者模式 — 子商户审核事件
+    @XmlElement(name = "MerchantId")
+    private Integer merchantId; // 子商户ID
+    @XmlElement(name = "IsPass")
+    private Integer isPass; // 是否通过，为1时审核通过
+    @XmlElement(name = "Reason")
+    private String reason; // 驳回的原因
+
+
     public String getContent() {
         return content;
     }
@@ -495,5 +504,237 @@ public class ReceiveMessage extends BaseReceiveMessage {
 
     public void setOriginalFee(String originalFee) {
         this.originalFee = originalFee;
+    }
+
+    public String getRefuseReason() {
+        return refuseReason;
+    }
+
+    public void setRefuseReason(String refuseReason) {
+        this.refuseReason = refuseReason;
+    }
+
+    public String getIsGiveByFriend() {
+        return isGiveByFriend;
+    }
+
+    public void setIsGiveByFriend(String isGiveByFriend) {
+        this.isGiveByFriend = isGiveByFriend;
+    }
+
+    public String getOldUserCardCode() {
+        return oldUserCardCode;
+    }
+
+    public void setOldUserCardCode(String oldUserCardCode) {
+        this.oldUserCardCode = oldUserCardCode;
+    }
+
+    public String getOuterStr() {
+        return outerStr;
+    }
+
+    public void setOuterStr(String outerStr) {
+        this.outerStr = outerStr;
+    }
+
+    public String getIsRestoreMemberCard() {
+        return isRestoreMemberCard;
+    }
+
+    public void setIsRestoreMemberCard(String isRestoreMemberCard) {
+        this.isRestoreMemberCard = isRestoreMemberCard;
+    }
+
+    public Integer getIsReturnBack() {
+        return isReturnBack;
+    }
+
+    public void setIsReturnBack(Integer isReturnBack) {
+        this.isReturnBack = isReturnBack;
+    }
+
+    public Integer getIsChatRoom() {
+        return isChatRoom;
+    }
+
+    public void setIsChatRoom(Integer isChatRoom) {
+        this.isChatRoom = isChatRoom;
+    }
+
+    public String getFriendUserName() {
+        return friendUserName;
+    }
+
+    public void setFriendUserName(String friendUserName) {
+        this.friendUserName = friendUserName;
+    }
+
+    public String getConsumeSource() {
+        return consumeSource;
+    }
+
+    public void setConsumeSource(String consumeSource) {
+        this.consumeSource = consumeSource;
+    }
+
+    public String getStaffOpenId() {
+        return staffOpenId;
+    }
+
+    public void setStaffOpenId(String staffOpenId) {
+        this.staffOpenId = staffOpenId;
+    }
+
+    public String getVerifyCode() {
+        return verifyCode;
+    }
+
+    public void setVerifyCode(String verifyCode) {
+        this.verifyCode = verifyCode;
+    }
+
+    public String getRemarkAmount() {
+        return remarkAmount;
+    }
+
+    public void setRemarkAmount(String remarkAmount) {
+        this.remarkAmount = remarkAmount;
+    }
+
+    public Integer getModifyBonus() {
+        return modifyBonus;
+    }
+
+    public void setModifyBonus(Integer modifyBonus) {
+        this.modifyBonus = modifyBonus;
+    }
+
+    public Integer getModifyBalance() {
+        return modifyBalance;
+    }
+
+    public void setModifyBalance(Integer modifyBalance) {
+        this.modifyBalance = modifyBalance;
+    }
+
+    public String getDetail() {
+        return detail;
+    }
+
+    public void setDetail(String detail) {
+        this.detail = detail;
+    }
+
+    public String getOrderId() {
+        return orderId;
+    }
+
+    public void setOrderId(String orderId) {
+        this.orderId = orderId;
+    }
+
+    public Integer getCreateOrderTime() {
+        return createOrderTime;
+    }
+
+    public void setCreateOrderTime(Integer createOrderTime) {
+        this.createOrderTime = createOrderTime;
+    }
+
+    public Integer getPayFinishTime() {
+        return payFinishTime;
+    }
+
+    public void setPayFinishTime(Integer payFinishTime) {
+        this.payFinishTime = payFinishTime;
+    }
+
+    public String getDesc() {
+        return desc;
+    }
+
+    public void setDesc(String desc) {
+        this.desc = desc;
+    }
+
+    public String getFreeCoinCount() {
+        return freeCoinCount;
+    }
+
+    public void setFreeCoinCount(String freeCoinCount) {
+        this.freeCoinCount = freeCoinCount;
+    }
+
+    public String getPayCoinCount() {
+        return payCoinCount;
+    }
+
+    public void setPayCoinCount(String payCoinCount) {
+        this.payCoinCount = payCoinCount;
+    }
+
+    public String getRefundFreeCoinCount() {
+        return refundFreeCoinCount;
+    }
+
+    public void setRefundFreeCoinCount(String refundFreeCoinCount) {
+        this.refundFreeCoinCount = refundFreeCoinCount;
+    }
+
+    public String getRefundPayCoinCount() {
+        return refundPayCoinCount;
+    }
+
+    public void setRefundPayCoinCount(String refundPayCoinCount) {
+        this.refundPayCoinCount = refundPayCoinCount;
+    }
+
+    public String getOrderType() {
+        return orderType;
+    }
+
+    public void setOrderType(String orderType) {
+        this.orderType = orderType;
+    }
+
+    public String getMemo() {
+        return memo;
+    }
+
+    public void setMemo(String memo) {
+        this.memo = memo;
+    }
+
+    public String getReceiptInfo() {
+        return receiptInfo;
+    }
+
+    public void setReceiptInfo(String receiptInfo) {
+        this.receiptInfo = receiptInfo;
+    }
+
+    public Integer getMerchantId() {
+        return merchantId;
+    }
+
+    public void setMerchantId(Integer merchantId) {
+        this.merchantId = merchantId;
+    }
+
+    public Integer getIsPass() {
+        return isPass;
+    }
+
+    public void setIsPass(Integer isPass) {
+        this.isPass = isPass;
+    }
+
+    public String getReason() {
+        return reason;
+    }
+
+    public void setReason(String reason) {
+        this.reason = reason;
     }
 }

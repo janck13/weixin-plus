@@ -1,6 +1,6 @@
 package com.rsh.framework.weixin_mp.api.web;
 
-import com.rsh.framework.weixin_mp.api.ApiConfigUtils;
+import com.rsh.framework.weixin_mp.api.WeixinMpApiConfigUtils;
 import com.rsh.framework.weixin_mp.api.AppConfig;
 import com.rsh.framework.weixin_mp.api.base.AccessTokenApi;
 import com.rsh.framework.weixin_mp.cache.IJsapiTicketCache;
@@ -33,7 +33,7 @@ public class JsapiTicketApi {
      * @return
      */
     public static JsapiTicket getJsapiTicket(JsapiTicketType jsapiTicketType) {
-        AppConfig appConfig = ApiConfigUtils.getAppConfig();
+        AppConfig appConfig = WeixinMpApiConfigUtils.getAppConfig();
 
         JsapiTicket jsapiTicket = getAvailableJsapiTicketByCache(appConfig, jsapiTicketType);
         if (jsapiTicket != null) {
@@ -55,7 +55,7 @@ public class JsapiTicketApi {
      * @return
      */
     private static JsapiTicket getAvailableJsapiTicketByCache(AppConfig appConfig, JsapiTicketType jsapiTicketType) {
-        IJsapiTicketCache jsapiTicketCache = ApiConfigUtils.getJsapiTicketCache();
+        IJsapiTicketCache jsapiTicketCache = WeixinMpApiConfigUtils.getJsapiTicketCache();
 
         String key = appConfig.getAppId() + "-" + jsapiTicketType.name();
         String jsapiTicketJson = jsapiTicketCache.getJsapiTicket(key);
@@ -106,7 +106,7 @@ public class JsapiTicketApi {
 
         // 将jsapiTicket加入缓存
         if (jsapiTicket != null) {
-            IJsapiTicketCache jsapiTicketCache = ApiConfigUtils.getJsapiTicketCache();
+            IJsapiTicketCache jsapiTicketCache = WeixinMpApiConfigUtils.getJsapiTicketCache();
             String key = appConfig.getAppId() + "-" + jsapiTicketType.name();
             jsapiTicketCache.setJsapiTicket(key, jsapiTicket.getCacheJson(), jsapiTicket.getExpiresIn());
         }

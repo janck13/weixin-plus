@@ -20,8 +20,8 @@ import java.util.concurrent.ConcurrentHashMap;
  * @Date: 2017/12/25
  * @Time: 17:15
  */
-public class ApiConfigUtils {
-    private static final Logger logger = LoggerFactory.getLogger(ApiConfigUtils.class);
+public class WeixinMpApiConfigUtils {
+    private static final Logger logger = LoggerFactory.getLogger(WeixinMpApiConfigUtils.class);
 
     // 将appid绑定到ThreadLocal，以方便在当前线程的各个地方获取AppConfig对象：
     private static final ThreadLocal<String> appidTL = new ThreadLocal<String>();
@@ -44,14 +44,14 @@ public class ApiConfigUtils {
      * @param appConfig 公众号配置
      * @return
      */
-    public static AppConfig putApiConfig(AppConfig appConfig) {
+    public static AppConfig putAppConfig(AppConfig appConfig) {
         if (appConfigMap.size() == 0) {
             appConfigMap.put(DEFAULT_APPCONFIG_KEY, appConfig);
         }
         return appConfigMap.put(appConfig.getAppId(), appConfig);
     }
 
-    public static AppConfig removeApiConfig(String appId) {
+    public static AppConfig removeAppConfig(String appId) {
         return appConfigMap.remove(appId);
     }
 
@@ -127,19 +127,19 @@ public class ApiConfigUtils {
     }
 
     public static boolean isDebug() {
-        return ApiConfigUtils.debug;
+        return WeixinMpApiConfigUtils.debug;
     }
 
     public static void setDebug(boolean debug) {
-        ApiConfigUtils.debug = debug;
+        WeixinMpApiConfigUtils.debug = debug;
     }
 
     public static void setAccessTokenCache(IAccessTokenCache accessTokenCache) {
-        ApiConfigUtils.accessTokenCache = accessTokenCache;
+        WeixinMpApiConfigUtils.accessTokenCache = accessTokenCache;
     }
 
     public static IAccessTokenCache getAccessTokenCache() {
-        return ApiConfigUtils.accessTokenCache;
+        return WeixinMpApiConfigUtils.accessTokenCache;
     }
 
     public static IJsapiTicketCache getJsapiTicketCache() {
@@ -147,6 +147,6 @@ public class ApiConfigUtils {
     }
 
     public static void setJsapiTicketCache(IJsapiTicketCache jsapiTicketCache) {
-        ApiConfigUtils.jsapiTicketCache = jsapiTicketCache;
+        WeixinMpApiConfigUtils.jsapiTicketCache = jsapiTicketCache;
     }
 }
