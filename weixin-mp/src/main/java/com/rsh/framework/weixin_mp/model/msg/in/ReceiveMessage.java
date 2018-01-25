@@ -209,7 +209,7 @@ public class ReceiveMessage extends BaseReceiveMessage {
     @XmlElement(name = "OrderId")
     private String orderId; // 本次推送对应的订单号
     //@XmlElement(name = "Status")
-   //private String status; // 本次订单号的状态,ORDER_STATUS_WAITING 等待支付 ORDER_STATUS_SUCC 支付成功 ORDER_STATUS_FINANCE_SUCC 加代币成功 ORDER_STATUS_QUANTITY_SUCC 加库存成功 ORDER_STATUS_HAS_REFUND 已退币 ORDER_STATUS_REFUND_WAITING 等待退币确认 ORDER_STATUS_ROLLBACK 已回退,系统失败 ORDER_STATUS_HAS_RECEIPT 已开发票
+    //private String status; // 本次订单号的状态,ORDER_STATUS_WAITING 等待支付 ORDER_STATUS_SUCC 支付成功 ORDER_STATUS_FINANCE_SUCC 加代币成功 ORDER_STATUS_QUANTITY_SUCC 加库存成功 ORDER_STATUS_HAS_REFUND 已退币 ORDER_STATUS_REFUND_WAITING 等待退币确认 ORDER_STATUS_ROLLBACK 已回退,系统失败 ORDER_STATUS_HAS_RECEIPT 已开发票
     @XmlElement(name = "CreateOrderTime")
     private Integer createOrderTime; // 购买券点时，支付二维码的生成时间
     @XmlElement(name = "PayFinishTime")
@@ -240,6 +240,62 @@ public class ReceiveMessage extends BaseReceiveMessage {
     private Integer isPass; // 是否通过，为1时审核通过
     @XmlElement(name = "Reason")
     private String reason; // 驳回的原因
+
+    // 新建门店审核事件推送
+    @XmlElement(name = "UniqId")
+    private String uniqId; // 商户自己内部ID，即字段中的sid
+    @XmlElement(name = "PoiId")
+    private String poiId; // 微信的门店ID，微信内门店唯一标示ID
+    @XmlElement(name = "Result")
+    private String result; // 审核结果，成功succ 或失败fail
+    @XmlElement(name = "msg")
+    private String msg; // 成功的通知信息，或审核失败的驳回理由
+
+    // 创建门店小程序的审核结果事件推送
+    @XmlElement(name = "audit_id")
+    private String auditId; // 审核单id
+//    @XmlElement(name = "status")
+//    private Integer status; // 审核状态（1：审核通过，3：审核失败，4：管理员拒绝）
+//    @XmlElement(name = "reason")
+//    private String reason; // 如果status为3或者4，会返回审核失败的原因
+
+    // 腾讯地图中创建门店的审核结果事件推送
+//    @XmlElement(name = "audit_id")
+//    private String auditId; // 审核单id
+//    @XmlElement(name = "status")
+//    private Integer status; // 审核状态（0：审核通过，1：审核失败）
+    @XmlElement(name = "map_poi_id")
+    private String mapPoiId; // 从腾讯地图换取的位置点id
+    @XmlElement(name = "name")
+    private String name; // 门店名字
+    @XmlElement(name = "address")
+    private String address; // 详细地址
+    //    @XmlElement(name = "latitude")
+//    private String latitude; // 经度
+//    @XmlElement(name = "longitude")
+//    private String longitude; // 纬度
+    @XmlElement(name = "sh_remark")
+    private String shRemark; // 备注
+
+    // 创建门店的审核结果事件推送
+//    @XmlElement(name = "audit_id")
+//    private String auditId; // 审核单id
+//    @XmlElement(name = "status")
+//    private Integer status; // 审核状态（1：审核通过，3：审核失败）
+//    @XmlElement(name = "reason")
+//    private String reason; // 如果status为3，会返回审核失败的原因
+    @XmlElement(name = "is_upgrade")
+    private String isUpgrade; // 0 表示创建门店1：表示是补充门店
+    @XmlElement(name = "poiid")
+    private String poiid; // 门店id，status=1 的时候才有效
+
+    // 修改门店图片的审核结果事件推送
+//    @XmlElement(name = "audit_id")
+//    private String auditId; // 审核单id
+//    @XmlElement(name = "status")
+//    private Integer status; // 审核状态（1：审核通过，3：审核失败）
+//    @XmlElement(name = "reason")
+//    private String reason; // 如果status为3，会返回审核失败的原因
 
 
     public String getContent() {
@@ -736,5 +792,93 @@ public class ReceiveMessage extends BaseReceiveMessage {
 
     public void setReason(String reason) {
         this.reason = reason;
+    }
+
+    public String getUniqId() {
+        return uniqId;
+    }
+
+    public void setUniqId(String uniqId) {
+        this.uniqId = uniqId;
+    }
+
+    public String getPoiId() {
+        return poiId;
+    }
+
+    public void setPoiId(String poiId) {
+        this.poiId = poiId;
+    }
+
+    public String getResult() {
+        return result;
+    }
+
+    public void setResult(String result) {
+        this.result = result;
+    }
+
+    public String getMsg() {
+        return msg;
+    }
+
+    public void setMsg(String msg) {
+        this.msg = msg;
+    }
+
+    public String getAuditId() {
+        return auditId;
+    }
+
+    public void setAuditId(String auditId) {
+        this.auditId = auditId;
+    }
+
+    public String getMapPoiId() {
+        return mapPoiId;
+    }
+
+    public void setMapPoiId(String mapPoiId) {
+        this.mapPoiId = mapPoiId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getShRemark() {
+        return shRemark;
+    }
+
+    public void setShRemark(String shRemark) {
+        this.shRemark = shRemark;
+    }
+
+    public String getIsUpgrade() {
+        return isUpgrade;
+    }
+
+    public void setIsUpgrade(String isUpgrade) {
+        this.isUpgrade = isUpgrade;
+    }
+
+    public String getPoiid() {
+        return poiid;
+    }
+
+    public void setPoiid(String poiid) {
+        this.poiid = poiid;
     }
 }

@@ -43,4 +43,9 @@ public enum Event {
     card_pay_order, // 券点流水详情事件
     submit_membercard_user_info, // 会员卡激活事件推送
     card_merchant_check_result, // 卡券第三方开发者模式 — 子商户审核事件
+    poi_check_notify, // 新建门店审核事件推送
+    apply_merchant_audit_info, // 创建门店小程序的审核结果事件推送
+    create_map_poi_audit_info, // 腾讯地图中创建门店的审核结果事件推送
+    add_store_audit_info, // 创建门店的审核结果事件推送
+    modify_store_audit_info, // 修改门店图片的审核结果事件推送
 }
