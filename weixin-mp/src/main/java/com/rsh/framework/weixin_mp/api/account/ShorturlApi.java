@@ -1,10 +1,11 @@
-package com.rsh.framework.weixin_mp.api.base;
+package com.rsh.framework.weixin_mp.api.account;
 
 import com.alibaba.fastjson.JSON;
 import com.rsh.framework.weixin.common.exception.WeixinApiException;
 import com.rsh.framework.weixin.common.model.ApiResult;
 import com.rsh.framework.weixin.utils.HttpUtils;
 import com.rsh.framework.weixin.utils.StringUtils;
+import com.rsh.framework.weixin_mp.api.base.AccessTokenApi;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -12,6 +13,7 @@ import java.util.Map;
 /**
  * Created By Rsh
  * 将一条长链接转成短链接 API
+ * 主要使用场景： 开发者用于生成二维码的原链接（商品、支付二维码等）太长导致扫码速度和成功率下降，将原长链接通过此接口转成短链接再生成二维码将大大提升扫码速度和成功率。
  *
  * @Description
  * @Date: 2018/1/24
