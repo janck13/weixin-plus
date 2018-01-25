@@ -29,6 +29,10 @@ public class AgentCardApi {
     private static final String uploadCardAgentQualificationUrl = "http://api.weixin.qq.com/cgi-bin/component/upload_card_agent_qualification?access_token=ACCESS_TOKEN";
     private static final String checkCardAgentQualificationUrl = "http://api.weixin.qq.com/cgi-bin/component/check_card_agent_qualification?access_token=ACCESS_TOKEN";
     private static final String uploadCardMerchantQualificationUrl = "http://api.weixin.qq.com/cgi-bin/component/upload_card_merchant_qualification?access_token=ACCESS_TOKEN";
+    private static final String checkCardMerchantQualificationUrl = "http://api.weixin.qq.com/cgi-bin/component/check_card_merchant_qualification?access_token=ACCESS_TOKEN";
+    private static final String getapplyprotocolUrl = "https://api.weixin.qq.com/card/getapplyprotocol?access_token=ACCESS_TOKEN";
+    private static final String getCardMerchantUrl = "http://api.weixin.qq.com/cgi-bin/component/get_card_merchant?access_token=ACCESS_TOKEN";
+    private static final String batchGetCardMerchantUrl = "http://api.weixin.qq.com/cgi-bin/component/batchget_card_merchant?access_token=ACCESS_TOKEN";
 
     /**
      * 母商户资质申请
@@ -94,6 +98,73 @@ public class AgentCardApi {
         String url = uploadCardMerchantQualificationUrl.replace("ACCESS_TOKEN", ComponentAccessTokenApi.getComponentAccessToken().getToken());
 
         String json = HttpUtils.post(url, cardMerchantQualification.getJson());
+        return new ApiResult(json);
+    }
+
+    /**
+     * 子商户资质审核查询
+     * 该接口用于查询子商户资质审核的结果，审核通过后才能进行后续授权流程。 注意，用母商户去调用接口，但接口内传入的是子商户的appid。
+     *
+     * @param appid 子商户的appid
+     * @return result    查询结果 1.RESULT_PASS：审核通过 2.RESULT_NOT_PASS：审核驳回 3.RESULT_CHECKING：待审核 4.RESULT_NOTHING_TO_CHECK：无提审记录
+     */
+    public static ApiResult checkCardMerchantQualification(String appid) {
+        if (appid == null) {
+            throw new WeixinApiException("appid Cannot be null");
+        }
+
+        String url = checkCardMerchantQualificationUrl.replace("ACCESS_TOKEN", ComponentAccessTokenApi.getComponentAccessToken().getToken());
+        Map<String, Object> param = new HashMap<>(1);
+        param.put("appid", appid);
+
+        String json = HttpUtils.post(url, JSON.toJSONString(param));
+        return new ApiResult(json);
+    }
+
+    /**
+     * 卡券开放类目查询
+     * 通过调用该接口查询卡券开放的类目ID，类目会随业务发展变更，请每次用接口去查询获取实时卡券类目。
+     *
+     * @return
+     */
+    public static ApiResult getapplyprotocol() {
+        String url = getapplyprotocolUrl.replace("ACCESS_TOKEN", ComponentAccessTokenApi.getComponentAccessToken().getToken());
+
+        String json = HttpUtils.get(url);
+        return new ApiResult(json);
+    }
+
+    /**
+     * 拉取单个子商户信息
+     * 通过指定的子商户appid，拉取该子商户的基础信息。 注意，用母商户去调用接口，但接口内传入的是子商户的appid。
+     *
+     * @param appid 子商户的appid
+     */
+    public static ApiResult getCardMerchant(String appid) {
+        if (appid == null) {
+            throw new WeixinApiException("appid Cannot be null");
+        }
+
+        String url = getCardMerchantUrl.replace("ACCESS_TOKEN", ComponentAccessTokenApi.getComponentAccessToken().getToken());
+        Map<String, Object> param = new HashMap<>(1);
+        param.put("appid", appid);
+
+        String json = HttpUtils.post(url, JSON.toJSONString(param));
+        return new ApiResult(json);
+    }
+
+    /**
+     * 拉取子商户列表
+     * 通过指定的子商户appid，拉取该子商户的基础信息。 注意，用母商户去调用接口，但接口内传入的是子商户的appid。
+     *
+     * @param nextGetAppid 注意最开始时为空。每次拉取20个子商户，下次拉取时填入返回数据中该字段的值，该值无实际意义。
+     */
+    public static ApiResult batchGetCardMerchant(String nextGetAppid) {
+        String url = batchGetCardMerchantUrl.replace("ACCESS_TOKEN", ComponentAccessTokenApi.getComponentAccessToken().getToken());
+        Map<String, Object> param = new HashMap<>(1);
+        param.put("next_get", nextGetAppid);
+
+        String json = HttpUtils.post(url, JSON.toJSONString(param));
         return new ApiResult(json);
     }
 

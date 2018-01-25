@@ -20,8 +20,8 @@ import java.util.concurrent.ConcurrentHashMap;
  * @Date: 2017/12/25
  * @Time: 17:15
  */
-public class ApiConfigUtils {
-    private static final Logger logger = LoggerFactory.getLogger(ApiConfigUtils.class);
+public class WeixinCompoentApiConfigUtils {
+    private static final Logger logger = LoggerFactory.getLogger(WeixinCompoentApiConfigUtils.class);
 
     // 将componentAppid绑定到ThreadLocal，以方便在当前线程的各个地方获取ComponentAppConfig对象：
     private static final ThreadLocal<String> appidTL = new ThreadLocal<String>();
@@ -129,29 +129,29 @@ public class ApiConfigUtils {
     }
 
     public static boolean isDebug() {
-        return ApiConfigUtils.debug;
+        return WeixinCompoentApiConfigUtils.debug;
     }
 
     public static void setDebug(boolean debug) {
-        ApiConfigUtils.debug = debug;
+        WeixinCompoentApiConfigUtils.debug = debug;
     }
 
     public static void setComponentAccessTokenCache(IComponentAccessTokenCache componentAccessTokenCache) {
         if (componentAccessTokenCache == null) {
             throw new WeixinApiException("componentAccessTokenCache Cannot be null");
         }
-        ApiConfigUtils.componentAccessTokenCache = componentAccessTokenCache;
+        WeixinCompoentApiConfigUtils.componentAccessTokenCache = componentAccessTokenCache;
     }
 
     public static IComponentAccessTokenCache getComponentAccessTokenCache() {
-        return ApiConfigUtils.componentAccessTokenCache;
+        return WeixinCompoentApiConfigUtils.componentAccessTokenCache;
     }
 
     public static void setComponentVerifyTicketCache(IComponentVerifyTicketCache componentVerifyTicketCache) {
         if (componentVerifyTicketCache == null) {
             throw new WeixinApiException("componentVerifyTicketCache Cannot be null");
         }
-        ApiConfigUtils.componentVerifyTicketCache = componentVerifyTicketCache;
+        WeixinCompoentApiConfigUtils.componentVerifyTicketCache = componentVerifyTicketCache;
     }
 
     public static IComponentVerifyTicketCache getComponentVerifyTicketCache() {

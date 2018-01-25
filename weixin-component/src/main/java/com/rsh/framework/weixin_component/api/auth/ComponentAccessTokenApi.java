@@ -4,7 +4,7 @@ import com.rsh.framework.weixin.common.exception.WeixinApiException;
 import com.rsh.framework.weixin.utils.HttpUtils;
 import com.rsh.framework.weixin.utils.RetryUtils;
 import com.rsh.framework.weixin.utils.StringUtils;
-import com.rsh.framework.weixin_component.api.ApiConfigUtils;
+import com.rsh.framework.weixin_component.api.WeixinCompoentApiConfigUtils;
 import com.rsh.framework.weixin_component.api.ComponentAppConfig;
 import com.rsh.framework.weixin_component.cache.IComponentAccessTokenCache;
 import com.rsh.framework.weixin_component.model.auth.ComponentAccessToken;
@@ -29,7 +29,7 @@ public class ComponentAccessTokenApi {
      * @return
      */
     public static ComponentAccessToken getComponentAccessToken() {
-        ComponentAppConfig componentAppConfig = ApiConfigUtils.getComponentAppConfig();
+        ComponentAppConfig componentAppConfig = WeixinCompoentApiConfigUtils.getComponentAppConfig();
         ComponentAccessToken componentAccessToken = getAvailableComponentAccessTokenByCache(componentAppConfig.getComponentAppid());
         if (componentAccessToken != null) {
             return componentAccessToken;
@@ -49,7 +49,7 @@ public class ComponentAccessTokenApi {
      * @return
      */
     private static ComponentAccessToken getAvailableComponentAccessTokenByCache(String componentAppid) {
-        IComponentAccessTokenCache componentAccessTokenCache = ApiConfigUtils.getComponentAccessTokenCache();
+        IComponentAccessTokenCache componentAccessTokenCache = WeixinCompoentApiConfigUtils.getComponentAccessTokenCache();
 
         String componentAccessTokenJson = componentAccessTokenCache.getComponentAccessToken(componentAppid);
         if (StringUtils.isNotBlank(componentAccessTokenJson)) {
@@ -98,7 +98,7 @@ public class ComponentAccessTokenApi {
         });
         // 将accessToken加入缓存
         if (componentAccessToken != null) {
-            IComponentAccessTokenCache componentAccessTokenCache = ApiConfigUtils.getComponentAccessTokenCache();
+            IComponentAccessTokenCache componentAccessTokenCache = WeixinCompoentApiConfigUtils.getComponentAccessTokenCache();
             componentAccessTokenCache.setComponentAccessToken(appId, componentAccessToken.getCacheJson(), componentAccessToken.getExpiresIn());
         }
         return componentAccessToken;
