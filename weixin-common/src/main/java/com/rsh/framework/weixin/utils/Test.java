@@ -1,5 +1,8 @@
 package com.rsh.framework.weixin.utils;
 
+
+import com.sun.istack.internal.NotNull;
+
 /**
  * Created By Rsh
  *
@@ -16,8 +19,21 @@ public class Test {
 
         System.out.println(Long.valueOf("10000000100"));
         System.out.println(Integer.MAX_VALUE);
-    }
 
+        System.out.println("--------------");
+        int concurrencyLevel = 16;
+        int sshift = 0;
+        int ssize = 1;
+        while (ssize < concurrencyLevel) {
+            ++sshift;
+            ssize <<= 1;
+            System.out.println(ssize);
+            System.out.println("==");
+        }
+        System.out.println(sshift);
+        System.out.println(ssize);
+
+    }
 
     /**
      * author：rsh
