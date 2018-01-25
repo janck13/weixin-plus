@@ -3,4 +3,6 @@ include 'weixin-common'
 include 'weixin-mp'
 include 'weixin-pay'
 include 'weixin-web'
+include 'weixin-component'
+include 'weixin-work'
 
