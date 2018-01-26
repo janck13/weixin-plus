@@ -30,7 +30,7 @@ public class MemberCardApi {
     private static final String addPayGiftcardUrl = "https://api.weixin.qq.com/card/paygiftcard/add?access_token=ACCESS_TOKEN";
     private static final String deletePayGiftcardUrl = "https://api.weixin.qq.com/card/paygiftcard/delete?access_token=ACCESS_TOKEN";
     private static final String getPayGiftcardUrl = "https://api.weixin.qq.com/card/paygiftcard/getbyid?access_token=ACCESS_TOKEN";
-    private static final String batchgetPayGiftcardUrl = "https://api.weixin.qq.com/card/paygiftcard/batchget?access_token=";
+    private static final String batchgetPayGiftcardUrl = "https://api.weixin.qq.com/card/paygiftcard/batchget?access_token=ACCESS_TOKEN";
 
     /**
      * 创建会员卡

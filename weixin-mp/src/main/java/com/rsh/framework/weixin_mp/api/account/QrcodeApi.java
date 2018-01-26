@@ -37,7 +37,7 @@ import java.util.Map;
  */
 public class QrcodeApi {
 
-    private static final String craeteQrcodeUrl = "https://api.weixin.qq.com/cgi-bin/qrcode/create?access_token=TOKEN";
+    private static final String craeteQrcodeUrl = "https://api.weixin.qq.com/cgi-bin/qrcode/create?access_token=ACCESS_TOKEN";
     private static final String dowloadQrcodeUrl = "https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=TICKET";
 
     /**
