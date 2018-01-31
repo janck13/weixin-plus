@@ -1,0 +1,44 @@
+group 'com.rsh.framework'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+ext {
+    mainClass = "com.rsh.framework.weixin_component.Main"
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    compile project (':weixin-common')
+}
+
+// jar包相关设置
+jar {
+    doFirst {
+        manifest {
+            attributes "Main-Class": project.mainClass
+            attributes "Class-Path": configurations.runtime.collect {
+                "lib\\"+ it.getName()
+            }.join(' ')
+        }
+    }
+}
+
+// 清除上次的编译过的文件
+task clearPj(type: Delete){
+    delete 'build', 'target'
+}
+
+// 把依赖的jar复制到对应的目录下
+task copyJar(type: Copy){
+    from configurations.runtime
+    into ('build/libs/lib')
+}
+
+// 打包命令，把JAR复制到目标目录
+// 函数release即是我们打包的时候的执行的函数，dependsOn[build,copyJar]这里会让执行relese函数的时候先执行build（系统自带的函数）和copyJar
+task release(type: Copy, dependsOn: [build, copyJar]) {
+//    from  'conf'
+//    into ('build/libs/eachend/conf') // 目标位置
+}
