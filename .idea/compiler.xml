@@ -4,12 +4,16 @@
     <bytecodeTargetLevel>
       <module name="weixin-common_main" target="1.8" />
       <module name="weixin-common_test" target="1.8" />
+      <module name="weixin-component_main" target="1.8" />
+      <module name="weixin-component_test" target="1.8" />
       <module name="weixin-mp_main" target="1.8" />
       <module name="weixin-mp_test" target="1.8" />
       <module name="weixin-pay_main" target="1.8" />
       <module name="weixin-pay_test" target="1.8" />
       <module name="weixin-web_main" target="1.8" />
       <module name="weixin-web_test" target="1.8" />
+      <module name="weixin-work_main" target="1.8" />
+      <module name="weixin-work_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

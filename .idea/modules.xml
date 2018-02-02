@@ -5,6 +5,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/weixin-common.iml" filepath="$PROJECT_DIR$/.idea/modules/weixin-common.iml" group="weixin-common" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/weixin-common/weixin-common_main.iml" filepath="$PROJECT_DIR$/.idea/modules/weixin-common/weixin-common_main.iml" group="weixin-common" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/weixin-common/weixin-common_test.iml" filepath="$PROJECT_DIR$/.idea/modules/weixin-common/weixin-common_test.iml" group="weixin-common" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/weixin-component.iml" filepath="$PROJECT_DIR$/.idea/modules/weixin-component.iml" group="weixin-component" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/weixin-component/weixin-component_main.iml" filepath="$PROJECT_DIR$/.idea/modules/weixin-component/weixin-component_main.iml" group="weixin-component" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/weixin-component/weixin-component_test.iml" filepath="$PROJECT_DIR$/.idea/modules/weixin-component/weixin-component_test.iml" group="weixin-component" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/weixin-mp.iml" filepath="$PROJECT_DIR$/.idea/modules/weixin-mp.iml" group="weixin-mp" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/weixin-mp/weixin-mp_main.iml" filepath="$PROJECT_DIR$/.idea/modules/weixin-mp/weixin-mp_main.iml" group="weixin-mp" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/weixin-mp/weixin-mp_test.iml" filepath="$PROJECT_DIR$/.idea/modules/weixin-mp/weixin-mp_test.iml" group="weixin-mp" />
@@ -15,6 +18,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/weixin-web.iml" filepath="$PROJECT_DIR$/.idea/modules/weixin-web.iml" group="weixin-web" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/weixin-web/weixin-web_main.iml" filepath="$PROJECT_DIR$/.idea/modules/weixin-web/weixin-web_main.iml" group="weixin-web" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/weixin-web/weixin-web_test.iml" filepath="$PROJECT_DIR$/.idea/modules/weixin-web/weixin-web_test.iml" group="weixin-web" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/weixin-work.iml" filepath="$PROJECT_DIR$/.idea/modules/weixin-work.iml" group="weixin-work" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/weixin-work/weixin-work_main.iml" filepath="$PROJECT_DIR$/.idea/modules/weixin-work/weixin-work_main.iml" group="weixin-work" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/weixin-work/weixin-work_test.iml" filepath="$PROJECT_DIR$/.idea/modules/weixin-work/weixin-work_test.iml" group="weixin-work" />
     </modules>
   </component>
 </project>
